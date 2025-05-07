@@ -1,0 +1,170 @@
+{
+    "library": [
+        {
+            "bookId": 1 ,
+            "genreName": "Fiction",
+            "bookTitle": "Dream Count", 
+            "author": "Chimamanda Ngozi Adichie",
+            "publisher": "Knopf",
+            "image": "https://dynamic.indigoimages.ca/v1/books/books/1039056253/1.jpg?width=810&maxHeight=810&quality=85"
+        },
+        {
+            "bookId": 2 ,
+            "genreName": "Fiction",
+            "bookTitle": "My Friends", 
+            "author": "Fredrik Backman",
+            "publisher": "Atria Books",
+            "image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982121655/my-friends-9781982121655_hr.jpg"
+        },
+        {
+            "bookId": 3 ,
+            "genreName": "Fiction",
+            "bookTitle": "Good Dirt", 
+            "author": "Charmaine Wilkerson",
+            "publisher": "Ballantine Books",
+            "image": "https://m.media-amazon.com/images/I/81wdlSQxGrL.jpg"
+        },
+        {
+            "bookId": 4 ,
+            "genreName": "Fiction",
+            "bookTitle": "The Stolen Queen", 
+            "author": 0,
+            "publisher": "PenguinRandomHouse",
+            "image": "https://m.media-amazon.com/images/I/91VAU-TJ-JL.jpg"
+        },
+        {
+            "bookId": 5 ,
+            "genreName": "Thriller",
+            "bookTitle": "Beautiful Ugly", 
+            "author": "Alice Feeney",
+            "publisher": "Flatiron Books",
+            "image": "https://m.media-amazon.com/images/I/81cwij5uDGL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "bookId": 6 ,
+            "genreName": "Thriller",
+            "bookTitle": "The Storm", 
+            "author": "Rachel Hawkins",
+            "publisher": "St-Martin's Press",
+            "image": "https://static.macmillan.com/static/smp/the-storm-9781250341884/img/TheStorm-HC.jpg"
+        },
+        {
+            "bookId": 7 ,
+            "genreName": "Thriller",
+            "bookTitle": "The Missing Half", 
+            "author": "Ashley Flowers",
+            "publisher": "Bantam",
+            "image": "https://m.media-amazon.com/images/I/81iI+AMZoEL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "bookId": 8 ,
+            "genreName": "Sci-Fi",
+            "bookTitle": "Sunrise on the Reaping", 
+            "author": "Suzanne Collins",
+            "publisher": "Scholastic Press",
+            "image": "https://m.media-amazon.com/images/I/81RUJzM+wvL._UF894,1000_QL80_.jpg"
+        },
+        {
+            "bookId": 9 ,
+            "genreName": "Fantasy",
+            "bookTitle": "Immortal", 
+            "author": "Sue Lynn Tan",
+            "publisher": "HarperCollins",
+            "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1723043112i/211642122.jpg"
+        },
+        {
+            "bookId": 10 ,
+            "genreName": "Fantasy",
+            "bookTitle": "Katabasis", 
+            "author": "R.F Kuang",
+            "publisher": "Harper Voyager",
+            "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1738769146i/210223811.jpg"
+        },
+        {
+            "bookId": 11 ,
+            "genreName": "Sci-Fi",
+            "bookTitle": "The Dream Hotel", 
+            "author": "Laila Lalami",
+            "publisher": "PenguinRandomHouse",
+            "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1728608469i/218695937.jpg"
+        },
+        {
+            "bookId": 12 ,
+            "genreName": "Sci-FI",
+            "bookTitle": "The Hunger Games", 
+            "author": "Suzanne Collins",
+            "publisher": "Scholastic Press",
+            "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1730469032i/220817728.jpg"
+        },
+        {
+            "bookId": 13 ,
+            "genreName": "Romance",
+            "bookTitle": "One Golden Summer", 
+            "author": "Carley Fortune",
+            "publisher": "PenguinRandomHouse",
+            "image": "https://m.media-amazon.com/images/I/71un2hI4mcL.jpg"
+        },
+        {
+            "bookId": 14 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+           
+            "image": ""
+        },
+        {
+            "bookId": 15 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+            
+            "image": ""
+        },
+        {
+            "bookId": 16 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+           
+            "image": ""
+        },
+        {
+            "bookId": 17 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+            
+            "image": ""
+        },
+        {
+            "bookId": 18 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+           
+            "image": ""
+        },
+        {
+            "bookId": 19 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+           
+            "image": ""
+        },
+        {
+            "bookId": 20 ,
+            "genreName": 0,
+            "bookTitle": 0, 
+            "author": 0,
+            "publisher": 0,
+            "image": ""
+        }
+    ]
+}
