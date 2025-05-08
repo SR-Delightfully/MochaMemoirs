@@ -1,0 +1,164 @@
+{
+  "library": [
+    {
+      "bookId": 1,
+      "genreName": "Fiction",
+      "bookTitle": "Dream Count",
+      "author": "Chimamanda Ngozi Adichie",
+      "publisher": "Knopf",
+      "image": "Images/1.jpg"
+    },
+    {
+      "bookId": 2,
+      "genreName": "Fiction",
+      "bookTitle": "My Friends",
+      "author": "Fredrik Backman",
+      "publisher": "Atria Books",
+      "image": "Images/2.jpg"
+    },
+    {
+      "bookId": 3,
+      "genreName": "Fiction",
+      "bookTitle": "Good Dirt",
+      "author": "Charmaine Wilkerson",
+      "publisher": "Ballantine Books",
+      "image": "Images/3.jpg"
+    },
+    {
+      "bookId": 4,
+      "genreName": "Fiction",
+      "bookTitle": "The Stolen Queen",
+      "author": "Fiona Davis",
+      "publisher": "PenguinRandomHouse",
+      "image": "Images/4.jpg"
+    },
+    {
+      "bookId": 5,
+      "genreName": "Thriller",
+      "bookTitle": "Beautiful Ugly",
+      "author": "Alice Feeney",
+      "publisher": "Flatiron Books",
+      "image": "Images/5.jpg"
+    },
+    {
+      "bookId": 6,
+      "genreName": "Thriller",
+      "bookTitle": "The Storm",
+      "author": "Rachel Hawkins",
+      "publisher": "St-Martin's Press",
+      "image": "Images/6.jpg"
+    },
+    {
+      "bookId": 7,
+      "genreName": "Thriller",
+      "bookTitle": "The Missing Half",
+      "author": "Ashley Flowers",
+      "publisher": "Bantam",
+      "image": "Images/7.jpg"
+    },
+    {
+      "bookId": 8,
+      "genreName": "Sci-Fi",
+      "bookTitle": "Sunrise on the Reaping",
+      "author": "Suzanne Collins",
+      "publisher": "Scholastic Press",
+      "image": "Images/8.jpg"
+    },
+    {
+      "bookId": 9,
+      "genreName": "Fantasy",
+      "bookTitle": "Immortal",
+      "author": "Sue Lynn Tan",
+      "publisher": "HarperCollins",
+      "image": "Images/9.jpg"
+    },
+    {
+      "bookId": 10,
+      "genreName": "Fantasy",
+      "bookTitle": "Katabasis",
+      "author": "R.F Kuang",
+      "publisher": "Harper Voyager",
+      "image": "Images/10.jpg"
+    },
+    {
+      "bookId": 11,
+      "genreName": "Sci-Fi",
+      "bookTitle": "The Dream Hotel",
+      "author": "Laila Lalami",
+      "publisher": "PenguinRandomHouse",
+      "image": "Images/11.jpg"
+    },
+    {
+      "bookId": 12,
+      "genreName": "Sci-FI",
+      "bookTitle": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "publisher": "Scholastic Press",
+      "image": "Images/12.jpg"
+    },
+    {
+      "bookId": 13,
+      "genreName": "Romance",
+      "bookTitle": "One Golden Summer",
+      "author": "Carley Fortune",
+      "publisher": "PenguinRandomHouse",
+      "image": "Images/13.jpg"
+    },
+    {
+      "bookId": 14,
+      "genreName": "Romance",
+      "bookTitle": "A Forty Year Kiss",
+      "author": "Nickolas Butler",
+      "publisher": "Sourcebooks Landmark",
+      "image": "Images/14.jpg"
+    },
+    {
+      "bookId": 15,
+      "genreName": "Romance",
+      "bookTitle": "The Striker",
+      "author": "Ana Huang",
+      "publisher": "Bloom Books",
+      "image": "Images/15.jpg"
+    },
+    {
+      "bookId": 16,
+      "genreName": "Fantasy",
+      "bookTitle": "Fourth Wing",
+      "author": "Rebecca Yarros",
+      "publisher": "Entangled Publishing",
+      "image": "Images/16.jpg"
+    },
+    {
+      "bookId": 17,
+      "genreName": "Sci-FI",
+      "bookTitle": "Polybius",
+      "author": "Collin Armstrong",
+      "publisher": "Simon & Schuster",
+      "image": "Images/17.jpg"
+    },
+    {
+      "bookId": 18,
+      "genreName": "Sci-FI",
+      "bookTitle": "Meet Me at Blue Hour",
+      "author": "Sarah Suk",
+      "publisher": "HarperCollins",
+      "image": "Images/18.jpg"
+    },
+    {
+      "bookId": 19,
+      "genreName": "Fantasy",
+      "bookTitle": "The Corruption of Hollis Brown",
+      "author": "K. Ancrum",
+      "publisher": "HarperCollins",
+      "image": "Images/19.jpg"
+    },
+    {
+      "bookId": 20,
+      "genreName": "Fantasy",
+      "bookTitle": "Advocate",
+      "author": "Daniel M. Ford",
+      "publisher": "Tor Publishing Group",
+      "image": "Images/20.jpg"
+    }
+  ]
+}

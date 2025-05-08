@@ -7,17 +7,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Newtonsoft.Json;
+
 
 
 namespace MochaMemoirs
 {
-    public partial class MochaMemoirsForm : Form {
-        //private DatabaseLib formsDatabase;
+    public partial class MochaMemoirsForm : Form
+    {
+        private List<Book> libraryBooks;
+        private int currentBookIndex = 0;
+
         public MochaMemoirsForm()
         {
             InitializeComponent();
+
             InitDateLabel();
         }
+
+        private void MochaMemoirsForm_Load(object sender, EventArgs e)
+        {
+            LoadBooks();
+        }
+
+        private void LoadBooks()
+        {
+            string jsonFilePath = "books.json";
+            string jsonContent = File.ReadAllText(jsonFilePath);
+            Library jsonLibrary = JsonConvert.DeserializeObject<Library>(jsonContent);
+
+            if (jsonLibrary != null && jsonLibrary.library != null)
+            {
+                libraryBooks = jsonLibrary.library;
+            }
+            else
+            {
+                libraryBooks = new List<Book>();
+            }
+
+
+            DisplayBook(currentBookIndex);
+        }
+
+
+        private void DisplayBook(int index)
+        {
+            if (libraryBooks.Count > 0)
+            {
+                var book = libraryBooks[index];
+                FeaturedBookPictureBox.ImageLocation = Path.Combine(Application.StartupPath, book.image);
+                FeaturedBookPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
+
+
         public void InitDateLabel()
         {
             int numDay = System.DateTime.Now.Day;
@@ -58,28 +102,37 @@ namespace MochaMemoirs
 
             DateLabel.Text = nameDay + ", " + nameMonth + " " + numDay + suffix;
         }
-        public void InitTimeLabel()
+
+
+
+        private void NextButton_Click(object sender, EventArgs e)
         {
+            if (currentBookIndex == libraryBooks.Count - 1)
+            {
+                currentBookIndex = 0;
+            }
+            else
+            {
+                currentBookIndex = currentBookIndex + 1;
 
-        }
-        private void DateLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TimeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PersonalLibraryGroupBox_Enter(object sender, EventArgs e)
-        {
-
+                DisplayBook(currentBookIndex);
+            }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PreviousButton_Click(object sender, EventArgs e)
         {
+            if (currentBookIndex == 0)
+            {
+                currentBookIndex = libraryBooks.Count - 1;
+            }
+            else
+            {
+                currentBookIndex = currentBookIndex - 1;
+            }
 
+            DisplayBook(currentBookIndex);  // Show previous book
         }
+
     }
 }
+
