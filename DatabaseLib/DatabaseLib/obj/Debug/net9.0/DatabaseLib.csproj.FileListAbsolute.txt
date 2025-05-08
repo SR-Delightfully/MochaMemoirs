@@ -1,0 +1,13 @@
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\Ressources\database.db
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\DatabaseLib.deps.json
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\DatabaseLib.pdb
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.AssemblyInfoInputs.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.AssemblyInfo.cs
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.csproj.CoreCompileInputs.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.sourcelink.json
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\refint\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.pdb
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\ref\DatabaseLib.dll
