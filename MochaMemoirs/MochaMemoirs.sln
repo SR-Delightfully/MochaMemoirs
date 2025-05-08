@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MochaMemoirs", "MochaMemoirs\MochaMemoirs.csproj", "{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLib", "..\DatabaseLib\DatabaseLib\DatabaseLib.csproj", "{08E2C9AF-BF83-4CD2-816E-93D0ED5D8C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E2C9AF-BF83-4CD2-816E-93D0ED5D8C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E2C9AF-BF83-4CD2-816E-93D0ED5D8C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E2C9AF-BF83-4CD2-816E-93D0ED5D8C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E2C9AF-BF83-4CD2-816E-93D0ED5D8C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MochaMemoirs
 {
-    public partial class MochaMemoirsForm : Form
-    {
+    public partial class MochaMemoirsForm : Form {
+        //private DatabaseLib formsDatabase;
         public MochaMemoirsForm()
         {
             InitializeComponent();

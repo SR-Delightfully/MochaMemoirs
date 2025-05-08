@@ -1,0 +1,6 @@
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net48\DatabaseLib.csproj.AssemblyReference.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net48\DatabaseLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net48\DatabaseLib.AssemblyInfoInputs.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net48\DatabaseLib.AssemblyInfo.cs
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net48\DatabaseLib.csproj.CoreCompileInputs.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net48\DatabaseLib.sourcelink.json
