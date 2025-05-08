@@ -7,7 +7,7 @@ public class DatabaseSystem {
     private readonly string DB_Path;
 
     public DatabaseSystem(string DB_Path) {
-        DB_Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Ressources", "database.db");
+        DB_Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "database.db");
     }
 
     public void testConnection() {

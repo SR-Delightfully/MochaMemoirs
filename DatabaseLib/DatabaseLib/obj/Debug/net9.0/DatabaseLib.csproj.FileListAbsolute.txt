@@ -1,4 +1,3 @@
-C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\Ressources\database.db
 C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\DatabaseLib.deps.json
 C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\DatabaseLib.dll
 C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\DatabaseLib.pdb
@@ -11,3 +10,5 @@ C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\Datab
 C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\refint\DatabaseLib.dll
 C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.pdb
 C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\ref\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net9.0\Resources\database.db
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net9.0\DatabaseLib.csproj.AssemblyReference.cache

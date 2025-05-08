@@ -8,7 +8,7 @@
 
     <ItemGroup>
       <None Remove="Ressources\database.db" />
-      <Content Include="Ressources\database.db">
+      <Content Include="Resources\database.db">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

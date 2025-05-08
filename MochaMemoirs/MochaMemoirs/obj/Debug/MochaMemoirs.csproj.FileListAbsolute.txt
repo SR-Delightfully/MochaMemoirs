@@ -18,3 +18,14 @@ C:\Users\rache\OneDrive\Documents\school\MochaMemoirs\MochaMemoirs\MochaMemoirs\
 C:\Users\rache\OneDrive\Documents\school\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.csproj.CoreCompileInputs.cache
 C:\Users\rache\OneDrive\Documents\school\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.exe
 C:\Users\rache\OneDrive\Documents\school\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.pdb
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\bin\Debug\Resources\database.db
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.csproj.AssemblyReference.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.MochaMemoirsForm.resources
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.Properties.Resources.resources
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.csproj.GenerateResource.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.csproj.CoreCompileInputs.cache
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.exe
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\obj\Debug\MochaMemoirs.pdb
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\bin\Debug\MochaMemoirs.exe.config
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\bin\Debug\MochaMemoirs.exe
+C:\Users\H\Documents\03_VANIER\02_APPLICATION DEV\MochaMemoirs\MochaMemoirs\MochaMemoirs\bin\Debug\MochaMemoirs.pdb
