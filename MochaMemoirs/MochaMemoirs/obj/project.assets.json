@@ -55,23 +55,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rache\\.nuget\\packages\\": {},
+    "C:\\Users\\H\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rache\\School\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
+      "projectUniqueName": "C:\\Users\\H\\Documents\\03_VANIER\\02_APPLICATION DEV\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
       "projectName": "MochaMemoirs",
-      "projectPath": "C:\\Users\\rache\\School\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
-      "packagesPath": "C:\\Users\\rache\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rache\\School\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\obj\\",
+      "projectPath": "C:\\Users\\H\\Documents\\03_VANIER\\02_APPLICATION DEV\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
+      "packagesPath": "C:\\Users\\H\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\H\\Documents\\03_VANIER\\02_APPLICATION DEV\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rache\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\H\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
