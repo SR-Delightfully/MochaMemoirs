@@ -27,6 +27,7 @@ namespace MochaMemoirs
         public MochaMemoirsForm()
         {
             InitializeComponent();
+            InitStages();
             RoundButton(HomeButton);
             RoundButton(LibraryButton);
             RoundButton(SettingsButton);
@@ -182,17 +183,54 @@ namespace MochaMemoirs
             }
         }
 
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BannerPictureBox_Click(object sender, EventArgs e)
         {
 
         }
 
         private void TitleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitStages()
+        {
+            HomePanel.Visible = true;
+            LibraryPanel.Visible = false;
+            SettingsPanel.Visible = false;
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = true;
+            LibraryPanel.Visible = false;
+            SettingsPanel.Visible = false;
+        }
+
+        private void LibraryButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = false;
+            LibraryPanel.Visible = true;
+            SettingsPanel.Visible = false;
+        }
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = false;
+            LibraryPanel.Visible = false;
+            SettingsPanel.Visible = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsPanelTitleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LibraryPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -121,7 +121,7 @@
   <data name="DateLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwAAAAD1CAYAAADnNpK5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cwAAEnMBjCK5BwAA+ERJREFUeF7snXV4FFfbxoMmOITgTowQJCRAEoK7e3F3t5YCxd3d3bW0tKXu1Ghx
+        cQAAEnEB89x6jgAA+ERJREFUeF7snXV4FFfbxoMmOITgTowQJCRAEoK7e3F3t5YCxd3d3bW0tKXu1Ghx
         d4egpe7t+93f9TxnJzt7Ztbicv74XZtsNrs7s7Mz9/3Y8Xh07R4UCoVCoVAoFApF2sBDvkOhUCgUCoVC
         oVCkXpQBUCgUCoVCoVAo0hDKACgUCoVCoVAoFGkIZQAUCoVCoVAoFIo0hDIACoVCoVAoFApFGkIZAIVC
         oVAoFAqFIg2hDIBCoVAoFAqFQpGGUAZAoVAoFAqFQqFIQygDoFAoFAqFQqFQpCGUAVAoFAqFQqFQKNIQ
@@ -3153,7 +3153,7 @@
   <data name="TitleLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlIAAAC+CAYAAAD+xuGjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAA701JREFUeF7snXV4FGcXxYMlQQIRHBJIiCfElYTg7u4SgrtDKS3u7u7uhSptv3op
+        cQAAEnEB89x6jgAA701JREFUeF7snXV4FGcXxYMlQQIRHBJIiCfElYTg7u4SgrtDKS3u7u7uhSptv3op
         7u4SJUFq1Hu+5953Znd2djdGgEDnj/Os787O7sz85lyzSLp+H5o0adKkSZMmTZqyLgv1HZo0adKkSZMm
         TZoyJw2kNGnSpEmTJk2asikNpDRp0qRJkyZNmrIpDaQ0adKkSZMmTZqyKQ2kNGnSpEmTJk2asikNpDRp
         0qRJkyZNmrIpDaQ0adKkSZMmTZqyKQ2kNGnSpEmTJk2asikNpDRp0qRJkyZNmrIpDaQ0adKkSZMmTZqy
