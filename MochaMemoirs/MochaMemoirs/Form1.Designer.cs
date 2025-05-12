@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MochaMemoirsForm));
             HomePanel = new System.Windows.Forms.Panel();
+            ViewLibrariesPanel = new System.Windows.Forms.Panel();
             FeaturedBookGroupBox = new System.Windows.Forms.GroupBox();
             FeaturedBookPictureBox = new System.Windows.Forms.PictureBox();
             PreviousButton = new System.Windows.Forms.Button();
             NextButton = new System.Windows.Forms.Button();
-            ViewLibrariesGroupBox = new System.Windows.Forms.GroupBox();
             PersonalLibraryGroupBox = new System.Windows.Forms.GroupBox();
             HeaderGroupBox = new System.Windows.Forms.GroupBox();
             DateLabel = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             LibraryPanel = new System.Windows.Forms.Panel();
             LibraryStageTitleLabel = new System.Windows.Forms.Label();
             SettingsPanel = new System.Windows.Forms.Panel();
+            ThemeComboBox = new System.Windows.Forms.ComboBox();
             SettingsPanelTitleLabel = new System.Windows.Forms.Label();
             HomePanel.SuspendLayout();
             FeaturedBookGroupBox.SuspendLayout();
@@ -62,14 +63,22 @@
             // 
             // HomePanel
             // 
+            HomePanel.Controls.Add(ViewLibrariesPanel);
             HomePanel.Controls.Add(FeaturedBookGroupBox);
-            HomePanel.Controls.Add(ViewLibrariesGroupBox);
             HomePanel.Controls.Add(PersonalLibraryGroupBox);
             HomePanel.Controls.Add(HeaderGroupBox);
             HomePanel.Location = new System.Drawing.Point(145, 3);
             HomePanel.Name = "HomePanel";
             HomePanel.Size = new System.Drawing.Size(686, 786);
             HomePanel.TabIndex = 0;
+            // 
+            // ViewLibrariesPanel
+            // 
+            ViewLibrariesPanel.AutoScroll = true;
+            ViewLibrariesPanel.Location = new System.Drawing.Point(3, 418);
+            ViewLibrariesPanel.Name = "ViewLibrariesPanel";
+            ViewLibrariesPanel.Size = new System.Drawing.Size(467, 352);
+            ViewLibrariesPanel.TabIndex = 0;
             // 
             // FeaturedBookGroupBox
             // 
@@ -114,17 +123,6 @@
             NextButton.Text = "&Next";
             NextButton.UseVisualStyleBackColor = true;
             NextButton.Click += NextButton_Click;
-            // 
-            // ViewLibrariesGroupBox
-            // 
-            ViewLibrariesGroupBox.Location = new System.Drawing.Point(2, 407);
-            ViewLibrariesGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            ViewLibrariesGroupBox.Name = "ViewLibrariesGroupBox";
-            ViewLibrariesGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            ViewLibrariesGroupBox.Size = new System.Drawing.Size(470, 363);
-            ViewLibrariesGroupBox.TabIndex = 11;
-            ViewLibrariesGroupBox.TabStop = false;
-            ViewLibrariesGroupBox.Text = "ViewLibraries";
             // 
             // PersonalLibraryGroupBox
             // 
@@ -176,7 +174,6 @@
             TimeLabel.Image = (System.Drawing.Image)resources.GetObject("TimeLabel.Image");
             TimeLabel.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             TimeLabel.Location = new System.Drawing.Point(550, 162);
-            //TimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             TimeLabel.Name = "TimeLabel";
             TimeLabel.Size = new System.Drawing.Size(123, 31);
             TimeLabel.TabIndex = 1;
@@ -273,9 +270,9 @@
             // LibraryPanel
             // 
             LibraryPanel.Controls.Add(LibraryStageTitleLabel);
-            LibraryPanel.Location = new System.Drawing.Point(148, 4);
+            LibraryPanel.Location = new System.Drawing.Point(145, 4);
             LibraryPanel.Name = "LibraryPanel";
-            LibraryPanel.Size = new System.Drawing.Size(686, 786);
+            LibraryPanel.Size = new System.Drawing.Size(689, 786);
             LibraryPanel.TabIndex = 9;
             // 
             // LibraryStageTitleLabel
@@ -291,11 +288,21 @@
             // 
             // SettingsPanel
             // 
+            SettingsPanel.Controls.Add(ThemeComboBox);
             SettingsPanel.Controls.Add(SettingsPanelTitleLabel);
-            SettingsPanel.Location = new System.Drawing.Point(148, 5);
+            SettingsPanel.Location = new System.Drawing.Point(145, 5);
             SettingsPanel.Name = "SettingsPanel";
-            SettingsPanel.Size = new System.Drawing.Size(683, 783);
+            SettingsPanel.Size = new System.Drawing.Size(686, 783);
             SettingsPanel.TabIndex = 10;
+            // 
+            // ThemeComboBox
+            // 
+            ThemeComboBox.FormattingEnabled = true;
+            ThemeComboBox.Items.AddRange(new object[] { "Light", "Dark" });
+            ThemeComboBox.Location = new System.Drawing.Point(15, 140);
+            ThemeComboBox.Name = "ThemeComboBox";
+            ThemeComboBox.Size = new System.Drawing.Size(265, 28);
+            ThemeComboBox.TabIndex = 1;
             // 
             // SettingsPanelTitleLabel
             // 
@@ -339,7 +346,6 @@
         private System.Windows.Forms.Button PreviousButton;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.PictureBox FeaturedBookPictureBox;
-        private System.Windows.Forms.GroupBox ViewLibrariesGroupBox;
         private System.Windows.Forms.GroupBox PersonalLibraryGroupBox;
         private System.Windows.Forms.GroupBox HeaderGroupBox;
         private System.Windows.Forms.Label DateLabel;
@@ -355,5 +361,7 @@
         private System.Windows.Forms.Panel SettingsPanel;
         private System.Windows.Forms.Label SettingsPanelTitleLabel;
         private System.Windows.Forms.Label LibraryStageTitleLabel;
+        private System.Windows.Forms.Panel ViewLibrariesPanel;
+        private System.Windows.Forms.ComboBox ThemeComboBox;
     }
 }

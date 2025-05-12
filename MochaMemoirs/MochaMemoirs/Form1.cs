@@ -16,6 +16,11 @@ using System.Reflection.Emit;
 
 namespace MochaMemoirs
 {
+    public enum AppTheme
+    {
+        Light,
+        Dark
+    }
     public partial class MochaMemoirsForm : Form
     {
         private List<Book> libraryBooks;
@@ -33,7 +38,73 @@ namespace MochaMemoirs
             InitDateLabel();
             initTimeLabel();
             TransparentLabels(DateLabel, TimeLabel);
+            ApplyTheme(false);
         }
+
+        private void MochaMemoirsForm_Load(object sender, EventArgs e)
+        {
+            LoadBooks();
+            ApplyTheme(false);
+            ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged;
+        }
+
+        private void ApplyTheme(bool darkMode)
+        {
+            Color backgroundColor = darkMode ? Color.FromArgb(30, 30, 30) : Color.WhiteSmoke;
+            Color textColor = darkMode ? Color.White : Color.Black;
+            ViewLibrariesPanel.BackColor = darkMode ? Color.FromArgb(30, 30, 30) : Color.WhiteSmoke;
+
+            this.BackColor = backgroundColor;
+
+            foreach (Control control in this.Controls)
+            {
+                ApplyThemeToControl(control, backgroundColor, textColor, darkMode);
+            }
+        }
+
+        private void ApplyThemeToControl(Control control, Color backColor, Color foreColor, bool darkMode)
+        {
+            if (control is Button btn)
+            {
+                btn.BackColor = darkMode ? Color.MediumPurple : Color.PeachPuff;
+                btn.ForeColor = Color.MidnightBlue;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+            }
+            else if (control is System.Windows.Forms.Label lbl)
+            {
+                if (lbl.Name == "TitleLabel" || lbl.Name == "DateLabel" || lbl.Name == "TimeLabel")
+                {
+                    lbl.ForeColor = Color.White;
+                }
+                else
+                {
+                    lbl.ForeColor = foreColor;
+                }
+                lbl.BackColor = Color.Transparent;
+            }
+
+            else
+            {
+                control.BackColor = backColor;
+                control.ForeColor = foreColor;
+            }
+
+            foreach (Control child in control.Controls)
+            {
+                ApplyThemeToControl(child, backColor, foreColor, darkMode);
+            }
+        }
+
+
+        private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ThemeComboBox.SelectedItem?.ToString() == "Dark")
+                ApplyTheme(true);
+            else
+                ApplyTheme(false);
+        }
+
 
         public void initTimeLabel()
         {
@@ -73,12 +144,6 @@ namespace MochaMemoirs
 
         }
 
-        private void MochaMemoirsForm_Load(object sender, EventArgs e)
-        {
-            LoadBooks();
-
-        }
-
         private void LoadBooks()
         {
             string jsonFilePath = "books.json";
@@ -96,7 +161,117 @@ namespace MochaMemoirs
 
 
             DisplayBook(currentBookIndex);
+
+            var booksByGenre = libraryBooks
+                .GroupBy(b => b.genreName)
+                .ToDictionary(g => g.Key, g => g.ToList());
+
+            PopulateGenres(booksByGenre);
         }
+
+        private void PopulateGenres(Dictionary<string, List<Book>> booksByGenre)
+        {   
+            ViewLibrariesPanel.Controls.Clear();
+            ViewLibrariesPanel.AutoScroll = true;
+
+            int yOffset = 10;
+            int maxPanelWidth = ViewLibrariesPanel.Width - 40; // Account for padding/scrollbar
+
+            foreach (var genre in booksByGenre)
+            {
+                Panel genrePanel = new Panel
+                {
+                    Width = maxPanelWidth,
+                    Location = new Point(10, yOffset),
+                    Height = 35,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    AutoSize = false
+                };
+
+                System.Windows.Forms.Label headerLabel = new System.Windows.Forms.Label
+                {
+                    Text = genre.Key,
+                    Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                    AutoSize = true,
+                    Cursor = Cursors.Hand,
+                    Location = new Point(5, 5)
+                };
+
+                Panel booksPanel = new Panel
+                {
+                    Location = new Point(0, 30),
+                    Width = maxPanelWidth,
+                    Height = genre.Value.Count * 105,
+                    Visible = false,
+                    AutoScroll = false
+                };
+
+                int bookYOffset = 5;
+
+                foreach (var book in genre.Value)
+                {
+                    Panel bookPanel = new Panel
+                    {
+                        Location = new Point(10, bookYOffset),
+                        Size = new Size(maxPanelWidth - 20, 100),
+                        BorderStyle = BorderStyle.FixedSingle
+                    };
+
+                    PictureBox cover = new PictureBox
+                    {
+                        Location = new Point(5, 5),
+                        Size = new Size(60, 90),
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        ImageLocation = Path.Combine(Application.StartupPath, book.image)
+                    };
+
+                    System.Windows.Forms.Label titleLabel = new System.Windows.Forms.Label
+                    {
+                        Text = book.bookTitle,
+                        Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                        Location = new Point(75, 5),
+                        AutoSize = true
+                    };
+
+                    System.Windows.Forms.Label authorLabel = new System.Windows.Forms.Label
+                    {
+                        Text = $"by {book.author}",
+                        Font = new Font("Segoe UI", 9, FontStyle.Italic),
+                        Location = new Point(75, 30),
+                        AutoSize = true
+                    };
+
+                    System.Windows.Forms.Label publisherLabel = new System.Windows.Forms.Label
+                    {
+                        Text = $"Published by {book.publisher}",
+                        Font = new Font("Segoe UI", 8),
+                        Location = new Point(75, 55),
+                        AutoSize = true
+                    };
+
+                    bookPanel.Controls.Add(cover);
+                    bookPanel.Controls.Add(titleLabel);
+                    bookPanel.Controls.Add(authorLabel);
+                    bookPanel.Controls.Add(publisherLabel);
+
+                    booksPanel.Controls.Add(bookPanel);
+                    bookYOffset += 105;
+                }
+
+                headerLabel.Click += (s, e) =>
+                {
+                    booksPanel.Visible = !booksPanel.Visible;
+                    genrePanel.Height = booksPanel.Visible ? booksPanel.Location.Y + booksPanel.Height : 35;
+                };
+
+                genrePanel.Controls.Add(headerLabel);
+                genrePanel.Controls.Add(booksPanel);
+                ViewLibrariesPanel.Controls.Add(genrePanel);
+
+                yOffset += genrePanel.Height + 10;
+            }
+        }
+
 
         private void DisplayBook(int index)
         {
@@ -212,6 +387,11 @@ namespace MochaMemoirs
         }
 
         private void DateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewLibrariesGroupBox_Enter(object sender, EventArgs e)
         {
 
         }
