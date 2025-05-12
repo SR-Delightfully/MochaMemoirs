@@ -311,6 +311,62 @@ namespace MochaMemoirs
             DisplayBook(currentBookIndex);
         }
 
+        // read
+        private List<Book> LoadAllBooks()
+        {
+            string jsonFilePath = "books.json";
+            if (!File.Exists(jsonFilePath)) return new List<Book>();
+
+            string json = File.ReadAllText(jsonFilePath);
+            var jsonLibrary = JsonConvert.DeserializeObject<Library>(json);
+            if (jsonLibrary != null && jsonLibrary.library != null)
+            {
+                return jsonLibrary.library;
+            }
+            else
+            {
+                return new List<Book>();
+            }
+        }
+
+        // write
+        private void SaveAllBooks(List<Book> books)
+        {
+            string jsonFilePath = "books.json";
+            var library = new Library { library = books };
+            string json = JsonConvert.SerializeObject(library);
+            File.WriteAllText(jsonFilePath, json);
+        }
+
+        // create
+        public void AddBook(Book newBook)
+        {
+            var books = LoadAllBooks();
+            books.Add(newBook);
+            SaveAllBooks(books);
+        }
+
+        // update
+        public void UpdateBook(Book updatedBook)
+        {
+            var books = LoadAllBooks();
+            var index = books.FindIndex(b => b.bookId == updatedBook.bookId);
+            if (index >= 0)
+            {
+                books[index] = updatedBook;
+                SaveAllBooks(books);
+            }
+        }
+
+        // delete
+        public void DeleteBook(int bookId)
+        {
+            var books = LoadAllBooks();
+            books.RemoveAll(b => b.bookId == bookId);
+            SaveAllBooks(books);
+        }
+
+
         public void InitDateLabel()
         {
             int numDay = System.DateTime.Now.Day;
