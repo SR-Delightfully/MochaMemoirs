@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj": {}
+    "C:\\Users\\rache\\OneDrive\\Desktop\\App-Dev\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj": {
+    "C:\\Users\\rache\\OneDrive\\Desktop\\App-Dev\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
+        "projectUniqueName": "C:\\Users\\rache\\OneDrive\\Desktop\\App-Dev\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
         "projectName": "MochaMemoirs",
-        "projectPath": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
+        "projectPath": "C:\\Users\\rache\\OneDrive\\Desktop\\App-Dev\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
         "packagesPath": "C:\\Users\\rache\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\obj\\",
+        "outputPath": "C:\\Users\\rache\\OneDrive\\Desktop\\App-Dev\\MochaMemoirs\\MochaMemoirs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

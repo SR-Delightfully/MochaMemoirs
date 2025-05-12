@@ -28,6 +28,13 @@
     <None Remove="Images\7.jpg" />
     <None Remove="Images\8.jpg" />
     <None Remove="Images\9.jpg" />
+    <None Remove="Images\bannerImage.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\bannerImage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

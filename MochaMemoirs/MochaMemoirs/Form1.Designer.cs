@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DateLabel = new System.Windows.Forms.Label();
-            TimeLabel = new System.Windows.Forms.Label();
-            TimeAndDateGroup = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MochaMemoirsForm));
             SideBarGroupBox = new System.Windows.Forms.GroupBox();
             HeaderGroupBox = new System.Windows.Forms.GroupBox();
+            TimeLabel = new System.Windows.Forms.Label();
+            DateLabel = new System.Windows.Forms.Label();
             BannerPictureBox = new System.Windows.Forms.PictureBox();
             PersonalLibraryGroupBox = new System.Windows.Forms.GroupBox();
             ViewLibrariesGroupBox = new System.Windows.Forms.GroupBox();
@@ -40,43 +40,11 @@
             PreviousButton = new System.Windows.Forms.Button();
             NextButton = new System.Windows.Forms.Button();
             FeaturedBookPictureBox = new System.Windows.Forms.PictureBox();
-            TimeAndDateGroup.SuspendLayout();
             HeaderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BannerPictureBox).BeginInit();
             FeaturedBookGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FeaturedBookPictureBox).BeginInit();
             SuspendLayout();
-            // 
-            // DateLabel
-            // 
-            DateLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            DateLabel.Location = new System.Drawing.Point(13, 13);
-            DateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            DateLabel.Name = "DateLabel";
-            DateLabel.Size = new System.Drawing.Size(350, 30);
-            DateLabel.TabIndex = 0;
-            // 
-            // TimeLabel
-            // 
-            TimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            TimeLabel.Location = new System.Drawing.Point(367, 13);
-            TimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            TimeLabel.Name = "TimeLabel";
-            TimeLabel.Size = new System.Drawing.Size(177, 30);
-            TimeLabel.TabIndex = 1;
-            // 
-            // TimeAndDateGroup
-            // 
-            TimeAndDateGroup.Controls.Add(TimeLabel);
-            TimeAndDateGroup.Controls.Add(DateLabel);
-            TimeAndDateGroup.Location = new System.Drawing.Point(0, 104);
-            TimeAndDateGroup.Margin = new System.Windows.Forms.Padding(2);
-            TimeAndDateGroup.Name = "TimeAndDateGroup";
-            TimeAndDateGroup.Padding = new System.Windows.Forms.Padding(2);
-            TimeAndDateGroup.Size = new System.Drawing.Size(545, 45);
-            TimeAndDateGroup.TabIndex = 2;
-            TimeAndDateGroup.TabStop = false;
-            TimeAndDateGroup.Text = "Date&Time";
             // 
             // SideBarGroupBox
             // 
@@ -91,7 +59,8 @@
             // 
             // HeaderGroupBox
             // 
-            HeaderGroupBox.Controls.Add(TimeAndDateGroup);
+            HeaderGroupBox.Controls.Add(TimeLabel);
+            HeaderGroupBox.Controls.Add(DateLabel);
             HeaderGroupBox.Controls.Add(BannerPictureBox);
             HeaderGroupBox.Location = new System.Drawing.Point(124, 2);
             HeaderGroupBox.Margin = new System.Windows.Forms.Padding(2);
@@ -102,12 +71,32 @@
             HeaderGroupBox.TabStop = false;
             HeaderGroupBox.Text = "Header";
             // 
+            // TimeLabel
+            // 
+            TimeLabel.BackColor = System.Drawing.Color.Transparent;
+            TimeLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            TimeLabel.Location = new System.Drawing.Point(373, 107);
+            TimeLabel.Name = "TimeLabel";
+            TimeLabel.Size = new System.Drawing.Size(159, 29);
+            TimeLabel.TabIndex = 5;
+            // 
+            // DateLabel
+            // 
+            DateLabel.BackColor = System.Drawing.Color.Transparent;
+            DateLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            DateLabel.Location = new System.Drawing.Point(6, 107);
+            DateLabel.Name = "DateLabel";
+            DateLabel.Size = new System.Drawing.Size(277, 29);
+            DateLabel.TabIndex = 4;
+            // 
             // BannerPictureBox
             // 
+            BannerPictureBox.Image = (System.Drawing.Image)resources.GetObject("BannerPictureBox.Image");
             BannerPictureBox.Location = new System.Drawing.Point(0, 7);
             BannerPictureBox.Margin = new System.Windows.Forms.Padding(2);
             BannerPictureBox.Name = "BannerPictureBox";
             BannerPictureBox.Size = new System.Drawing.Size(545, 142);
+            BannerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             BannerPictureBox.TabIndex = 3;
             BannerPictureBox.TabStop = false;
             // 
@@ -192,7 +181,6 @@
             Name = "MochaMemoirsForm";
             Text = "Mocha Memoirs";
             Load += MochaMemoirsForm_Load;
-            TimeAndDateGroup.ResumeLayout(false);
             HeaderGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)BannerPictureBox).EndInit();
             FeaturedBookGroupBox.ResumeLayout(false);
@@ -201,10 +189,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label DateLabel;
-        private System.Windows.Forms.Label TimeLabel;
-        private System.Windows.Forms.GroupBox TimeAndDateGroup;
         private System.Windows.Forms.GroupBox SideBarGroupBox;
         private System.Windows.Forms.GroupBox HeaderGroupBox;
         private System.Windows.Forms.GroupBox PersonalLibraryGroupBox;
@@ -214,6 +198,8 @@
         private System.Windows.Forms.PictureBox FeaturedBookPictureBox;
         private System.Windows.Forms.Button PreviousButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Label TimeLabel;
+        private System.Windows.Forms.Label DateLabel;
     }
 }
 
