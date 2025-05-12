@@ -330,20 +330,20 @@ namespace MochaMemoirs
         }
 
         // write
-        private void SaveAllBooks(List<Book> books)
+        private void SaveAllBooks()
         {
-            string jsonFilePath = "books.json";
-            var library = new Library { library = books };
-            string json = JsonConvert.SerializeObject(library);
-            File.WriteAllText(jsonFilePath, json);
+            var jsonLibrary = new Library { library = libraryBooks };
+            string json = JsonConvert.SerializeObject(jsonLibrary, Formatting.Indented);
+            File.WriteAllText("books.json", json);
         }
+
 
         // create
         public void AddBook(Book newBook)
         {
             var books = LoadAllBooks();
             books.Add(newBook);
-            SaveAllBooks(books);
+            SaveAllBooks();
         }
 
         // update
@@ -354,16 +354,16 @@ namespace MochaMemoirs
             if (index >= 0)
             {
                 books[index] = updatedBook;
-                SaveAllBooks(books);
+                SaveAllBooks();
             }
         }
 
         // delete
-        public void DeleteBook(int bookId)
+        public void DeleteBook(string bookId)
         {
             var books = LoadAllBooks();
             books.RemoveAll(b => b.bookId == bookId);
-            SaveAllBooks(books);
+            SaveAllBooks();
         }
 
 
@@ -415,6 +415,7 @@ namespace MochaMemoirs
                 label.BackColor = Color.Transparent;
             }
         }
+
         private void InitStages()
         {
             HomePanel.Visible = true;
@@ -447,9 +448,132 @@ namespace MochaMemoirs
 
         }
 
+<<<<<<< Updated upstream
         private void ViewLibrariesGroupBox_Enter(object sender, EventArgs e)
         {
 
+=======
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            Book newBook = new Book
+            {
+                bookId = GetNextBookId().ToString(),
+                bookTitle = titleTextBox.Text,
+                author = authorTextBox.Text,
+                publisher = publisherTextBox.Text,
+                image = ""
+            };
+
+            libraryBooks.Add(newBook);
+            SaveAllBooks();
+            MessageBox.Show("Book added successfully!");
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            string id = bookIdTextBox.Text;
+            var book = libraryBooks.FirstOrDefault(b => b.bookId == id);
+            if (book != null)
+            {
+                book.bookTitle = titleTextBox.Text;
+                book.author = authorTextBox.Text;
+                book.publisher = publisherTextBox.Text;
+
+                SaveAllBooks();
+                MessageBox.Show("Book updated.");
+            }
+            else
+            {
+                MessageBox.Show("Book ID not found.");
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            string id = bookIdTextBox.Text;
+            var book = libraryBooks.FirstOrDefault(b => b.bookId == id);
+            if (book != null)
+            {
+                libraryBooks.Remove(book);
+                SaveAllBooks();
+                MessageBox.Show("Book deleted.");
+            }
+            else
+            {
+                MessageBox.Show("Book ID not found.");
+            }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LoadBooksIntoGrid()
+        {
+            string jsonFilePath = "books.json";
+            if (!File.Exists(jsonFilePath))
+            {
+                MessageBox.Show("File not found.");
+                return;
+            }
+
+            string jsonContent = File.ReadAllText(jsonFilePath);
+            Library jsonLibrary = JsonConvert.DeserializeObject<Library>(jsonContent);
+
+            if (jsonLibrary != null && jsonLibrary.library != null)
+            {
+                booksDataGridView.DataSource = jsonLibrary.library;
+
+                // Hide the image column
+                if (booksDataGridView.Columns["image"] != null)
+                {
+                    booksDataGridView.Columns["image"].Visible = false;
+                }
+            }
+            else
+            {
+                booksDataGridView.DataSource = null;
+                MessageBox.Show("No books found.");
+            }
+        }
+
+        private int GetNextBookId()
+        {
+            int maxId = 0;
+
+            foreach (Book book in libraryBooks)
+            {
+
+                if (book.bookId.Length > 0)
+                {
+                    int id = int.Parse(book.bookId);
+                    if (id > maxId)
+                    {
+                        maxId = id;
+                    }
+                }
+            }
+
+            return maxId + 1;
+        }
+
+
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            LoadBooksIntoGrid();
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            titleTextBox.Text = "";
+            authorTextBox.Text = "";
+            publisherTextBox.Text = "";
+            bookIdTextBox.Text = "";
+            genreTextBox.Text = "";
+>>>>>>> Stashed changes
         }
     }
+
 }
