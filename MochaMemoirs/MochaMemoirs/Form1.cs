@@ -27,9 +27,9 @@ namespace MochaMemoirs
         public MochaMemoirsForm()
         {
             InitializeComponent();
-            //RoundButton(HomeButton);
-            //RoundButton(LibraryButton);
-            //RoundButton(SettingsButton);
+            RoundButton(HomeButton);
+            RoundButton(LibraryButton);
+            RoundButton(SettingsButton);
             InitDateLabel();
             initTimeLabel();
             TransparentLabels(DateLabel, TimeLabel);
@@ -68,7 +68,7 @@ namespace MochaMemoirs
                 }
             }
             DateLabel.Text = $"{current:dddd}, {current:MMMM} {current.Day}{suffix}";
-            
+
 
 
         }
@@ -184,18 +184,34 @@ namespace MochaMemoirs
                 label.BackColor = Color.Transparent;
             }
         }
+        private void InitStages()
+        {
+            HomePanel.Visible = true;
+            LibraryPanel.Visible = false;
+            SettingsPanel.Visible = false;
+        }
 
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = true;
+            LibraryPanel.Visible = false;
+            SettingsPanel.Visible = false;
+        }
+
+        private void LibraryButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = false;
+            LibraryPanel.Visible = true;
+            SettingsPanel.Visible = false;
+        }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-
+            HomePanel.Visible = false;
+            LibraryPanel.Visible = false;
+            SettingsPanel.Visible = true;
         }
 
-        private void BannerPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TitleLabel_Click(object sender, EventArgs e)
+        private void DateLabel_Click(object sender, EventArgs e)
         {
 
         }
