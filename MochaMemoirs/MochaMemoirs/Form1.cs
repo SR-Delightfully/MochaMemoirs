@@ -36,6 +36,7 @@ namespace MochaMemoirs
             RoundButton(HomeButton);
             RoundButton(LibraryButton);
             RoundButton(SettingsButton);
+            RoundButton(exitButton);
             InitDateLabel();
             initTimeLabel();
             TransparentLabels(DateLabel, TimeLabel);

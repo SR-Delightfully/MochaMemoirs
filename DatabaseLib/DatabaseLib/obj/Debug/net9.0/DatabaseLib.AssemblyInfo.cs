@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bc195360a2ecba232aedd74e02e7df34055142b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c00f4d8d99480cfe688433d9914db6cf2ddfa397")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

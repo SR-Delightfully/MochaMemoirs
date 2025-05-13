@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MochaMemoirs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f466d5c38bcba11d3df8ecb556570e3c8d374b2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c00f4d8d99480cfe688433d9914db6cf2ddfa397")]
 [assembly: System.Reflection.AssemblyProductAttribute("MochaMemoirs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MochaMemoirs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

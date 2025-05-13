@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fFpT16OOe1k=",
+  "dgSpecHash": "VRhAytX7dKY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\srobi\\Documents\\0_Vanier_College\\3_Semester\\4_AppDev1\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
+  "projectFilePath": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\srobi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\rache\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
