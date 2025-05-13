@@ -21,6 +21,7 @@ namespace MochaMemoirs
         Light,
         Dark
     }
+
     public partial class MochaMemoirsForm : Form
     {
         private List<Book> libraryBooks;
@@ -447,12 +448,6 @@ namespace MochaMemoirs
         {
 
         }
-
-<<<<<<< Updated upstream
-        private void ViewLibrariesGroupBox_Enter(object sender, EventArgs e)
-        {
-
-=======
         private void AddButton_Click(object sender, EventArgs e)
         {
             Book newBook = new Book
@@ -547,10 +542,10 @@ namespace MochaMemoirs
 
                 if (book.bookId.Length > 0)
                 {
-                    int id = int.Parse(book.bookId);
-                    if (id > maxId)
+                    var id = book.bookId;
+                    if (int.Parse(id) > maxId)
                     {
-                        maxId = id;
+                        maxId = int.Parse(id);
                     }
                 }
             }
@@ -572,7 +567,6 @@ namespace MochaMemoirs
             publisherTextBox.Text = "";
             bookIdTextBox.Text = "";
             genreTextBox.Text = "";
->>>>>>> Stashed changes
         }
     }
 
