@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VRhAytX7dKY=",
+  "dgSpecHash": "wZjHW6GQSlo=",
   "success": true,
   "projectFilePath": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rache\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\rache\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\rache\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.4\\system.configuration.configurationmanager.9.0.4.nupkg.sha512",
+    "C:\\Users\\rache\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.4\\system.diagnostics.eventlog.9.0.4.nupkg.sha512",
+    "C:\\Users\\rache\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
   ],
   "logs": []
 }

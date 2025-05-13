@@ -11,6 +11,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Drawing.Drawing2D;
 using System.Reflection.Emit;
+using MochaMemoirs.Model;
 
 
 
@@ -608,6 +609,30 @@ namespace MochaMemoirs
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void LanguageBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var changeLanguage = new ChangeLanguage();
+            switch (LanguageBox.SelectedIndex)
+            {
+                case 0:
+                    changeLanguage.UpdateConfig("language", "en");
+                    Application.Restart();
+                    break;
+
+                case 1:
+                    changeLanguage.UpdateConfig("language", "fr-CA");
+                    Application.Restart();
+                    break;
+
+                case 2:
+                    changeLanguage.UpdateConfig("language", "es");
+                    Application.Restart();
+                    break;
+
+                
+            }
         }
     }
 
