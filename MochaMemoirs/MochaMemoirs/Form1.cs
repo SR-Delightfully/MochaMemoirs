@@ -171,7 +171,7 @@ namespace MochaMemoirs
         }
 
         private void PopulateGenres(Dictionary<string, List<Book>> booksByGenre)
-        {   
+        {
             ViewLibrariesPanel.Controls.Clear();
             ViewLibrariesPanel.AutoScroll = true;
 
@@ -567,6 +567,46 @@ namespace MochaMemoirs
             publisherTextBox.Text = "";
             bookIdTextBox.Text = "";
             genreTextBox.Text = "";
+        }
+
+        private void ThemeComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccentLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MinimizedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClockAndDateSettingsGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -1,7 +1,7 @@
 {
   "library": [
     {
-      "bookId": 1,
+      "bookId": "1",
       "genreName": "Fiction",
       "bookTitle": "Dream Count",
       "author": "Chimamanda Ngozi Adichie",
@@ -9,7 +9,7 @@
       "image": "Images/1.jpg"
     },
     {
-      "bookId": 2,
+      "bookId": "2",
       "genreName": "Fiction",
       "bookTitle": "My Friends",
       "author": "Fredrik Backman",
@@ -17,7 +17,7 @@
       "image": "Images/2.jpg"
     },
     {
-      "bookId": 3,
+      "bookId": "3",
       "genreName": "Fiction",
       "bookTitle": "Good Dirt",
       "author": "Charmaine Wilkerson",
@@ -25,7 +25,7 @@
       "image": "Images/3.jpg"
     },
     {
-      "bookId": 4,
+      "bookId": "4",
       "genreName": "Fiction",
       "bookTitle": "The Stolen Queen",
       "author": "Fiona Davis",
@@ -33,7 +33,7 @@
       "image": "Images/4.jpg"
     },
     {
-      "bookId": 5,
+      "bookId": "5",
       "genreName": "Thriller",
       "bookTitle": "Beautiful Ugly",
       "author": "Alice Feeney",
@@ -41,7 +41,7 @@
       "image": "Images/5.jpg"
     },
     {
-      "bookId": 6,
+      "bookId": "6",
       "genreName": "Thriller",
       "bookTitle": "The Storm",
       "author": "Rachel Hawkins",
@@ -49,7 +49,7 @@
       "image": "Images/6.jpg"
     },
     {
-      "bookId": 7,
+      "bookId": "7",
       "genreName": "Thriller",
       "bookTitle": "The Missing Half",
       "author": "Ashley Flowers",
@@ -57,15 +57,15 @@
       "image": "Images/7.jpg"
     },
     {
-      "bookId": 8,
+      "bookId": "8",
       "genreName": "Sci-Fi",
-      "bookTitle": "Sunrise on the Reaping",
-      "author": "Suzanne Collins",
-      "publisher": "Scholastic Press",
+      "bookTitle": "",
+      "author": "",
+      "publisher": "",
       "image": "Images/8.jpg"
     },
     {
-      "bookId": 9,
+      "bookId": "9",
       "genreName": "Fantasy",
       "bookTitle": "Immortal",
       "author": "Sue Lynn Tan",
@@ -73,7 +73,7 @@
       "image": "Images/9.jpg"
     },
     {
-      "bookId": 10,
+      "bookId": "10",
       "genreName": "Fantasy",
       "bookTitle": "Katabasis",
       "author": "R.F Kuang",
@@ -81,7 +81,7 @@
       "image": "Images/10.jpg"
     },
     {
-      "bookId": 11,
+      "bookId": "11",
       "genreName": "Sci-Fi",
       "bookTitle": "The Dream Hotel",
       "author": "Laila Lalami",
@@ -89,7 +89,7 @@
       "image": "Images/11.jpg"
     },
     {
-      "bookId": 12,
+      "bookId": "12",
       "genreName": "Sci-FI",
       "bookTitle": "The Hunger Games",
       "author": "Suzanne Collins",
@@ -97,7 +97,7 @@
       "image": "Images/12.jpg"
     },
     {
-      "bookId": 13,
+      "bookId": "13",
       "genreName": "Romance",
       "bookTitle": "One Golden Summer",
       "author": "Carley Fortune",
@@ -105,7 +105,7 @@
       "image": "Images/13.jpg"
     },
     {
-      "bookId": 14,
+      "bookId": "14",
       "genreName": "Romance",
       "bookTitle": "A Forty Year Kiss",
       "author": "Nickolas Butler",
@@ -113,7 +113,7 @@
       "image": "Images/14.jpg"
     },
     {
-      "bookId": 15,
+      "bookId": "15",
       "genreName": "Romance",
       "bookTitle": "The Striker",
       "author": "Ana Huang",
@@ -121,7 +121,7 @@
       "image": "Images/15.jpg"
     },
     {
-      "bookId": 16,
+      "bookId": "16",
       "genreName": "Fantasy",
       "bookTitle": "Fourth Wing",
       "author": "Rebecca Yarros",
@@ -129,7 +129,7 @@
       "image": "Images/16.jpg"
     },
     {
-      "bookId": 17,
+      "bookId": "17",
       "genreName": "Sci-FI",
       "bookTitle": "Polybius",
       "author": "Collin Armstrong",
@@ -137,7 +137,7 @@
       "image": "Images/17.jpg"
     },
     {
-      "bookId": 18,
+      "bookId": "18",
       "genreName": "Sci-FI",
       "bookTitle": "Meet Me at Blue Hour",
       "author": "Sarah Suk",
@@ -145,7 +145,7 @@
       "image": "Images/18.jpg"
     },
     {
-      "bookId": 19,
+      "bookId": "19",
       "genreName": "Fantasy",
       "bookTitle": "The Corruption of Hollis Brown",
       "author": "K. Ancrum",
@@ -153,7 +153,7 @@
       "image": "Images/19.jpg"
     },
     {
-      "bookId": 20,
+      "bookId": "20",
       "genreName": "Fantasy",
       "bookTitle": "Advocate",
       "author": "Daniel M. Ford",
