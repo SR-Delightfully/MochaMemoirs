@@ -118,6 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ViewLibrariesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 417</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ViewLibrariesPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ViewLibrariesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>473, 353</value>
+  </data>
+  <data name="FeaturedBookPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 27</value>
+  </data>
+  <data name="FeaturedBookPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 285</value>
+  </data>
+  <data name="PreviousButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 317</value>
+  </data>
+  <data name="PreviousButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="PreviousButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 40</value>
+  </data>
+  <data name="NextButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 316</value>
+  </data>
+  <data name="NextButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="NextButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 43</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 408</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 362</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 207</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 195</value>
+  </data>
   <data name="DateLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlIAAAC+CAYAAAD+xuGjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -1144,6 +1202,12 @@
         ynCk6uB9IVD7N70n6jhlzS7Gc5N2YEL6KqQl5ooIk6gmPmoeUkWyPeU3ZUtp+kGWJlBEt/BlvOBtbOxx
         6yPcno8vsRYp3j/Hk/8PbFgFHPstOL4AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="DateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 163</value>
+  </data>
+  <data name="DateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 31</value>
   </data>
   <data name="TimeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2172,6 +2236,15 @@
         6yPcno8vsRYp3j/Hk/8PbFgFHPstOL4AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="TimeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>548, 163</value>
+  </data>
+  <data name="TimeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 31</value>
+  </data>
+  <data name="TitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 32pt</value>
+  </data>
   <data name="TitleLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlIAAAC+CAYAAAD+xuGjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -3198,6 +3271,16 @@
         ynCk6uB9IVD7N70n6jhlzS7Gc5N2YEL6KqQl5ooIk6gmPmoeUkWyPeU3ZUtp+kGWJlBEt/BlvOBtbOxx
         6yPcno8vsRYp3j/Hk/8PbFgFHPstOL4AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 57</value>
+  </data>
+  <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>678, 56</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="BannerPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5166,6 +5249,228 @@
         p/8fvogN2puJ6XQAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="BannerPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, -11</value>
+  </data>
+  <data name="BannerPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="BannerPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>678, 209</value>
+  </data>
+  <data name="HeaderGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="HeaderGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="HeaderGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="HeaderGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 199</value>
+  </data>
+  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 0</value>
+  </data>
+  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 789</value>
+  </data>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 615</value>
+  </data>
+  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="SettingsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 337</value>
+  </data>
+  <data name="SettingsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="LibraryButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 179</value>
+  </data>
+  <data name="LibraryButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="HomeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 27</value>
+  </data>
+  <data name="HomeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="LanguageBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 732</value>
+  </data>
+  <data name="LanguageBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="SideBarGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SideBarGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SideBarGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 783</value>
+  </data>
+  <data name="booksDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 185</value>
+  </data>
+  <data name="booksDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="booksDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 267</value>
+  </data>
+  <data name="DeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>467, 117</value>
+  </data>
+  <data name="DeleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DeleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 51</value>
+  </data>
+  <data name="EditButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 117</value>
+  </data>
+  <data name="EditButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="EditButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 51</value>
+  </data>
+  <data name="AddButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 117</value>
+  </data>
+  <data name="AddButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="AddButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 51</value>
+  </data>
+  <data name="genreTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 169</value>
+  </data>
+  <data name="genreTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="genreTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="genreLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 167</value>
+  </data>
+  <data name="genreLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 28</value>
+  </data>
+  <data name="bookIdTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 48</value>
+  </data>
+  <data name="bookIdTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="bookIdTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="RefreshButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 256</value>
+  </data>
+  <data name="RefreshButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="RefreshButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 31</value>
+  </data>
+  <data name="ClearButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 256</value>
+  </data>
+  <data name="ClearButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ClearButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 31</value>
+  </data>
+  <data name="bookIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 48</value>
+  </data>
+  <data name="bookIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 28</value>
+  </data>
+  <data name="publisherTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 211</value>
+  </data>
+  <data name="publisherTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="publisherTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="authorTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 125</value>
+  </data>
+  <data name="authorTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="authorTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="titleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 87</value>
+  </data>
+  <data name="titleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="titleTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="detailsPublisherLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 208</value>
+  </data>
+  <data name="detailsPublisherLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 28</value>
+  </data>
+  <data name="detailsAuthor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 129</value>
+  </data>
+  <data name="detailsAuthor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 28</value>
+  </data>
+  <data name="titleDetailsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 87</value>
+  </data>
+  <data name="titleDetailsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 28</value>
+  </data>
+  <data name="DetailsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="DetailsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 32</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 460</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 293</value>
+  </data>
+  <data name="LibraryStageTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="LibraryStageTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 73</value>
+  </data>
+  <data name="LibraryPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 0</value>
+  </data>
+  <data name="LibraryPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>683, 780</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqMAAAKjCAYAAAApnwZoAAABdGlDQ1BrQ0dDb2xvclNwYWNlRGlzcGxh
@@ -6364,5 +6669,203 @@
         FVJ3LmlPMopCOqSMOiijhBAyDphrmIUxRpPRSFfUklGvDg0so9IYQhGNyehlV5M/PlE9/MJXgzpP+uNf
         AHfVcm8ALEILAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 108</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 289</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 99</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 298</value>
+  </data>
+  <data name="DefaultPanelLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 110</value>
+  </data>
+  <data name="DefaultPanelLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 134</value>
+  </data>
+  <data name="comboBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 28</value>
+  </data>
+  <data name="MinimizedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 54</value>
+  </data>
+  <data name="MinimizedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 24</value>
+  </data>
+  <data name="StartupGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 547</value>
+  </data>
+  <data name="StartupGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 236</value>
+  </data>
+  <data name="StartupGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="StartupGroupBox.Text" xml:space="preserve">
+    <value>Startup</value>
+  </data>
+  <data name="HideTimeCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 66</value>
+  </data>
+  <data name="HideTimeCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="HideDateCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="HideDateCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 64</value>
+  </data>
+  <data name="HideDateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="HideDateCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 26</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 25</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ClockAndDateSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 420</value>
+  </data>
+  <data name="ClockAndDateSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 109</value>
+  </data>
+  <data name="ClockAndDateSettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="ClockAndDateSettingsGroupBox.Text" xml:space="preserve">
+    <value>Date &amp;&amp; Time </value>
+  </data>
+  <data name="ItalicCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ItalicCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 269</value>
+  </data>
+  <data name="ItalicCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="ItalicCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ItalicCheckBox.Text" xml:space="preserve">
+    <value> :  Italic Text</value>
+  </data>
+  <data name="BoldCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BoldCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 269</value>
+  </data>
+  <data name="BoldCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="BoldCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BoldCheckBox.Text" xml:space="preserve">
+    <value>:  Bold Text</value>
+  </data>
+  <data name="ThemeModeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 39</value>
+  </data>
+  <data name="ThemeModeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 20</value>
+  </data>
+  <data name="ThemeComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 67</value>
+  </data>
+  <data name="ThemeComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ThemeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 28</value>
+  </data>
+  <data name="FontFamilyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 180</value>
+  </data>
+  <data name="FontFamilyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 20</value>
+  </data>
+  <data name="FontFamilyComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 211</value>
+  </data>
+  <data name="FontFamilyComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="FontFamilyComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 28</value>
+  </data>
+  <data name="FontFamilyComboBox.Text" xml:space="preserve">
+    <value> Default ( Segoe UI )</value>
+  </data>
+  <data name="AppearanceGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 417</value>
+  </data>
+  <data name="AppearanceGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 366</value>
+  </data>
+  <data name="AppearanceGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="AppearanceGroupBox.Text" xml:space="preserve">
+    <value>Appearance:</value>
+  </data>
+  <data name="SettingsPanelTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 9</value>
+  </data>
+  <data name="SettingsPanelTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>673, 73</value>
+  </data>
+  <data name="SettingsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 0</value>
+  </data>
+  <data name="SettingsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 789</value>
+  </data>
+  <data name="SettingsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>832, 783</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
   </data>
 </root>

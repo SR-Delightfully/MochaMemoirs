@@ -117,19 +117,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ViewLibrariesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 417</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ViewLibrariesPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ViewLibrariesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>473, 353</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 407</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="FeaturedBookGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 363</value>
+  </data>
   <data name="FeaturedBookGroupBox.Text" xml:space="preserve">
     <value>Libros Destacados</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 207</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="PersonalLibraryGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 195</value>
   </data>
   <data name="PersonalLibraryGroupBox.Text" xml:space="preserve">
     <value>Biblioteca Personal</value>
   </data>
+  <data name="HeaderGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="HeaderGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="HeaderGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="HeaderGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>679, 199</value>
+  </data>
+  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 0</value>
+  </data>
+  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 789</value>
+  </data>
+  <data name="FeaturedBookPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 27</value>
+  </data>
+  <data name="FeaturedBookPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 285</value>
+  </data>
+  <data name="PreviousButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 317</value>
+  </data>
+  <data name="PreviousButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="PreviousButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 40</value>
+  </data>
   <data name="PreviousButton.Text" xml:space="preserve">
     <value>&amp;Previo</value>
+  </data>
+  <data name="NextButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 316</value>
+  </data>
+  <data name="NextButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="NextButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 43</value>
   </data>
   <data name="NextButton.Text" xml:space="preserve">
     <value>P&amp;róximo</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DateLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlIAAAC+CAYAAAD+xuGjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -1156,6 +1232,12 @@
         ynCk6uB9IVD7N70n6jhlzS7Gc5N2YEL6KqQl5ooIk6gmPmoeUkWyPeU3ZUtp+kGWJlBEt/BlvOBtbOxx
         6yPcno8vsRYp3j/Hk/8PbFgFHPstOL4AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="DateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 163</value>
+  </data>
+  <data name="DateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 31</value>
   </data>
   <data name="TimeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2184,6 +2266,12 @@
         6yPcno8vsRYp3j/Hk/8PbFgFHPstOL4AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="TimeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>514, 163</value>
+  </data>
+  <data name="TimeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 31</value>
+  </data>
   <data name="TitleLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlIAAAC+CAYAAAD+xuGjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -3210,6 +3298,12 @@
         ynCk6uB9IVD7N70n6jhlzS7Gc5N2YEL6KqQl5ooIk6gmPmoeUkWyPeU3ZUtp+kGWJlBEt/BlvOBtbOxx
         6yPcno8vsRYp3j/Hk/8PbFgFHPstOL4AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 69</value>
+  </data>
+  <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>678, 53</value>
   </data>
   <data name="BannerPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5178,6 +5272,48 @@
         p/8fvogN2puJ6XQAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="BannerPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, -11</value>
+  </data>
+  <data name="BannerPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="BannerPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>678, 209</value>
+  </data>
+  <data name="SideBarGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SideBarGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="SideBarGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 783</value>
+  </data>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 615</value>
+  </data>
+  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="SettingsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 337</value>
+  </data>
+  <data name="SettingsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="LibraryButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 179</value>
+  </data>
+  <data name="LibraryButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
+  <data name="HomeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 27</value>
+  </data>
+  <data name="HomeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 73</value>
+  </data>
   <data name="LanguageBox.Items" xml:space="preserve">
     <value>Inglés</value>
   </data>
@@ -5187,62 +5323,215 @@
   <data name="LanguageBox.Items2" xml:space="preserve">
     <value>Espagnol</value>
   </data>
+  <data name="LanguageBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 732</value>
+  </data>
+  <data name="LanguageBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
   <data name="LanguageBox.Text" xml:space="preserve">
     <value>Idiomas</value>
+  </data>
+  <data name="LibraryPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 0</value>
+  </data>
+  <data name="LibraryPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>683, 780</value>
+  </data>
+  <data name="booksDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 185</value>
+  </data>
+  <data name="booksDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="booksDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 267</value>
+  </data>
+  <data name="DeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>467, 117</value>
+  </data>
+  <data name="DeleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DeleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 51</value>
   </data>
   <data name="DeleteButton.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="EditButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 117</value>
+  </data>
+  <data name="EditButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="EditButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 51</value>
+  </data>
   <data name="EditButton.Text" xml:space="preserve">
     <value>Editar</value>
+  </data>
+  <data name="AddButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 117</value>
+  </data>
+  <data name="AddButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="AddButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 51</value>
   </data>
   <data name="AddButton.Text" xml:space="preserve">
     <value>Agregar</value>
   </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 460</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 293</value>
+  </data>
+  <data name="genreTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 169</value>
+  </data>
+  <data name="genreTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="genreTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="genreLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 167</value>
+  </data>
   <data name="genreLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 21</value>
+    <value>80, 28</value>
   </data>
   <data name="genreLabel.Text" xml:space="preserve">
     <value>Género:</value>
   </data>
+  <data name="bookIdTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 48</value>
+  </data>
+  <data name="bookIdTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="bookIdTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="RefreshButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 256</value>
+  </data>
+  <data name="RefreshButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="RefreshButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 31</value>
+  </data>
   <data name="RefreshButton.Text" xml:space="preserve">
     <value>Actualizar</value>
+  </data>
+  <data name="ClearButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 256</value>
+  </data>
+  <data name="ClearButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ClearButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 31</value>
   </data>
   <data name="ClearButton.Text" xml:space="preserve">
     <value>Desalojar</value>
   </data>
+  <data name="bookIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 48</value>
+  </data>
+  <data name="bookIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 28</value>
+  </data>
+  <data name="publisherTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 211</value>
+  </data>
+  <data name="publisherTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="publisherTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="authorTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 125</value>
+  </data>
+  <data name="authorTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="authorTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
+  <data name="titleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 87</value>
+  </data>
+  <data name="titleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="titleTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 27</value>
+  </data>
   <data name="detailsPublisherLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 156</value>
+    <value>33, 208</value>
   </data>
   <data name="detailsPublisherLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 21</value>
+    <value>69, 28</value>
   </data>
   <data name="detailsPublisherLabel.Text" xml:space="preserve">
     <value>Editor:</value>
   </data>
   <data name="detailsAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 97</value>
+    <value>34, 129</value>
   </data>
   <data name="detailsAuthor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 21</value>
+    <value>66, 28</value>
   </data>
   <data name="detailsAuthor.Text" xml:space="preserve">
     <value>Autor:</value>
   </data>
+  <data name="titleDetailsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 87</value>
+  </data>
   <data name="titleDetailsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 21</value>
+    <value>66, 28</value>
   </data>
   <data name="titleDetailsLabel.Text" xml:space="preserve">
     <value>Título:</value>
   </data>
+  <data name="DetailsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
   <data name="DetailsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 25</value>
+    <value>199, 32</value>
   </data>
   <data name="DetailsLabel.Text" xml:space="preserve">
     <value>Detalles del libro:</value>
   </data>
+  <data name="LibraryStageTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="LibraryStageTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 73</value>
+  </data>
   <data name="LibraryStageTitleLabel.Text" xml:space="preserve">
     <value>Biblioteca</value>
+  </data>
+  <data name="SettingsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 0</value>
+  </data>
+  <data name="SettingsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 783</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 117</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>368, 259</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Información del usuario</value>
@@ -6446,8 +6735,26 @@
         AHfVcm8ALEILAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 128</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 248</value>
+  </data>
+  <data name="StartupGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 640</value>
+  </data>
+  <data name="StartupGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 120</value>
+  </data>
+  <data name="StartupGroupBox.Text" xml:space="preserve">
+    <value>Comportamiento de inicio</value>
+  </data>
+  <data name="DefaultPanelLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
   <data name="DefaultPanelLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 15</value>
+    <value>126, 20</value>
   </data>
   <data name="DefaultPanelLabel.Text" xml:space="preserve">
     <value>Panel por defecto</value>
@@ -6461,77 +6768,164 @@
   <data name="comboBox1.Items2" xml:space="preserve">
     <value>Panel de configuración</value>
   </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 81</value>
+  </data>
+  <data name="comboBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 28</value>
+  </data>
   <data name="comboBox1.Text" xml:space="preserve">
     <value>Por defecto (Panel de inicio)</value>
   </data>
+  <data name="MinimizedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 23</value>
+  </data>
   <data name="MinimizedCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 19</value>
+    <value>175, 24</value>
   </data>
   <data name="MinimizedCheckBox.Text" xml:space="preserve">
     <value>Empezar minimizado:</value>
   </data>
-  <data name="StartupGroupBox.Text" xml:space="preserve">
-    <value>Comportamiento de inicio</value>
+  <data name="AccessabilityGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 405</value>
+  </data>
+  <data name="AccessabilityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 135</value>
   </data>
   <data name="AccessabilityGroupBox.Text" xml:space="preserve">
     <value>Accesibilidad</value>
   </data>
-  <data name="HideTimeCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 19</value>
+  <data name="HighContrastCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 27</value>
   </data>
-  <data name="HideTimeCheckBox.Text" xml:space="preserve">
-    <value>Ocultar tiempo</value>
+  <data name="HighContrastCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 24</value>
   </data>
-  <data name="HideDateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
+  <data name="HighContrastCheckBox.Text" xml:space="preserve">
+    <value>Modo de alto contraste</value>
   </data>
-  <data name="HideDateCheckBox.Text" xml:space="preserve">
-    <value>Ocultar fecha</value>
+  <data name="ClockAndDateSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 547</value>
   </data>
-  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 19</value>
-  </data>
-  <data name="radioButton2.Text" xml:space="preserve">
-    <value>24-horas</value>
-  </data>
-  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 19</value>
-  </data>
-  <data name="radioButton1.Text" xml:space="preserve">
-    <value>12-horas</value>
+  <data name="ClockAndDateSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 87</value>
   </data>
   <data name="ClockAndDateSettingsGroupBox.Text" xml:space="preserve">
     <value>Reloj y fecha</value>
   </data>
+  <data name="HideTimeCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 53</value>
+  </data>
+  <data name="HideTimeCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 24</value>
+  </data>
+  <data name="HideTimeCheckBox.Text" xml:space="preserve">
+    <value>Ocultar tiempo</value>
+  </data>
+  <data name="HideDateCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 57</value>
+  </data>
+  <data name="HideDateCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="HideDateCheckBox.Text" xml:space="preserve">
+    <value>Ocultar fecha</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 23</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 24</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>24-horas</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 23</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 24</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>12-horas</value>
+  </data>
+  <data name="AppearanceGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 405</value>
+  </data>
+  <data name="AppearanceGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>368, 313</value>
+  </data>
+  <data name="AppearanceGroupBox.Text" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="BackgroundPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 197</value>
+  </data>
+  <data name="BackgroundPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="ItalicCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 283</value>
+  </data>
   <data name="ItalicCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 19</value>
+    <value>136, 24</value>
   </data>
   <data name="ItalicCheckBox.Text" xml:space="preserve">
     <value>Texto en cursiva</value>
   </data>
+  <data name="AccentPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 121</value>
+  </data>
+  <data name="AccentPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 196</value>
+  </data>
+  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 27</value>
+  </data>
+  <data name="BoldCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 253</value>
+  </data>
   <data name="BoldCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 19</value>
+    <value>138, 24</value>
   </data>
   <data name="BoldCheckBox.Text" xml:space="preserve">
     <value>Texto en negrita</value>
   </data>
+  <data name="FontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 173</value>
+  </data>
   <data name="FontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 15</value>
+    <value>131, 20</value>
   </data>
   <data name="FontSizeLabel.Text" xml:space="preserve">
     <value>Tamaño de fuente:</value>
   </data>
+  <data name="AccentPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 47</value>
+  </data>
+  <data name="AccentPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="ThemeModeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 25</value>
+  </data>
   <data name="ThemeModeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 15</value>
+    <value>107, 20</value>
   </data>
   <data name="ThemeModeLabel.Text" xml:space="preserve">
     <value>Tema de color:</value>
   </data>
   <data name="BackLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 153</value>
+    <value>219, 204</value>
   </data>
   <data name="BackLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 15</value>
+    <value>113, 20</value>
   </data>
   <data name="BackLabel.Text" xml:space="preserve">
     <value>Color de fondo:</value>
@@ -6542,40 +6936,73 @@
   <data name="ThemeComboBox.Items1" xml:space="preserve">
     <value>Oscuro</value>
   </data>
+  <data name="ThemeComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
+  </data>
+  <data name="ThemeComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ThemeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 28</value>
+  </data>
   <data name="ThemeComboBox.Text" xml:space="preserve">
     <value>Por defecto (modo de luz)</value>
   </data>
+  <data name="FontFamilyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 95</value>
+  </data>
   <data name="FontFamilyLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 15</value>
+    <value>132, 20</value>
   </data>
   <data name="FontFamilyLabel.Text" xml:space="preserve">
     <value>Familia de fuentes:</value>
   </data>
+  <data name="AccentLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 128</value>
+  </data>
   <data name="AccentLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 15</value>
+    <value>139, 20</value>
   </data>
   <data name="AccentLabel2.Text" xml:space="preserve">
     <value>Color de acento #2:</value>
   </data>
+  <data name="FontFamilyComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 119</value>
+  </data>
+  <data name="FontFamilyComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="FontFamilyComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 28</value>
+  </data>
   <data name="FontFamilyComboBox.Text" xml:space="preserve">
     <value>Por defecto ()</value>
   </data>
+  <data name="AccentLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 53</value>
+  </data>
   <data name="AccentLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 15</value>
+    <value>139, 20</value>
   </data>
   <data name="AccentLabel1.Text" xml:space="preserve">
     <value>Color de acento #1:</value>
   </data>
-  <data name="AppearanceGroupBox.Text" xml:space="preserve">
-    <value>Apariencia</value>
+  <data name="SettingsPanelTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 24</value>
+  </data>
+  <data name="SettingsPanelTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>659, 73</value>
   </data>
   <data name="SettingsPanelTitleLabel.Text" xml:space="preserve">
     <value>Menú de Configuración</value>
   </data>
-  <data name="HighContrastCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 19</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
   </data>
-  <data name="HighContrastCheckBox.Text" xml:space="preserve">
-    <value>Modo de alto contraste</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>832, 783</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 4, 2, 4</value>
   </data>
 </root>

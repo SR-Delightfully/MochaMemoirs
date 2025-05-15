@@ -15,6 +15,12 @@
           "MochaMemoirs.dll": {}
         },
         "resources": {
+          "en-CA/MochaMemoirs.resources.dll": {
+            "locale": "en-CA"
+          },
+          "es/MochaMemoirs.resources.dll": {
+            "locale": "es"
+          },
           "fr-CA/MochaMemoirs.resources.dll": {
             "locale": "fr-CA"
           }

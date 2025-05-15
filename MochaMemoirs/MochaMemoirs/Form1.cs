@@ -17,12 +17,6 @@ using MochaMemoirs.Model;
 
 namespace MochaMemoirs
 {
-    public enum AppTheme
-    {
-        Light,
-        Dark
-    }
-
     public partial class MochaMemoirsForm : Form
     {
         private List<Book> libraryBooks;
@@ -30,7 +24,16 @@ namespace MochaMemoirs
         private Timer currentDateTimer;
         private string currentDate = "";
         private string previousDate = "";
+        private string timeFormat = "hh:mm:ss tt";
 
+        private Dictionary<string, Theme> themes = new Dictionary<string, Theme>()
+        {
+            { "Light", new Theme("Light", Color.MistyRose, Color.Indigo, Color.Plum, Color.Orchid) },
+            { "Dark", new Theme("Dark", Color.Black, Color.Gainsboro, Color.DarkBlue, Color.MidnightBlue) },
+            { "Sepia", new Theme("Sepia", Color.BurlyWood, Color.Maroon, Color.Peru, Color.Sienna) },
+            { "LightSolarized", new Theme("LightSolarized", Color.Beige, Color.DimGray, Color.Khaki, Color.DarkKhaki) },
+            { "DarkSolarized", new Theme("DarkSolarized", Color.DarkSlateGray, Color.Azure, Color.Teal, Color.CadetBlue) }
+        };
         public MochaMemoirsForm()
         {
             InitializeComponent();
@@ -41,73 +44,227 @@ namespace MochaMemoirs
             InitDateLabel();
             initTimeLabel();
             TransparentLabels(DateLabel, TimeLabel);
-            ApplyTheme(false);
+
+            ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged;
         }
 
         private void MochaMemoirsForm_Load(object sender, EventArgs e)
         {
             LoadBooks();
-            ApplyTheme(false);
-            ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged;
-        }
 
-        private void ApplyTheme(bool darkMode)
-        {
-            Color backgroundColor = darkMode ? Color.FromArgb(30, 30, 30) : Color.WhiteSmoke;
-            Color textColor = darkMode ? Color.White : Color.Black;
-            ViewLibrariesPanel.BackColor = darkMode ? Color.FromArgb(30, 30, 30) : Color.WhiteSmoke;
+            string selectedTheme = Properties.Settings.Default.AppTheme;
 
-            this.BackColor = backgroundColor;
-
-            foreach (Control control in this.Controls)
+            if (!string.IsNullOrEmpty(selectedTheme) && themes.ContainsKey(selectedTheme))
             {
-                ApplyThemeToControl(control, backgroundColor, textColor, darkMode);
+                ThemeComboBox.SelectedItem = selectedTheme;
+                ApplyTheme(themes[selectedTheme]);
             }
-        }
-
-        private void ApplyThemeToControl(Control control, Color backColor, Color foreColor, bool darkMode)
-        {
-            if (control is Button btn)
-            {
-                btn.BackColor = darkMode ? Color.MediumPurple : Color.PeachPuff;
-                btn.ForeColor = Color.MidnightBlue;
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.BorderSize = 0;
-            }
-            else if (control is System.Windows.Forms.Label lbl)
-            {
-                if (lbl.Name == "TitleLabel" || lbl.Name == "DateLabel" || lbl.Name == "TimeLabel")
-                {
-                    lbl.ForeColor = Color.White;
-                }
-                else
-                {
-                    lbl.ForeColor = foreColor;
-                }
-                lbl.BackColor = Color.Transparent;
-            }
-
             else
             {
-                control.BackColor = backColor;
-                control.ForeColor = foreColor;
+                ThemeComboBox.SelectedItem = "Light";
+                ApplyTheme(themes["Light"]);
+            }
+
+            MinimizedCheckBox.Checked = Properties.Settings.Default.StartMinimized;
+            comboBox1.SelectedItem = Properties.Settings.Default.DefaultPanel ?? "HomePanel";
+
+            if (MinimizedCheckBox.Checked)
+                this.WindowState = FormWindowState.Minimized;
+
+            ShowPanel(Properties.Settings.Default.DefaultPanel);
+            InitSettingsEvents();
+        }
+
+        private void ShowPanel(string panelName)
+        {
+            HomePanel.Visible = (panelName == "HomePanel");
+            LibraryPanel.Visible = (panelName == "LibraryPanel");
+            SettingsPanel.Visible = (panelName == "SettingsPanel");
+        }
+
+        private void InitSettingsEvents()
+        {
+            FontFamilyComboBox.SelectedIndexChanged += FontSettingsChanged;
+            BoldCheckBox.CheckedChanged += FontSettingsChanged;
+            ItalicCheckBox.CheckedChanged += FontSettingsChanged;
+
+            HideDateCheckBox.CheckedChanged += DateTimeVisibilityChanged;
+            HideTimeCheckBox.CheckedChanged += DateTimeVisibilityChanged;
+
+            comboBox1.SelectedIndexChanged += StartupBehaviorChanged;
+            MinimizedCheckBox.CheckedChanged += StartupBehaviorChanged;
+
+            radioButton1.CheckedChanged += TimeFormatChanged;
+            radioButton2.CheckedChanged += TimeFormatChanged;
+        }
+        private void TimeFormatChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+                timeFormat = "hh:mm:ss tt";
+            else if (radioButton2.Checked)
+                timeFormat = "HH:mm:ss";
+
+            UpdateTimeAndDateLabels();
+        }
+        private void FontSettingsChanged(object sender, EventArgs e)
+        {
+            string fontFamily = FontFamilyComboBox.SelectedItem?.ToString() ?? "Segoe UI";
+            FontStyle style = FontStyle.Regular;
+
+            if (BoldCheckBox.Checked) style |= FontStyle.Bold;
+            if (ItalicCheckBox.Checked) style |= FontStyle.Italic;
+
+            Font newFont = new Font(fontFamily, 10, style);
+            ApplyFontToControls(this.Controls, newFont);
+        }
+        private void FontFamilyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedFont = FontFamilyComboBox.SelectedItem.ToString();
+            Font newFont = new Font(selectedFont, 10);
+        }
+        private void ApplyFontToControls(Control.ControlCollection controls, Font font)
+        {
+            foreach (Control control in controls)
+            {
+                control.Font = new Font(font.FontFamily, control.Font.Size, font.Style);
+                if (control.HasChildren)
+                    ApplyFontToControls(control.Controls, font);
+            }
+        }
+        private void ApplyThemeToControl(Control control, Theme theme)
+        {
+            control.BackColor = theme.BackgroundColor;
+            control.ForeColor = theme.ForegroundColor;
+
+            switch (control)
+            {
+                case Button btn:
+                    btn.BackColor = theme.Accent1;
+                    btn.ForeColor = theme.ForegroundColor;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.FlatAppearance.BorderColor = theme.Accent1;
+                    btn.FlatAppearance.MouseOverBackColor = theme.Accent2;
+                    btn.FlatAppearance.MouseDownBackColor = theme.Accent2;
+
+                    btn.MouseEnter -= Button_MouseEnter;
+                    btn.MouseLeave -= Button_MouseLeave;
+                    btn.MouseEnter += Button_MouseEnter;
+                    btn.MouseLeave += Button_MouseLeave;
+                    break;
+
+                case TextBox tb:
+                    tb.BackColor = theme.BackgroundColor;
+                    tb.ForeColor = theme.ForegroundColor;
+                    tb.BorderStyle = BorderStyle.FixedSingle;
+                    break;
+
+                case ComboBox cb:
+                    cb.BackColor = theme.BackgroundColor;
+                    cb.ForeColor = theme.ForegroundColor;
+                    cb.FlatStyle = FlatStyle.Flat;
+                    break;
+
+                case System.Windows.Forms.Label lbl:
+                    lbl.BackColor = Color.Transparent;
+                    lbl.ForeColor = theme.ForegroundColor;
+                    break;
+
+                case GroupBox gb:
+                    gb.BackColor = theme.BackgroundColor;
+                    gb.ForeColor = theme.ForegroundColor;
+                    break;
+
+                case Panel pnl:
+                    pnl.BackColor = theme.BackgroundColor;
+                    break;
+
+                case DataGridView dgv:
+                    dgv.BackgroundColor = theme.BackgroundColor;
+                    dgv.ForeColor = theme.ForegroundColor;
+                    dgv.GridColor = theme.Accent1;
+                    dgv.DefaultCellStyle.BackColor = theme.BackgroundColor;
+                    dgv.DefaultCellStyle.ForeColor = theme.ForegroundColor;
+                    dgv.DefaultCellStyle.SelectionBackColor = theme.Accent2;
+                    dgv.DefaultCellStyle.SelectionForeColor = theme.ForegroundColor;
+                    dgv.EnableHeadersVisualStyles = false;
+                    dgv.ColumnHeadersDefaultCellStyle.BackColor = theme.Accent1;
+                    dgv.ColumnHeadersDefaultCellStyle.ForeColor = theme.ForegroundColor;
+                    break;
             }
 
             foreach (Control child in control.Controls)
             {
-                ApplyThemeToControl(child, backColor, foreColor, darkMode);
+                ApplyThemeToControl(child, theme);
             }
         }
 
 
-        private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void ApplyTheme(Theme theme)
         {
-            if (ThemeComboBox.SelectedItem?.ToString() == "Dark")
-                ApplyTheme(true);
-            else
-                ApplyTheme(false);
+            this.BackColor = theme.BackgroundColor;
+
+            ViewLibrariesPanel.BackColor = theme.BackgroundColor;
+            LibraryPanel.BackColor = theme.BackgroundColor;
+            SettingsPanel.BackColor = theme.BackgroundColor;
+
+            foreach (Control control in this.Controls)
+            {
+                ApplyThemeToControl(control, theme);
+            }
+            this.TimeLabel.ForeColor = Color.White;
+            this.DateLabel.ForeColor = Color.White;
+            this.TitleLabel.ForeColor = Color.White;
         }
 
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is Button btn)
+            {
+                var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
+                btn.BackColor = selectedTheme.Accent2;
+            }
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is Button btn)
+            {
+                var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
+                btn.BackColor = selectedTheme.Accent1;
+            }
+        }
+
+        private void ClockFormatChanged(object sender, EventArgs e)
+        {
+            UpdateTimeAndDateLabels();
+        }
+
+        private void DateTimeVisibilityChanged(object sender, EventArgs e)
+        {
+            TimeLabel.Visible = !HideTimeCheckBox.Checked;
+            DateLabel.Visible = !HideDateCheckBox.Checked;
+        }
+
+        private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = ThemeComboBox.SelectedItem?.ToString();
+
+            if (themes.TryGetValue(selected, out var selectedTheme))
+            {
+                ApplyTheme(selectedTheme);
+                Properties.Settings.Default.AppTheme = selected;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+
+        private void StartupBehaviorChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.StartMinimized = MinimizedCheckBox.Checked;
+            Properties.Settings.Default.DefaultPanel = comboBox1.SelectedItem?.ToString() ?? "HomePanel";
+            Properties.Settings.Default.Save();
+        }
 
         public void initTimeLabel()
         {
@@ -125,26 +282,26 @@ namespace MochaMemoirs
         private void UpdateTimeAndDateLabels()
         {
             DateTime current = DateTime.Now;
-            TimeLabel.Text = current.ToString("hh:mm:ss tt");
+            TimeLabel.Text = current.ToString(timeFormat);
 
             string currentDate = current.ToString("dddd, MMMM d");
-            string suffix = "";
+            string suffix = GetDaySuffix(current.Day);
 
-            if (currentDate != previousDate)
-            {
-                previousDate = currentDate;
-                switch (current.Day)
-                {
-                    case 1: suffix = "st"; break;
-                    case 2: suffix = "nd"; break;
-                    case 3: suffix = "rd"; break;
-                    default: suffix = "th"; break;
-                }
-            }
             DateLabel.Text = $"{current:dddd}, {current:MMMM} {current.Day}{suffix}";
+        }
 
+        private string GetDaySuffix(int day)
+        {
+            if (day >= 11 && day <= 13)
+                return "th";
 
-
+            switch (day % 10)
+            {
+                case 1: return "st";
+                case 2: return "nd";
+                case 3: return "rd";
+                default: return "th";
+            }
         }
 
         private void LoadBooks()
@@ -314,7 +471,6 @@ namespace MochaMemoirs
             DisplayBook(currentBookIndex);
         }
 
-        // read
         private List<Book> LoadAllBooks()
         {
             string jsonFilePath = "books.json";
@@ -332,7 +488,6 @@ namespace MochaMemoirs
             }
         }
 
-        // write
         private void SaveAllBooks()
         {
             var jsonLibrary = new Library { library = libraryBooks };
@@ -341,7 +496,6 @@ namespace MochaMemoirs
         }
 
 
-        // create
         public void AddBook(Book newBook)
         {
             var books = LoadAllBooks();
@@ -349,7 +503,6 @@ namespace MochaMemoirs
             SaveAllBooks();
         }
 
-        // update
         public void UpdateBook(Book updatedBook)
         {
             var books = LoadAllBooks();
@@ -361,7 +514,6 @@ namespace MochaMemoirs
             }
         }
 
-        // delete
         public void DeleteBook(string bookId)
         {
             var books = LoadAllBooks();
@@ -444,11 +596,6 @@ namespace MochaMemoirs
             HomePanel.Visible = false;
             LibraryPanel.Visible = false;
             SettingsPanel.Visible = true;
-        }
-
-        private void DateLabel_Click(object sender, EventArgs e)
-        {
-
         }
         private void AddButton_Click(object sender, EventArgs e)
         {
@@ -571,46 +718,6 @@ namespace MochaMemoirs
             genreTextBox.Text = "";
         }
 
-        private void ThemeComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AccentLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SettingsPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MinimizedCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ClockAndDateSettingsGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void LanguageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var changeLanguage = new ChangeLanguage();
@@ -631,8 +738,18 @@ namespace MochaMemoirs
                     Application.Restart();
                     break;
 
-                
+
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

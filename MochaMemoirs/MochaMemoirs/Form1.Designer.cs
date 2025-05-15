@@ -1,4 +1,6 @@
-﻿namespace MochaMemoirs
+﻿using System.Drawing;
+
+namespace MochaMemoirs
 {
     partial class MochaMemoirsForm
     {
@@ -68,34 +70,24 @@
             DetailsLabel = new System.Windows.Forms.Label();
             LibraryStageTitleLabel = new System.Windows.Forms.Label();
             SettingsPanel = new System.Windows.Forms.Panel();
-            groupBox1 = new System.Windows.Forms.GroupBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
+            groupBox1 = new System.Windows.Forms.GroupBox();
             StartupGroupBox = new System.Windows.Forms.GroupBox();
             DefaultPanelLabel = new System.Windows.Forms.Label();
             comboBox1 = new System.Windows.Forms.ComboBox();
             MinimizedCheckBox = new System.Windows.Forms.CheckBox();
-            AccessabilityGroupBox = new System.Windows.Forms.GroupBox();
-            HighContrastCheckBox = new System.Windows.Forms.CheckBox();
             ClockAndDateSettingsGroupBox = new System.Windows.Forms.GroupBox();
             HideTimeCheckBox = new System.Windows.Forms.CheckBox();
             HideDateCheckBox = new System.Windows.Forms.CheckBox();
             radioButton2 = new System.Windows.Forms.RadioButton();
             radioButton1 = new System.Windows.Forms.RadioButton();
             AppearanceGroupBox = new System.Windows.Forms.GroupBox();
-            BackgroundPanel = new System.Windows.Forms.Panel();
             ItalicCheckBox = new System.Windows.Forms.CheckBox();
-            AccentPanel2 = new System.Windows.Forms.Panel();
-            numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             BoldCheckBox = new System.Windows.Forms.CheckBox();
-            FontSizeLabel = new System.Windows.Forms.Label();
-            AccentPanel1 = new System.Windows.Forms.Panel();
             ThemeModeLabel = new System.Windows.Forms.Label();
-            BackLabel = new System.Windows.Forms.Label();
             ThemeComboBox = new System.Windows.Forms.ComboBox();
             FontFamilyLabel = new System.Windows.Forms.Label();
-            AccentLabel2 = new System.Windows.Forms.Label();
             FontFamilyComboBox = new System.Windows.Forms.ComboBox();
-            AccentLabel1 = new System.Windows.Forms.Label();
             SettingsPanelTitleLabel = new System.Windows.Forms.Label();
             viewLibrariesGroupBox = new System.Windows.Forms.GroupBox();
             HomePanel.SuspendLayout();
@@ -110,10 +102,8 @@
             SettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             StartupGroupBox.SuspendLayout();
-            AccessabilityGroupBox.SuspendLayout();
             ClockAndDateSettingsGroupBox.SuspendLayout();
             AppearanceGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // HomePanel
@@ -168,7 +158,7 @@
             // HeaderGroupBox
             // 
             resources.ApplyResources(HeaderGroupBox, "HeaderGroupBox");
-            HeaderGroupBox.BackColor = System.Drawing.Color.Transparent;
+            HeaderGroupBox.BackColor = Color.Transparent;
             HeaderGroupBox.Controls.Add(DateLabel);
             HeaderGroupBox.Controls.Add(TimeLabel);
             HeaderGroupBox.Controls.Add(TitleLabel);
@@ -179,26 +169,25 @@
             // DateLabel
             // 
             resources.ApplyResources(DateLabel, "DateLabel");
-            DateLabel.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            DateLabel.BackColor = Color.FromArgb(0, 0, 64);
             DateLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            DateLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            DateLabel.ForeColor = SystemColors.HighlightText;
             DateLabel.Name = "DateLabel";
-            DateLabel.Click += DateLabel_Click;
             // 
             // TimeLabel
             // 
             resources.ApplyResources(TimeLabel, "TimeLabel");
-            TimeLabel.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            TimeLabel.BackColor = Color.FromArgb(0, 0, 64);
             TimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            TimeLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            TimeLabel.ForeColor = SystemColors.HighlightText;
             TimeLabel.Name = "TimeLabel";
             // 
             // TitleLabel
             // 
             resources.ApplyResources(TitleLabel, "TitleLabel");
-            TitleLabel.BackColor = System.Drawing.Color.Transparent;
+            TitleLabel.BackColor = Color.Transparent;
             TitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            TitleLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            TitleLabel.ForeColor = SystemColors.HighlightText;
             TitleLabel.Name = "TitleLabel";
             TitleLabel.UseCompatibleTextRendering = true;
             // 
@@ -222,8 +211,8 @@
             // exitButton
             // 
             resources.ApplyResources(exitButton, "exitButton");
-            exitButton.BackColor = System.Drawing.Color.PeachPuff;
-            exitButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            exitButton.BackColor = Color.PeachPuff;
+            exitButton.ForeColor = Color.MidnightBlue;
             exitButton.Name = "exitButton";
             exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += exitButton_Click;
@@ -231,8 +220,8 @@
             // SettingsButton
             // 
             resources.ApplyResources(SettingsButton, "SettingsButton");
-            SettingsButton.BackColor = System.Drawing.Color.PeachPuff;
-            SettingsButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            SettingsButton.BackColor = Color.PeachPuff;
+            SettingsButton.ForeColor = Color.MidnightBlue;
             SettingsButton.Name = "SettingsButton";
             SettingsButton.UseVisualStyleBackColor = false;
             SettingsButton.Click += SettingsButton_Click;
@@ -240,8 +229,8 @@
             // LibraryButton
             // 
             resources.ApplyResources(LibraryButton, "LibraryButton");
-            LibraryButton.BackColor = System.Drawing.Color.PeachPuff;
-            LibraryButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            LibraryButton.BackColor = Color.PeachPuff;
+            LibraryButton.ForeColor = Color.MidnightBlue;
             LibraryButton.Name = "LibraryButton";
             LibraryButton.UseVisualStyleBackColor = false;
             LibraryButton.Click += LibraryButton_Click;
@@ -249,8 +238,8 @@
             // HomeButton
             // 
             resources.ApplyResources(HomeButton, "HomeButton");
-            HomeButton.BackColor = System.Drawing.Color.PeachPuff;
-            HomeButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            HomeButton.BackColor = Color.PeachPuff;
+            HomeButton.ForeColor = Color.MidnightBlue;
             HomeButton.Name = "HomeButton";
             HomeButton.UseVisualStyleBackColor = false;
             HomeButton.Click += HomeButton_Click;
@@ -397,27 +386,26 @@
             // SettingsPanel
             // 
             resources.ApplyResources(SettingsPanel, "SettingsPanel");
-            SettingsPanel.Controls.Add(groupBox1);
             SettingsPanel.Controls.Add(pictureBox1);
+            SettingsPanel.Controls.Add(groupBox1);
             SettingsPanel.Controls.Add(StartupGroupBox);
-            SettingsPanel.Controls.Add(AccessabilityGroupBox);
             SettingsPanel.Controls.Add(ClockAndDateSettingsGroupBox);
             SettingsPanel.Controls.Add(AppearanceGroupBox);
             SettingsPanel.Controls.Add(SettingsPanelTitleLabel);
             SettingsPanel.Name = "SettingsPanel";
-            SettingsPanel.Paint += SettingsPanel_Paint;
-            // 
-            // groupBox1
-            // 
-            resources.ApplyResources(groupBox1, "groupBox1");
-            groupBox1.Name = "groupBox1";
-            groupBox1.TabStop = false;
             // 
             // pictureBox1
             // 
             resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // groupBox1
+            // 
+            resources.ApplyResources(groupBox1, "groupBox1");
+            groupBox1.Name = "groupBox1";
+            groupBox1.TabStop = false;
             // 
             // StartupGroupBox
             // 
@@ -445,20 +433,6 @@
             resources.ApplyResources(MinimizedCheckBox, "MinimizedCheckBox");
             MinimizedCheckBox.Name = "MinimizedCheckBox";
             MinimizedCheckBox.UseVisualStyleBackColor = true;
-            MinimizedCheckBox.CheckedChanged += MinimizedCheckBox_CheckedChanged;
-            // 
-            // AccessabilityGroupBox
-            // 
-            resources.ApplyResources(AccessabilityGroupBox, "AccessabilityGroupBox");
-            AccessabilityGroupBox.Controls.Add(HighContrastCheckBox);
-            AccessabilityGroupBox.Name = "AccessabilityGroupBox";
-            AccessabilityGroupBox.TabStop = false;
-            // 
-            // HighContrastCheckBox
-            // 
-            resources.ApplyResources(HighContrastCheckBox, "HighContrastCheckBox");
-            HighContrastCheckBox.Name = "HighContrastCheckBox";
-            HighContrastCheckBox.UseVisualStyleBackColor = true;
             // 
             // ClockAndDateSettingsGroupBox
             // 
@@ -469,7 +443,6 @@
             ClockAndDateSettingsGroupBox.Controls.Add(radioButton1);
             ClockAndDateSettingsGroupBox.Name = "ClockAndDateSettingsGroupBox";
             ClockAndDateSettingsGroupBox.TabStop = false;
-            ClockAndDateSettingsGroupBox.Enter += ClockAndDateSettingsGroupBox_Enter;
             // 
             // HideTimeCheckBox
             // 
@@ -501,103 +474,48 @@
             // AppearanceGroupBox
             // 
             resources.ApplyResources(AppearanceGroupBox, "AppearanceGroupBox");
-            AppearanceGroupBox.Controls.Add(BackgroundPanel);
             AppearanceGroupBox.Controls.Add(ItalicCheckBox);
-            AppearanceGroupBox.Controls.Add(AccentPanel2);
-            AppearanceGroupBox.Controls.Add(numericUpDown1);
             AppearanceGroupBox.Controls.Add(BoldCheckBox);
-            AppearanceGroupBox.Controls.Add(FontSizeLabel);
-            AppearanceGroupBox.Controls.Add(AccentPanel1);
             AppearanceGroupBox.Controls.Add(ThemeModeLabel);
-            AppearanceGroupBox.Controls.Add(BackLabel);
             AppearanceGroupBox.Controls.Add(ThemeComboBox);
             AppearanceGroupBox.Controls.Add(FontFamilyLabel);
-            AppearanceGroupBox.Controls.Add(AccentLabel2);
             AppearanceGroupBox.Controls.Add(FontFamilyComboBox);
-            AppearanceGroupBox.Controls.Add(AccentLabel1);
             AppearanceGroupBox.Name = "AppearanceGroupBox";
             AppearanceGroupBox.TabStop = false;
-            // 
-            // BackgroundPanel
-            // 
-            resources.ApplyResources(BackgroundPanel, "BackgroundPanel");
-            BackgroundPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            BackgroundPanel.Name = "BackgroundPanel";
             // 
             // ItalicCheckBox
             // 
             resources.ApplyResources(ItalicCheckBox, "ItalicCheckBox");
             ItalicCheckBox.Name = "ItalicCheckBox";
-            ItalicCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AccentPanel2
-            // 
-            resources.ApplyResources(AccentPanel2, "AccentPanel2");
-            AccentPanel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            AccentPanel2.Name = "AccentPanel2";
-            // 
-            // numericUpDown1
-            // 
-            resources.ApplyResources(numericUpDown1, "numericUpDown1");
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // BoldCheckBox
             // 
             resources.ApplyResources(BoldCheckBox, "BoldCheckBox");
             BoldCheckBox.Name = "BoldCheckBox";
-            BoldCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FontSizeLabel
-            // 
-            resources.ApplyResources(FontSizeLabel, "FontSizeLabel");
-            FontSizeLabel.Name = "FontSizeLabel";
-            // 
-            // AccentPanel1
-            // 
-            resources.ApplyResources(AccentPanel1, "AccentPanel1");
-            AccentPanel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            AccentPanel1.Name = "AccentPanel1";
             // 
             // ThemeModeLabel
             // 
             resources.ApplyResources(ThemeModeLabel, "ThemeModeLabel");
             ThemeModeLabel.Name = "ThemeModeLabel";
             // 
-            // BackLabel
-            // 
-            resources.ApplyResources(BackLabel, "BackLabel");
-            BackLabel.Name = "BackLabel";
-            // 
             // ThemeComboBox
             // 
             resources.ApplyResources(ThemeComboBox, "ThemeComboBox");
             ThemeComboBox.FormattingEnabled = true;
-            ThemeComboBox.Items.AddRange(new object[] { resources.GetString("ThemeComboBox.Items"), resources.GetString("ThemeComboBox.Items1") });
+            ThemeComboBox.Items.AddRange(new object[] { resources.GetString("ThemeComboBox.Items"), resources.GetString("ThemeComboBox.Items1"), resources.GetString("ThemeComboBox.Items2"), resources.GetString("ThemeComboBox.Items3"), resources.GetString("ThemeComboBox.Items4") });
             ThemeComboBox.Name = "ThemeComboBox";
-            ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged_1;
             // 
             // FontFamilyLabel
             // 
             resources.ApplyResources(FontFamilyLabel, "FontFamilyLabel");
             FontFamilyLabel.Name = "FontFamilyLabel";
             // 
-            // AccentLabel2
-            // 
-            resources.ApplyResources(AccentLabel2, "AccentLabel2");
-            AccentLabel2.Name = "AccentLabel2";
-            // 
             // FontFamilyComboBox
             // 
             resources.ApplyResources(FontFamilyComboBox, "FontFamilyComboBox");
             FontFamilyComboBox.FormattingEnabled = true;
+            FontFamilyComboBox.Items.AddRange(new object[] { resources.GetString("FontFamilyComboBox.Items"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items2"), resources.GetString("FontFamilyComboBox.Items3"), resources.GetString("FontFamilyComboBox.Items4"), resources.GetString("FontFamilyComboBox.Items5"), resources.GetString("FontFamilyComboBox.Items6"), resources.GetString("FontFamilyComboBox.Items7"), resources.GetString("FontFamilyComboBox.Items8"), resources.GetString("FontFamilyComboBox.Items9") });
             FontFamilyComboBox.Name = "FontFamilyComboBox";
-            // 
-            // AccentLabel1
-            // 
-            resources.ApplyResources(AccentLabel1, "AccentLabel1");
-            AccentLabel1.Name = "AccentLabel1";
-            AccentLabel1.Click += AccentLabel1_Click;
             // 
             // SettingsPanelTitleLabel
             // 
@@ -635,13 +553,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             StartupGroupBox.ResumeLayout(false);
             StartupGroupBox.PerformLayout();
-            AccessabilityGroupBox.ResumeLayout(false);
-            AccessabilityGroupBox.PerformLayout();
             ClockAndDateSettingsGroupBox.ResumeLayout(false);
             ClockAndDateSettingsGroupBox.PerformLayout();
             AppearanceGroupBox.ResumeLayout(false);
             AppearanceGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
@@ -693,28 +608,18 @@
         private System.Windows.Forms.Label ThemeModeLabel;
         private System.Windows.Forms.ComboBox FontFamilyComboBox;
         private System.Windows.Forms.Label FontFamilyLabel;
-        private System.Windows.Forms.GroupBox AccessabilityGroupBox;
         private System.Windows.Forms.GroupBox ClockAndDateSettingsGroupBox;
         private System.Windows.Forms.GroupBox StartupGroupBox;
         private System.Windows.Forms.GroupBox AppearanceGroupBox;
-        private System.Windows.Forms.Label FontSizeLabel;
         private System.Windows.Forms.CheckBox ItalicCheckBox;
         private System.Windows.Forms.CheckBox BoldCheckBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label BackLabel;
-        private System.Windows.Forms.Label AccentLabel2;
-        private System.Windows.Forms.Label AccentLabel1;
         private System.Windows.Forms.CheckBox MinimizedCheckBox;
-        private System.Windows.Forms.CheckBox HighContrastCheckBox;
         private System.Windows.Forms.Label DefaultPanelLabel;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.CheckBox HideTimeCheckBox;
         private System.Windows.Forms.CheckBox HideDateCheckBox;
-        private System.Windows.Forms.Panel BackgroundPanel;
-        private System.Windows.Forms.Panel AccentPanel2;
-        private System.Windows.Forms.Panel AccentPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button exitButton;
