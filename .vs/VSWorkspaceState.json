@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\MochaMemoirs",
-    "\\MochaMemoirs\\MochaMemoirs",
-    "\\MochaMemoirs\\MochaMemoirs\\Model",
-    "\\MochaMemoirs\\MochaMemoirs\\Properties"
+    "\\MochaMemoirs\\MochaMemoirs"
   ],
-  "SelectedNode": "\\MochaMemoirs\\MochaMemoirs\\Properties\\Resources.Designer.cs",
+  "SelectedNode": "\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

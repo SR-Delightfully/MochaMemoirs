@@ -226,31 +226,19 @@ namespace MochaMemoirs
 
         private void Button_MouseEnter(object sender, EventArgs e)
         {
-            if (ThemeComboBox.SelectedItem == null || themes == null)
-                return;
-
-            string selectedKey = ThemeComboBox.SelectedItem.ToString();
-            if (!themes.ContainsKey(selectedKey))
-                return;
-
             if (sender is Button btn)
             {
-                btn.BackColor = themes[selectedKey].Accent2;
+                var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
+                btn.BackColor = selectedTheme.Accent2;
             }
         }
 
         private void Button_MouseLeave(object sender, EventArgs e)
         {
-            if (ThemeComboBox.SelectedItem == null || themes == null)
-                return;
-
-            string selectedKey = ThemeComboBox.SelectedItem.ToString();
-            if (!themes.ContainsKey(selectedKey))
-                return;
-
             if (sender is Button btn)
             {
-                btn.BackColor = themes[selectedKey].Accent2;
+                var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
+                btn.BackColor = selectedTheme.Accent1;
             }
         }
 
