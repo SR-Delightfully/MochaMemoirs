@@ -28,7 +28,8 @@ namespace MochaMemoirs
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MochaMemoirsForm));
             HomePanel = new System.Windows.Forms.Panel();
             ViewLibrariesPanel = new System.Windows.Forms.Panel();
@@ -89,24 +90,6 @@ namespace MochaMemoirs
             FontFamilyComboBox = new System.Windows.Forms.ComboBox();
             SettingsPanelTitleLabel = new System.Windows.Forms.Label();
             viewLibrariesGroupBox = new System.Windows.Forms.GroupBox();
-            loginPanel = new System.Windows.Forms.Panel();
-            passwordLabel = new System.Windows.Forms.Label();
-            caPasswordInput = new System.Windows.Forms.TextBox();
-            cdEmailInput = new System.Windows.Forms.TextBox();
-            createAccountButton = new System.Windows.Forms.Button();
-            emailLabel = new System.Windows.Forms.Label();
-            CreateAccTitleLabel = new System.Windows.Forms.Label();
-            backToLoginBtn = new System.Windows.Forms.Button();
-            panel2 = new System.Windows.Forms.Panel();
-            toCreateAccountBtn = new System.Windows.Forms.Button();
-            label1 = new System.Windows.Forms.Label();
-            passwordInput = new System.Windows.Forms.TextBox();
-            usernameInput = new System.Windows.Forms.TextBox();
-            loginBtn = new System.Windows.Forms.Button();
-            label2 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            nameLabel = new System.Windows.Forms.Label();
-            cdNameInput = new System.Windows.Forms.TextBox();
             HomePanel.SuspendLayout();
             FeaturedBookGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FeaturedBookPictureBox).BeginInit();
@@ -121,17 +104,15 @@ namespace MochaMemoirs
             StartupGroupBox.SuspendLayout();
             ClockAndDateSettingsGroupBox.SuspendLayout();
             AppearanceGroupBox.SuspendLayout();
-            loginPanel.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // HomePanel
             // 
+            resources.ApplyResources(HomePanel, "HomePanel");
             HomePanel.Controls.Add(ViewLibrariesPanel);
             HomePanel.Controls.Add(FeaturedBookGroupBox);
             HomePanel.Controls.Add(PersonalLibraryGroupBox);
             HomePanel.Controls.Add(HeaderGroupBox);
-            resources.ApplyResources(HomePanel, "HomePanel");
             HomePanel.Name = "HomePanel";
             // 
             // ViewLibrariesPanel
@@ -141,10 +122,10 @@ namespace MochaMemoirs
             // 
             // FeaturedBookGroupBox
             // 
+            resources.ApplyResources(FeaturedBookGroupBox, "FeaturedBookGroupBox");
             FeaturedBookGroupBox.Controls.Add(FeaturedBookPictureBox);
             FeaturedBookGroupBox.Controls.Add(PreviousButton);
             FeaturedBookGroupBox.Controls.Add(NextButton);
-            resources.ApplyResources(FeaturedBookGroupBox, "FeaturedBookGroupBox");
             FeaturedBookGroupBox.Name = "FeaturedBookGroupBox";
             FeaturedBookGroupBox.TabStop = false;
             // 
@@ -176,36 +157,36 @@ namespace MochaMemoirs
             // 
             // HeaderGroupBox
             // 
+            resources.ApplyResources(HeaderGroupBox, "HeaderGroupBox");
             HeaderGroupBox.BackColor = Color.Transparent;
             HeaderGroupBox.Controls.Add(DateLabel);
             HeaderGroupBox.Controls.Add(TimeLabel);
             HeaderGroupBox.Controls.Add(TitleLabel);
             HeaderGroupBox.Controls.Add(BannerPictureBox);
-            resources.ApplyResources(HeaderGroupBox, "HeaderGroupBox");
             HeaderGroupBox.Name = "HeaderGroupBox";
             HeaderGroupBox.TabStop = false;
             // 
             // DateLabel
             // 
+            resources.ApplyResources(DateLabel, "DateLabel");
             DateLabel.BackColor = Color.FromArgb(0, 0, 64);
             DateLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(DateLabel, "DateLabel");
             DateLabel.ForeColor = SystemColors.HighlightText;
             DateLabel.Name = "DateLabel";
             // 
             // TimeLabel
             // 
+            resources.ApplyResources(TimeLabel, "TimeLabel");
             TimeLabel.BackColor = Color.FromArgb(0, 0, 64);
             TimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(TimeLabel, "TimeLabel");
             TimeLabel.ForeColor = SystemColors.HighlightText;
             TimeLabel.Name = "TimeLabel";
             // 
             // TitleLabel
             // 
+            resources.ApplyResources(TitleLabel, "TitleLabel");
             TitleLabel.BackColor = Color.Transparent;
             TitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(TitleLabel, "TitleLabel");
             TitleLabel.ForeColor = SystemColors.HighlightText;
             TitleLabel.Name = "TitleLabel";
             TitleLabel.UseCompatibleTextRendering = true;
@@ -218,19 +199,19 @@ namespace MochaMemoirs
             // 
             // SideBarGroupBox
             // 
+            resources.ApplyResources(SideBarGroupBox, "SideBarGroupBox");
             SideBarGroupBox.Controls.Add(exitButton);
             SideBarGroupBox.Controls.Add(SettingsButton);
             SideBarGroupBox.Controls.Add(LibraryButton);
             SideBarGroupBox.Controls.Add(HomeButton);
             SideBarGroupBox.Controls.Add(LanguageBox);
-            resources.ApplyResources(SideBarGroupBox, "SideBarGroupBox");
             SideBarGroupBox.Name = "SideBarGroupBox";
             SideBarGroupBox.TabStop = false;
             // 
             // exitButton
             // 
-            exitButton.BackColor = Color.PeachPuff;
             resources.ApplyResources(exitButton, "exitButton");
+            exitButton.BackColor = Color.PeachPuff;
             exitButton.ForeColor = Color.MidnightBlue;
             exitButton.Name = "exitButton";
             exitButton.UseVisualStyleBackColor = false;
@@ -238,8 +219,8 @@ namespace MochaMemoirs
             // 
             // SettingsButton
             // 
-            SettingsButton.BackColor = Color.PeachPuff;
             resources.ApplyResources(SettingsButton, "SettingsButton");
+            SettingsButton.BackColor = Color.PeachPuff;
             SettingsButton.ForeColor = Color.MidnightBlue;
             SettingsButton.Name = "SettingsButton";
             SettingsButton.UseVisualStyleBackColor = false;
@@ -247,8 +228,8 @@ namespace MochaMemoirs
             // 
             // LibraryButton
             // 
-            LibraryButton.BackColor = Color.PeachPuff;
             resources.ApplyResources(LibraryButton, "LibraryButton");
+            LibraryButton.BackColor = Color.PeachPuff;
             LibraryButton.ForeColor = Color.MidnightBlue;
             LibraryButton.Name = "LibraryButton";
             LibraryButton.UseVisualStyleBackColor = false;
@@ -256,8 +237,8 @@ namespace MochaMemoirs
             // 
             // HomeButton
             // 
-            HomeButton.BackColor = Color.PeachPuff;
             resources.ApplyResources(HomeButton, "HomeButton");
+            HomeButton.BackColor = Color.PeachPuff;
             HomeButton.ForeColor = Color.MidnightBlue;
             HomeButton.Name = "HomeButton";
             HomeButton.UseVisualStyleBackColor = false;
@@ -265,27 +246,27 @@ namespace MochaMemoirs
             // 
             // LanguageBox
             // 
+            resources.ApplyResources(LanguageBox, "LanguageBox");
             LanguageBox.FormattingEnabled = true;
             LanguageBox.Items.AddRange(new object[] { resources.GetString("LanguageBox.Items"), resources.GetString("LanguageBox.Items1"), resources.GetString("LanguageBox.Items2") });
-            resources.ApplyResources(LanguageBox, "LanguageBox");
             LanguageBox.Name = "LanguageBox";
             LanguageBox.SelectedIndexChanged += LanguageBox_SelectedIndexChanged;
             // 
             // LibraryPanel
             // 
+            resources.ApplyResources(LibraryPanel, "LibraryPanel");
             LibraryPanel.Controls.Add(booksDataGridView);
             LibraryPanel.Controls.Add(DeleteButton);
             LibraryPanel.Controls.Add(EditButton);
             LibraryPanel.Controls.Add(AddButton);
             LibraryPanel.Controls.Add(panel1);
             LibraryPanel.Controls.Add(LibraryStageTitleLabel);
-            resources.ApplyResources(LibraryPanel, "LibraryPanel");
             LibraryPanel.Name = "LibraryPanel";
             // 
             // booksDataGridView
             // 
-            booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(booksDataGridView, "booksDataGridView");
+            booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             booksDataGridView.Name = "booksDataGridView";
             // 
             // DeleteButton
@@ -311,6 +292,7 @@ namespace MochaMemoirs
             // 
             // panel1
             // 
+            resources.ApplyResources(panel1, "panel1");
             panel1.Controls.Add(genreTextBox);
             panel1.Controls.Add(genreLabel);
             panel1.Controls.Add(bookIdTextBox);
@@ -324,7 +306,6 @@ namespace MochaMemoirs
             panel1.Controls.Add(detailsAuthor);
             panel1.Controls.Add(titleDetailsLabel);
             panel1.Controls.Add(DetailsLabel);
-            resources.ApplyResources(panel1, "panel1");
             panel1.Name = "panel1";
             // 
             // genreTextBox
@@ -398,19 +379,19 @@ namespace MochaMemoirs
             // 
             // LibraryStageTitleLabel
             // 
-            LibraryStageTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(LibraryStageTitleLabel, "LibraryStageTitleLabel");
+            LibraryStageTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             LibraryStageTitleLabel.Name = "LibraryStageTitleLabel";
             // 
             // SettingsPanel
             // 
+            resources.ApplyResources(SettingsPanel, "SettingsPanel");
             SettingsPanel.Controls.Add(pictureBox1);
             SettingsPanel.Controls.Add(groupBox1);
             SettingsPanel.Controls.Add(StartupGroupBox);
             SettingsPanel.Controls.Add(ClockAndDateSettingsGroupBox);
             SettingsPanel.Controls.Add(AppearanceGroupBox);
             SettingsPanel.Controls.Add(SettingsPanelTitleLabel);
-            resources.ApplyResources(SettingsPanel, "SettingsPanel");
             SettingsPanel.Name = "SettingsPanel";
             // 
             // pictureBox1
@@ -428,10 +409,10 @@ namespace MochaMemoirs
             // 
             // StartupGroupBox
             // 
+            resources.ApplyResources(StartupGroupBox, "StartupGroupBox");
             StartupGroupBox.Controls.Add(DefaultPanelLabel);
             StartupGroupBox.Controls.Add(comboBox1);
             StartupGroupBox.Controls.Add(MinimizedCheckBox);
-            resources.ApplyResources(StartupGroupBox, "StartupGroupBox");
             StartupGroupBox.Name = "StartupGroupBox";
             StartupGroupBox.TabStop = false;
             // 
@@ -442,9 +423,9 @@ namespace MochaMemoirs
             // 
             // comboBox1
             // 
+            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2") });
-            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.Name = "comboBox1";
             // 
             // MinimizedCheckBox
@@ -455,11 +436,11 @@ namespace MochaMemoirs
             // 
             // ClockAndDateSettingsGroupBox
             // 
+            resources.ApplyResources(ClockAndDateSettingsGroupBox, "ClockAndDateSettingsGroupBox");
             ClockAndDateSettingsGroupBox.Controls.Add(HideTimeCheckBox);
             ClockAndDateSettingsGroupBox.Controls.Add(HideDateCheckBox);
             ClockAndDateSettingsGroupBox.Controls.Add(radioButton2);
             ClockAndDateSettingsGroupBox.Controls.Add(radioButton1);
-            resources.ApplyResources(ClockAndDateSettingsGroupBox, "ClockAndDateSettingsGroupBox");
             ClockAndDateSettingsGroupBox.Name = "ClockAndDateSettingsGroupBox";
             ClockAndDateSettingsGroupBox.TabStop = false;
             // 
@@ -492,13 +473,13 @@ namespace MochaMemoirs
             // 
             // AppearanceGroupBox
             // 
+            resources.ApplyResources(AppearanceGroupBox, "AppearanceGroupBox");
             AppearanceGroupBox.Controls.Add(ItalicCheckBox);
             AppearanceGroupBox.Controls.Add(BoldCheckBox);
             AppearanceGroupBox.Controls.Add(ThemeModeLabel);
             AppearanceGroupBox.Controls.Add(ThemeComboBox);
             AppearanceGroupBox.Controls.Add(FontFamilyLabel);
             AppearanceGroupBox.Controls.Add(FontFamilyComboBox);
-            resources.ApplyResources(AppearanceGroupBox, "AppearanceGroupBox");
             AppearanceGroupBox.Name = "AppearanceGroupBox";
             AppearanceGroupBox.TabStop = false;
             // 
@@ -519,9 +500,9 @@ namespace MochaMemoirs
             // 
             // ThemeComboBox
             // 
+            resources.ApplyResources(ThemeComboBox, "ThemeComboBox");
             ThemeComboBox.FormattingEnabled = true;
             ThemeComboBox.Items.AddRange(new object[] { resources.GetString("ThemeComboBox.Items"), resources.GetString("ThemeComboBox.Items1"), resources.GetString("ThemeComboBox.Items2"), resources.GetString("ThemeComboBox.Items3"), resources.GetString("ThemeComboBox.Items4") });
-            resources.ApplyResources(ThemeComboBox, "ThemeComboBox");
             ThemeComboBox.Name = "ThemeComboBox";
             // 
             // FontFamilyLabel
@@ -531,15 +512,15 @@ namespace MochaMemoirs
             // 
             // FontFamilyComboBox
             // 
+            resources.ApplyResources(FontFamilyComboBox, "FontFamilyComboBox");
             FontFamilyComboBox.FormattingEnabled = true;
             FontFamilyComboBox.Items.AddRange(new object[] { resources.GetString("FontFamilyComboBox.Items"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items2"), resources.GetString("FontFamilyComboBox.Items3"), resources.GetString("FontFamilyComboBox.Items4"), resources.GetString("FontFamilyComboBox.Items5"), resources.GetString("FontFamilyComboBox.Items6"), resources.GetString("FontFamilyComboBox.Items7"), resources.GetString("FontFamilyComboBox.Items8"), resources.GetString("FontFamilyComboBox.Items9") });
-            resources.ApplyResources(FontFamilyComboBox, "FontFamilyComboBox");
             FontFamilyComboBox.Name = "FontFamilyComboBox";
             // 
             // SettingsPanelTitleLabel
             // 
-            SettingsPanelTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(SettingsPanelTitleLabel, "SettingsPanelTitleLabel");
+            SettingsPanelTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             SettingsPanelTitleLabel.Name = "SettingsPanelTitleLabel";
             // 
             // viewLibrariesGroupBox
@@ -548,122 +529,10 @@ namespace MochaMemoirs
             viewLibrariesGroupBox.Name = "viewLibrariesGroupBox";
             viewLibrariesGroupBox.TabStop = false;
             // 
-            // loginPanel
-            // 
-            loginPanel.Controls.Add(cdNameInput);
-            loginPanel.Controls.Add(nameLabel);
-            loginPanel.Controls.Add(backToLoginBtn);
-            loginPanel.Controls.Add(passwordLabel);
-            loginPanel.Controls.Add(caPasswordInput);
-            loginPanel.Controls.Add(cdEmailInput);
-            loginPanel.Controls.Add(createAccountButton);
-            loginPanel.Controls.Add(emailLabel);
-            loginPanel.Controls.Add(CreateAccTitleLabel);
-            resources.ApplyResources(loginPanel, "loginPanel");
-            loginPanel.Name = "loginPanel";
-            // 
-            // passwordLabel
-            // 
-            resources.ApplyResources(passwordLabel, "passwordLabel");
-            passwordLabel.Name = "passwordLabel";
-            // 
-            // caPasswordInput
-            // 
-            resources.ApplyResources(caPasswordInput, "caPasswordInput");
-            caPasswordInput.Name = "caPasswordInput";
-            // 
-            // cdEmailInput
-            // 
-            resources.ApplyResources(cdEmailInput, "cdEmailInput");
-            cdEmailInput.Name = "cdEmailInput";
-            // 
-            // createAccountButton
-            // 
-            resources.ApplyResources(createAccountButton, "createAccountButton");
-            createAccountButton.Name = "createAccountButton";
-            createAccountButton.UseVisualStyleBackColor = true;
-            // 
-            // emailLabel
-            // 
-            resources.ApplyResources(emailLabel, "emailLabel");
-            emailLabel.Name = "emailLabel";
-            // 
-            // CreateAccTitleLabel
-            // 
-            resources.ApplyResources(CreateAccTitleLabel, "CreateAccTitleLabel");
-            CreateAccTitleLabel.Name = "CreateAccTitleLabel";
-            // 
-            // backToLoginBtn
-            // 
-            resources.ApplyResources(backToLoginBtn, "backToLoginBtn");
-            backToLoginBtn.Name = "backToLoginBtn";
-            backToLoginBtn.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(toCreateAccountBtn);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(passwordInput);
-            panel2.Controls.Add(usernameInput);
-            panel2.Controls.Add(loginBtn);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label3);
-            resources.ApplyResources(panel2, "panel2");
-            panel2.Name = "panel2";
-            // 
-            // toCreateAccountBtn
-            // 
-            resources.ApplyResources(toCreateAccountBtn, "toCreateAccountBtn");
-            toCreateAccountBtn.Name = "toCreateAccountBtn";
-            toCreateAccountBtn.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(label1, "label1");
-            label1.Name = "label1";
-            // 
-            // passwordInput
-            // 
-            resources.ApplyResources(passwordInput, "passwordInput");
-            passwordInput.Name = "passwordInput";
-            // 
-            // usernameInput
-            // 
-            resources.ApplyResources(usernameInput, "usernameInput");
-            usernameInput.Name = "usernameInput";
-            // 
-            // loginBtn
-            // 
-            resources.ApplyResources(loginBtn, "loginBtn");
-            loginBtn.Name = "loginBtn";
-            loginBtn.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(label2, "label2");
-            label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(label3, "label3");
-            label3.Name = "label3";
-            // 
-            // nameLabel
-            // 
-            resources.ApplyResources(nameLabel, "nameLabel");
-            nameLabel.Name = "nameLabel";
-            // 
-            // cdNameInput
-            // 
-            resources.ApplyResources(cdNameInput, "cdNameInput");
-            cdNameInput.Name = "cdNameInput";
-            // 
             // MochaMemoirsForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(panel2);
-            Controls.Add(loginPanel);
             Controls.Add(HomePanel);
             Controls.Add(LibraryPanel);
             Controls.Add(SettingsPanel);
@@ -688,10 +557,6 @@ namespace MochaMemoirs
             ClockAndDateSettingsGroupBox.PerformLayout();
             AppearanceGroupBox.ResumeLayout(false);
             AppearanceGroupBox.PerformLayout();
-            loginPanel.ResumeLayout(false);
-            loginPanel.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -758,23 +623,5 @@ namespace MochaMemoirs
         private System.Windows.Forms.PictureBox   pictureBox1;
         private System.Windows.Forms.GroupBox     groupBox1;
         private System.Windows.Forms.Button       exitButton;
-        private System.Windows.Forms.Panel loginPanel;
-        private System.Windows.Forms.Label CreateAccTitleLabel;
-        private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.TextBox caPasswordInput;
-        private System.Windows.Forms.TextBox cdEmailInput;
-        private System.Windows.Forms.Button createAccountButton;
-        private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.Button backToLoginBtn;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button toCreateAccountBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox passwordInput;
-        private System.Windows.Forms.TextBox usernameInput;
-        private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox cdNameInput;
-        private System.Windows.Forms.Label nameLabel;
     }
 }

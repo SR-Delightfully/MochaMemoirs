@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\",
+  "WorkspaceRootPath": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\mochamemoirs\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
-      "RelativeMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|solutionrelative:mochamemoirs\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|solutionrelative:mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|c:\\users\\h\\documents\\03_vanier\\mochamemoirs\\mochamemoirs\\mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|c:\\users\\rache\\onedrive\\documents\\mochamemoirs\\mochamemoirs\\mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|solutionrelative:mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|c:\\users\\h\\documents\\03_vanier\\mochamemoirs\\mochamemoirs\\mochamemoirs\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|c:\\users\\rache\\onedrive\\documents\\mochamemoirs\\mochamemoirs\\mochamemoirs\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|solutionrelative:mochamemoirs\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|c:\\users\\h\\documents\\03_vanier\\mochamemoirs\\mochamemoirs\\mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|solutionrelative:mochamemoirs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\mochamemoirs\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{9EE26827-B95E-48D5-9940-A61E1E5B4DD2}|MochaMemoirs\\MochaMemoirs.csproj|solutionrelative:mochamemoirs\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,30 +26,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 112,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Settings.settings",
-              "DocumentMoniker": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Properties\\Settings.settings",
+              "DocumentMoniker": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "MochaMemoirs\\Properties\\Settings.settings",
-              "ToolTip": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Properties\\Settings.settings",
               "RelativeToolTip": "MochaMemoirs\\Properties\\Settings.settings",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
               "WhenOpened": "2025-05-15T19:06:29.174Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
               "RelativeDocumentMoniker": "MochaMemoirs\\Form1.cs",
-              "ToolTip": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
+              "ToolTip": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
               "RelativeToolTip": "MochaMemoirs\\Form1.cs",
-              "ViewState": "AgIAAIICAAAAAAAAAAAcwJECAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswDsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T00:09:06.619Z",
               "IsPinned": true,
@@ -57,27 +56,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design - English]",
+              "DocumentMoniker": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs",
               "RelativeDocumentMoniker": "MochaMemoirs\\Form1.cs",
-              "ToolTip": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs [Design]",
-              "RelativeToolTip": "MochaMemoirs\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.cs [Design - English]",
+              "RelativeToolTip": "MochaMemoirs\\Form1.cs [Design - English]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:01:40.439Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2025-05-15T02:24:38.551Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design - English]"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -88,18 +84,14 @@
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "MochaMemoirs\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\rache\\OneDrive\\Documents\\MochaMemoirs\\MochaMemoirs\\MochaMemoirs\\Form1.Designer.cs",
               "RelativeToolTip": "MochaMemoirs\\Form1.Designer.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAAqwDICAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAIBJwBgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T17:42:09.861Z",
               "EditorCaption": ""
