@@ -19,17 +19,16 @@ using MochaMemoirs.Model;
 namespace MochaMemoirs
 {
     //public interface IDatabaseService { }
-    public partial class MochaMemoirsForm : Form
-    {
-        private          List<Book>       libraryBooks;
-        private          int              currentBookIndex = 0;
-        private          Timer            currentDateTimer;
-        private          string           currentDate  = "";
-        private          string           previousDate = "";
-        private          string           timeFormat   = "hh:mm:ss tt";
-        private          User             currentUser;
-        private          string           username;
-        private          string           password;
+    public partial class MochaMemoirsForm : Form {
+        private List<Book> libraryBooks;
+        private int currentBookIndex = 0;
+        private Timer currentDateTimer;
+        private string currentDate = "";
+        private string previousDate = "";
+        private string timeFormat = "hh:mm:ss tt";
+        private User currentUser;
+        private string username;
+        private string password;
         private readonly IDatabaseService database;
 
         private Dictionary<string, Theme> themes = new Dictionary<string, Theme>()
@@ -40,8 +39,7 @@ namespace MochaMemoirs
             { "LightSolarized", new Theme("LightSolarized", Color.Beige, Color.DimGray, Color.Khaki, Color.DarkKhaki) },
             { "DarkSolarized", new Theme("DarkSolarized", Color.DarkSlateGray, Color.Azure, Color.Teal, Color.CadetBlue) }
         };
-        public MochaMemoirsForm(IDatabaseService database)
-        {
+        public MochaMemoirsForm(IDatabaseService database) {
             InitializeComponent();
             this.database = database;
             RoundButton(HomeButton);
@@ -55,19 +53,15 @@ namespace MochaMemoirs
             ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged;
         }
 
-        private void MochaMemoirsForm_Load(object sender, EventArgs e)
-        {
+        private void MochaMemoirsForm_Load(object sender, EventArgs e) {
             LoadBooks();
 
             string selectedTheme = Properties.Settings.Default.AppTheme;
 
-            if (!string.IsNullOrEmpty(selectedTheme) && themes.ContainsKey(selectedTheme))
-            {
+            if (!string.IsNullOrEmpty(selectedTheme) && themes.ContainsKey(selectedTheme)) {
                 ThemeComboBox.SelectedItem = selectedTheme;
                 ApplyTheme(themes[selectedTheme]);
-            }
-            else
-            {
+            } else {
                 ThemeComboBox.SelectedItem = "Light";
                 ApplyTheme(themes["Light"]);
             }
@@ -82,15 +76,13 @@ namespace MochaMemoirs
             InitSettingsEvents();
         }
 
-        private void ShowPanel(string panelName)
-        {
+        private void ShowPanel(string panelName) {
             HomePanel.Visible = (panelName == "HomePanel");
             LibraryPanel.Visible = (panelName == "LibraryPanel");
             SettingsPanel.Visible = (panelName == "SettingsPanel");
         }
 
-        private void InitSettingsEvents()
-        {
+        private void InitSettingsEvents() {
             FontFamilyComboBox.SelectedIndexChanged += FontSettingsChanged;
             BoldCheckBox.CheckedChanged += FontSettingsChanged;
             ItalicCheckBox.CheckedChanged += FontSettingsChanged;
@@ -104,8 +96,7 @@ namespace MochaMemoirs
             radioButton1.CheckedChanged += TimeFormatChanged;
             radioButton2.CheckedChanged += TimeFormatChanged;
         }
-        private void TimeFormatChanged(object sender, EventArgs e)
-        {
+        private void TimeFormatChanged(object sender, EventArgs e) {
             if (radioButton1.Checked)
                 timeFormat = "hh:mm:ss tt";
             else if (radioButton2.Checked)
@@ -113,8 +104,7 @@ namespace MochaMemoirs
 
             UpdateTimeAndDateLabels();
         }
-        private void FontSettingsChanged(object sender, EventArgs e)
-        {
+        private void FontSettingsChanged(object sender, EventArgs e) {
             string fontFamily = FontFamilyComboBox.SelectedItem?.ToString() ?? "Segoe UI";
             FontStyle style = FontStyle.Regular;
 
@@ -124,27 +114,22 @@ namespace MochaMemoirs
             Font newFont = new Font(fontFamily, 10, style);
             ApplyFontToControls(this.Controls, newFont);
         }
-        private void FontFamilyComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void FontFamilyComboBox_SelectedIndexChanged(object sender, EventArgs e) {
             string selectedFont = FontFamilyComboBox.SelectedItem.ToString();
             Font newFont = new Font(selectedFont, 10);
         }
-        private void ApplyFontToControls(Control.ControlCollection controls, Font font)
-        {
-            foreach (Control control in controls)
-            {
+        private void ApplyFontToControls(Control.ControlCollection controls, Font font) {
+            foreach (Control control in controls) {
                 control.Font = new Font(font.FontFamily, control.Font.Size, font.Style);
                 if (control.HasChildren)
                     ApplyFontToControls(control.Controls, font);
             }
         }
-        private void ApplyThemeToControl(Control control, Theme theme)
-        {
+        private void ApplyThemeToControl(Control control, Theme theme) {
             control.BackColor = theme.BackgroundColor;
             control.ForeColor = theme.ForegroundColor;
 
-            switch (control)
-            {
+            switch (control) {
                 case Button btn:
                     btn.BackColor = theme.Accent1;
                     btn.ForeColor = theme.ForegroundColor;
@@ -199,23 +184,20 @@ namespace MochaMemoirs
                     break;
             }
 
-            foreach (Control child in control.Controls)
-            {
+            foreach (Control child in control.Controls) {
                 ApplyThemeToControl(child, theme);
             }
         }
 
 
-        private void ApplyTheme(Theme theme)
-        {
+        private void ApplyTheme(Theme theme) {
             this.BackColor = theme.BackgroundColor;
 
             ViewLibrariesPanel.BackColor = theme.BackgroundColor;
             LibraryPanel.BackColor = theme.BackgroundColor;
             SettingsPanel.BackColor = theme.BackgroundColor;
 
-            foreach (Control control in this.Controls)
-            {
+            foreach (Control control in this.Controls) {
                 ApplyThemeToControl(control, theme);
             }
             this.TimeLabel.ForeColor = Color.White;
@@ -224,41 +206,33 @@ namespace MochaMemoirs
         }
 
 
-        private void Button_MouseEnter(object sender, EventArgs e)
-        {
-            if (sender is Button btn)
-            {
+        private void Button_MouseEnter(object sender, EventArgs e) {
+            if (sender is Button btn) {
                 var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
                 btn.BackColor = selectedTheme.Accent2;
             }
         }
 
-        private void Button_MouseLeave(object sender, EventArgs e)
-        {
-            if (sender is Button btn)
-            {
+        private void Button_MouseLeave(object sender, EventArgs e) {
+            if (sender is Button btn) {
                 var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
                 btn.BackColor = selectedTheme.Accent1;
             }
         }
 
-        private void ClockFormatChanged(object sender, EventArgs e)
-        {
+        private void ClockFormatChanged(object sender, EventArgs e) {
             UpdateTimeAndDateLabels();
         }
 
-        private void DateTimeVisibilityChanged(object sender, EventArgs e)
-        {
+        private void DateTimeVisibilityChanged(object sender, EventArgs e) {
             TimeLabel.Visible = !HideTimeCheckBox.Checked;
             DateLabel.Visible = !HideDateCheckBox.Checked;
         }
 
-        private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e) {
             string selected = ThemeComboBox.SelectedItem?.ToString();
 
-            if (themes.TryGetValue(selected, out var selectedTheme))
-            {
+            if (themes.TryGetValue(selected, out var selectedTheme)) {
                 ApplyTheme(selectedTheme);
                 Properties.Settings.Default.AppTheme = selected;
                 Properties.Settings.Default.Save();
@@ -266,28 +240,24 @@ namespace MochaMemoirs
         }
 
 
-        private void StartupBehaviorChanged(object sender, EventArgs e)
-        {
+        private void StartupBehaviorChanged(object sender, EventArgs e) {
             Properties.Settings.Default.StartMinimized = MinimizedCheckBox.Checked;
             Properties.Settings.Default.DefaultPanel = comboBox1.SelectedItem?.ToString() ?? "HomePanel";
             Properties.Settings.Default.Save();
         }
 
-        public void initTimeLabel()
-        {
+        public void initTimeLabel() {
             currentDateTimer = new Timer();
             currentDateTimer.Interval = 1000;
             currentDateTimer.Tick += CurrentDateTimer_Tick;
             currentDateTimer.Start();
         }
 
-        private void CurrentDateTimer_Tick(object sender, EventArgs e)
-        {
+        private void CurrentDateTimer_Tick(object sender, EventArgs e) {
             UpdateTimeAndDateLabels();
         }
 
-        private void UpdateTimeAndDateLabels()
-        {
+        private void UpdateTimeAndDateLabels() {
             DateTime current = DateTime.Now;
             TimeLabel.Text = current.ToString(timeFormat);
 
@@ -297,13 +267,11 @@ namespace MochaMemoirs
             DateLabel.Text = $"{current:dddd}, {current:MMMM} {current.Day}{suffix}";
         }
 
-        private string GetDaySuffix(int day)
-        {
+        private string GetDaySuffix(int day) {
             if (day >= 11 && day <= 13)
                 return "th";
 
-            switch (day % 10)
-            {
+            switch (day % 10) {
                 case 1: return "st";
                 case 2: return "nd";
                 case 3: return "rd";
@@ -311,18 +279,14 @@ namespace MochaMemoirs
             }
         }
 
-        private void LoadBooks()
-        {
+        private void LoadBooks() {
             string jsonFilePath = "books.json";
             string jsonContent = File.ReadAllText(jsonFilePath);
             Library jsonLibrary = JsonConvert.DeserializeObject<Library>(jsonContent);
 
-            if (jsonLibrary != null && jsonLibrary.library != null)
-            {
+            if (jsonLibrary != null && jsonLibrary.library != null) {
                 libraryBooks = jsonLibrary.library;
-            }
-            else
-            {
+            } else {
                 libraryBooks = new List<Book>();
             }
 
@@ -336,18 +300,15 @@ namespace MochaMemoirs
             PopulateGenres(booksByGenre);
         }
 
-        private void PopulateGenres(Dictionary<string, List<Book>> booksByGenre)
-        {
+        private void PopulateGenres(Dictionary<string, List<Book>> booksByGenre) {
             ViewLibrariesPanel.Controls.Clear();
             ViewLibrariesPanel.AutoScroll = true;
 
             int yOffset = 10;
             int maxPanelWidth = ViewLibrariesPanel.Width - 40; // Account for padding/scrollbar
 
-            foreach (var genre in booksByGenre)
-            {
-                Panel genrePanel = new Panel
-                {
+            foreach (var genre in booksByGenre) {
+                Panel genrePanel = new Panel {
                     Width = maxPanelWidth,
                     Location = new Point(10, yOffset),
                     Height = 35,
@@ -355,8 +316,7 @@ namespace MochaMemoirs
                     AutoSize = false
                 };
 
-                System.Windows.Forms.Label headerLabel = new System.Windows.Forms.Label
-                {
+                System.Windows.Forms.Label headerLabel = new System.Windows.Forms.Label {
                     Text = genre.Key,
                     Font = new Font("Segoe UI", 12, FontStyle.Bold),
                     AutoSize = true,
@@ -364,8 +324,7 @@ namespace MochaMemoirs
                     Location = new Point(5, 5)
                 };
 
-                Panel booksPanel = new Panel
-                {
+                Panel booksPanel = new Panel {
                     Location = new Point(0, 30),
                     Width = maxPanelWidth,
                     Height = genre.Value.Count * 105,
@@ -375,41 +334,35 @@ namespace MochaMemoirs
 
                 int bookYOffset = 5;
 
-                foreach (var book in genre.Value)
-                {
-                    Panel bookPanel = new Panel
-                    {
+                foreach (var book in genre.Value) {
+                    Panel bookPanel = new Panel {
                         Location = new Point(10, bookYOffset),
                         Size = new Size(maxPanelWidth - 20, 100),
                         BorderStyle = BorderStyle.FixedSingle
                     };
 
-                    PictureBox cover = new PictureBox
-                    {
+                    PictureBox cover = new PictureBox {
                         Location = new Point(5, 5),
                         Size = new Size(60, 90),
                         SizeMode = PictureBoxSizeMode.Zoom,
                         ImageLocation = Path.Combine(Application.StartupPath, book.image)
                     };
 
-                    System.Windows.Forms.Label titleLabel = new System.Windows.Forms.Label
-                    {
+                    System.Windows.Forms.Label titleLabel = new System.Windows.Forms.Label {
                         Text = book.bookTitle,
                         Font = new Font("Segoe UI", 10, FontStyle.Bold),
                         Location = new Point(75, 5),
                         AutoSize = true
                     };
 
-                    System.Windows.Forms.Label authorLabel = new System.Windows.Forms.Label
-                    {
+                    System.Windows.Forms.Label authorLabel = new System.Windows.Forms.Label {
                         Text = $"by {book.author}",
                         Font = new Font("Segoe UI", 9, FontStyle.Italic),
                         Location = new Point(75, 30),
                         AutoSize = true
                     };
 
-                    System.Windows.Forms.Label publisherLabel = new System.Windows.Forms.Label
-                    {
+                    System.Windows.Forms.Label publisherLabel = new System.Windows.Forms.Label {
                         Text = $"Published by {book.publisher}",
                         Font = new Font("Segoe UI", 8),
                         Location = new Point(75, 55),
@@ -425,8 +378,7 @@ namespace MochaMemoirs
                     bookYOffset += 105;
                 }
 
-                headerLabel.Click += (s, e) =>
-                {
+                headerLabel.Click += (s, e) => {
                     booksPanel.Visible = !booksPanel.Visible;
                     genrePanel.Height = booksPanel.Visible ? booksPanel.Location.Y + booksPanel.Height : 35;
                 };
@@ -440,97 +392,77 @@ namespace MochaMemoirs
         }
 
 
-        private void DisplayBook(int index)
-        {
-            if (libraryBooks.Count > 0)
-            {
+        private void DisplayBook(int index) {
+            if (libraryBooks.Count > 0) {
                 var book = libraryBooks[index];
                 FeaturedBookPictureBox.ImageLocation = Path.Combine(Application.StartupPath, book.image);
                 FeaturedBookPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
-        {
-            if (currentBookIndex == libraryBooks.Count - 1)
-            {
+        private void NextButton_Click(object sender, EventArgs e) {
+            if (currentBookIndex == libraryBooks.Count - 1) {
                 currentBookIndex = 0;
-            }
-            else
-            {
+            } else {
                 currentBookIndex = currentBookIndex + 1;
 
                 DisplayBook(currentBookIndex);
             }
         }
 
-        private void PreviousButton_Click(object sender, EventArgs e)
-        {
-            if (currentBookIndex == 0)
-            {
+        private void PreviousButton_Click(object sender, EventArgs e) {
+            if (currentBookIndex == 0) {
                 currentBookIndex = libraryBooks.Count - 1;
-            }
-            else
-            {
+            } else {
                 currentBookIndex = currentBookIndex - 1;
             }
 
             DisplayBook(currentBookIndex);
         }
 
-        private List<Book> LoadAllBooks()
-        {
+        private List<Book> LoadAllBooks() {
             string jsonFilePath = "books.json";
             if (!File.Exists(jsonFilePath)) return new List<Book>();
 
             string json = File.ReadAllText(jsonFilePath);
             var jsonLibrary = JsonConvert.DeserializeObject<Library>(json);
-            if (jsonLibrary != null && jsonLibrary.library != null)
-            {
+            if (jsonLibrary != null && jsonLibrary.library != null) {
                 return jsonLibrary.library;
-            }
-            else
-            {
+            } else {
                 return new List<Book>();
             }
         }
 
-        private void SaveAllBooks()
-        {
+        private void SaveAllBooks() {
             var jsonLibrary = new Library { library = libraryBooks };
             string json = JsonConvert.SerializeObject(jsonLibrary, Formatting.Indented);
             File.WriteAllText("books.json", json);
         }
 
 
-        public void AddBook(Book newBook)
-        {
+        public void AddBook(Book newBook) {
             var books = LoadAllBooks();
             books.Add(newBook);
             SaveAllBooks();
         }
 
-        public void UpdateBook(Book updatedBook)
-        {
+        public void UpdateBook(Book updatedBook) {
             var books = LoadAllBooks();
             var index = books.FindIndex(b => b.bookId == updatedBook.bookId);
-            if (index >= 0)
-            {
+            if (index >= 0) {
                 books[index] = updatedBook;
                 SaveAllBooks();
             }
         }
 
-        public void DeleteBook(string bookId)
-        {
+        public void DeleteBook(string bookId) {
             var books = LoadAllBooks();
             books.RemoveAll(b => b.bookId == bookId);
             SaveAllBooks();
         }
 
 
-        public void InitDateLabel()
-        {
+        public void InitDateLabel() {
             int numDay = System.DateTime.Now.Day;
             string nameDay = System.DateTime.Now.DayOfWeek.ToString();
 
@@ -541,8 +473,7 @@ namespace MochaMemoirs
 
             string suffix = "";
 
-            switch (numMonth)
-            {
+            switch (numMonth) {
                 case 1: nameMonth = "January"; break;
                 case 2: nameMonth = "February"; break;
                 case 3: nameMonth = "March"; break;
@@ -560,8 +491,7 @@ namespace MochaMemoirs
             DateLabel.Text = nameDay + ", " + nameMonth + " " + numDay + suffix;
         }
 
-        private void RoundButton(Button button)
-        {
+        private void RoundButton(Button button) {
             GraphicsPath path = new GraphicsPath();
             path.AddEllipse(0, 0, button.Width, button.Height);
             button.Region = new Region(path);
@@ -570,44 +500,36 @@ namespace MochaMemoirs
             button.TextAlign = ContentAlignment.MiddleCenter;
         }
 
-        private void TransparentLabels(params System.Windows.Forms.Label[] labels)
-        {
-            foreach (var label in labels)
-            {
+        private void TransparentLabels(params System.Windows.Forms.Label[] labels) {
+            foreach (var label in labels) {
                 label.BackColor = Color.Transparent;
             }
         }
 
-        private void InitStages()
-        {
+        private void InitStages() {
             HomePanel.Visible = true;
             LibraryPanel.Visible = false;
             SettingsPanel.Visible = false;
         }
 
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
+        private void HomeButton_Click(object sender, EventArgs e) {
             HomePanel.Visible = true;
             LibraryPanel.Visible = false;
             SettingsPanel.Visible = false;
         }
 
-        private void LibraryButton_Click(object sender, EventArgs e)
-        {
+        private void LibraryButton_Click(object sender, EventArgs e) {
             HomePanel.Visible = false;
             LibraryPanel.Visible = true;
             SettingsPanel.Visible = false;
         }
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
+        private void SettingsButton_Click(object sender, EventArgs e) {
             HomePanel.Visible = false;
             LibraryPanel.Visible = false;
             SettingsPanel.Visible = true;
         }
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            Book newBook = new Book
-            {
+        private void AddButton_Click(object sender, EventArgs e) {
+            Book newBook = new Book {
                 bookId = GetNextBookId().ToString(),
                 bookTitle = titleTextBox.Text,
                 author = authorTextBox.Text,
@@ -620,51 +542,40 @@ namespace MochaMemoirs
             MessageBox.Show("Book added successfully!");
         }
 
-        private void EditButton_Click(object sender, EventArgs e)
-        {
+        private void EditButton_Click(object sender, EventArgs e) {
             string id = bookIdTextBox.Text;
             var book = libraryBooks.FirstOrDefault(b => b.bookId == id);
-            if (book != null)
-            {
+            if (book != null) {
                 book.bookTitle = titleTextBox.Text;
                 book.author = authorTextBox.Text;
                 book.publisher = publisherTextBox.Text;
 
                 SaveAllBooks();
                 MessageBox.Show("Book updated.");
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Book ID not found.");
             }
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
+        private void DeleteButton_Click(object sender, EventArgs e) {
             string id = bookIdTextBox.Text;
             var book = libraryBooks.FirstOrDefault(b => b.bookId == id);
-            if (book != null)
-            {
+            if (book != null) {
                 libraryBooks.Remove(book);
                 SaveAllBooks();
                 MessageBox.Show("Book deleted.");
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Book ID not found.");
             }
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
+        private void exitButton_Click(object sender, EventArgs e) {
             Application.Exit();
         }
 
-        private void LoadBooksIntoGrid()
-        {
+        private void LoadBooksIntoGrid() {
             string jsonFilePath = "books.json";
-            if (!File.Exists(jsonFilePath))
-            {
+            if (!File.Exists(jsonFilePath)) {
                 MessageBox.Show("File not found.");
                 return;
             }
@@ -672,35 +583,27 @@ namespace MochaMemoirs
             string jsonContent = File.ReadAllText(jsonFilePath);
             Library jsonLibrary = JsonConvert.DeserializeObject<Library>(jsonContent);
 
-            if (jsonLibrary != null && jsonLibrary.library != null)
-            {
+            if (jsonLibrary != null && jsonLibrary.library != null) {
                 booksDataGridView.DataSource = jsonLibrary.library;
 
                 // Hide the image column
-                if (booksDataGridView.Columns["image"] != null)
-                {
+                if (booksDataGridView.Columns["image"] != null) {
                     booksDataGridView.Columns["image"].Visible = false;
                 }
-            }
-            else
-            {
+            } else {
                 booksDataGridView.DataSource = null;
                 MessageBox.Show("No books found.");
             }
         }
 
-        private int GetNextBookId()
-        {
+        private int GetNextBookId() {
             int maxId = 0;
 
-            foreach (Book book in libraryBooks)
-            {
+            foreach (Book book in libraryBooks) {
 
-                if (book.bookId.Length > 0)
-                {
+                if (book.bookId.Length > 0) {
                     var id = book.bookId;
-                    if (int.Parse(id) > maxId)
-                    {
+                    if (int.Parse(id) > maxId) {
                         maxId = int.Parse(id);
                     }
                 }
@@ -711,13 +614,11 @@ namespace MochaMemoirs
 
 
 
-        private void loadButton_Click(object sender, EventArgs e)
-        {
+        private void loadButton_Click(object sender, EventArgs e) {
             LoadBooksIntoGrid();
         }
 
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
+        private void ClearButton_Click(object sender, EventArgs e) {
             titleTextBox.Text = "";
             authorTextBox.Text = "";
             publisherTextBox.Text = "";
@@ -725,11 +626,9 @@ namespace MochaMemoirs
             genreTextBox.Text = "";
         }
 
-        private void LanguageBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void LanguageBox_SelectedIndexChanged(object sender, EventArgs e) {
             var changeLanguage = new ChangeLanguage();
-            switch (LanguageBox.SelectedIndex)
-            {
+            switch (LanguageBox.SelectedIndex) {
                 case 0:
                     changeLanguage.UpdateConfig("language", "en");
                     Application.Restart();
@@ -749,15 +648,14 @@ namespace MochaMemoirs
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        private void pictureBox1_Click(object sender, EventArgs e) {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) {
 
         }
+
     }
 
 }
