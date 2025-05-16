@@ -12,3 +12,17 @@ C:\Users\rache\OneDrive\Documents\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug
 C:\Users\rache\OneDrive\Documents\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\refint\DatabaseLib.dll
 C:\Users\rache\OneDrive\Documents\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.pdb
 C:\Users\rache\OneDrive\Documents\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\ref\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net8.0\Resources\database.db
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net8.0\DatabaseLib.deps.json
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net8.0\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\bin\Debug\net8.0\DatabaseLib.pdb
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.csproj.AssemblyReference.cache
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.AssemblyInfoInputs.cache
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.AssemblyInfo.cs
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.csproj.CoreCompileInputs.cache
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.sourcelink.json
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\refint\DatabaseLib.dll
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\DatabaseLib.pdb
+C:\Users\H\Documents\03_VANIER\MochaMemoirs\DatabaseLib\DatabaseLib\obj\Debug\net8.0\ref\DatabaseLib.dll

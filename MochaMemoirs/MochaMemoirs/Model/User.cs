@@ -17,11 +17,11 @@ public class User {
 
     //CONSTRUCTORS & PROPERTIES/////////////////////////////////////////////////////////////////////////////////////////
     public User(string user_id, string name, string email, string password, List<Library> libraries) {
-        user_id   = UserId;
-        name      = Name;
-        email     = Email;
-        password  = Password;
-        libraries = [];
+        this.UserId    = user_id;
+        this.Name      = name;
+        this.Email     = email;
+        this.Password  = password;
+        this.Libraries = libraries;
     }
 
     public string UserId { get; set; }

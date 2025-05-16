@@ -18,9 +18,11 @@ public interface IDatabaseService {
     string[]   getLibraryContentsById(int lib_id);
     string[]   getBookById(string isbn);
     string[]   getBookGenres(string isbn);
+    string     createUser(string name, string email, string password);
 
     string DbPath { get; }
 }
+
 public class DatabaseSystem : IDatabaseService {
     private readonly string DB_Path;
 
@@ -232,7 +234,7 @@ public class DatabaseSystem : IDatabaseService {
 
         return null;
     }
-    
+
     public string[] getUserByEmail(string email) {
         var query = "SELECT * FROM Users WHERE email = @email";
 
@@ -244,7 +246,7 @@ public class DatabaseSystem : IDatabaseService {
         try {
             using var reader = cmd.ExecuteReader();
             if (reader.Read()) {
-                var user_id    = reader.GetString(reader.GetOrdinal("user_id"));
+                var user_id  = reader.GetString(reader.GetOrdinal("user_id"));
                 var name     = reader.GetString(reader.GetOrdinal("name"));
                 var password = reader.GetString(reader.GetOrdinal("password"));
 
@@ -255,9 +257,11 @@ public class DatabaseSystem : IDatabaseService {
 
         return null;
     }
-    
+
     public string[][] getUserLibraries(string user_id) {
-        var query = "SELECT * FROM UserLibraryBooks WHERE lib_id IN (SELECT lib_id FROM UserLibraries WHERE user_id = @user_id)";;
+        var query =
+            "SELECT * FROM UserLibraryBooks WHERE lib_id IN (SELECT lib_id FROM UserLibraries WHERE user_id = @user_id)";
+        ;
 
         using var connection = new SqliteConnection(DB_Path);
         connection.Open();
@@ -268,12 +272,12 @@ public class DatabaseSystem : IDatabaseService {
         try {
             using var reader = cmd.ExecuteReader();
             if (reader.Read()) {
-                var lib_id  = reader.GetString(reader.GetOrdinal("lib_id"));
-                var isbn     = reader.GetString(reader.GetOrdinal("isbn"));
+                var      lib_id  = reader.GetString(reader.GetOrdinal("lib_id"));
+                var      isbn    = reader.GetString(reader.GetOrdinal("isbn"));
                 string[] library = { lib_id, isbn };
                 result.Add(library);
             }
-            
+
             return result.ToArray();
         } catch (SqliteException e) { Console.WriteLine("[ERROR : unable to retrieve libraries : " + e.Message + "]"); }
 
@@ -281,7 +285,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public string[] getLibraryContentsById(int lib_id) {
-        var query = "SELECT * FROM FROM UserLibraryBooks WHERE lib_id = @lib_id";
+        var query = "SELECT * FROM UserLibraryBooks WHERE lib_id = @lib_id";
 
         using var connection = new SqliteConnection(DB_Path);
         connection.Open();
@@ -341,5 +345,87 @@ public class DatabaseSystem : IDatabaseService {
 
         return null;
     }
+
+    public string createUser(string name, string email, string password) {
+        using var connection = new SqliteConnection(DB_Path);
+        connection.Open();
+
+        string    query   = "INSERT INTO Users (name, email, password) VALUES (@name, @email, @password);";
+        using var command = new SqliteCommand(query, connection);
+        command.Parameters.AddWithValue("@name", name);
+        command.Parameters.AddWithValue("@email", email);
+        command.Parameters.AddWithValue("@password", password);
+
+        command.ExecuteNonQuery();
+
+        // Get the user ID
+        query               = "SELECT last_insert_rowid();";
+        command.CommandText = query;
+        var userId = command.ExecuteScalar().ToString();
+        connection.Close();
+
+        Console.WriteLine($"User created: {userId}");
+        return userId;
+    }
+
+    public void InsertBooks(string[] book) {
+        using var connection = new SqliteConnection(DB_Path);
+        connection.Open();
+        
+        string query = "INSERT INTO Books (isbn, title, author, publisher, cover) VALUES (@isbn, @title, @author, @publisher, @cover);";
+        using var command = new SqliteCommand(query, connection);
+        command.Parameters.AddWithValue("@isbn", book[0].ToString());
+        command.Parameters.AddWithValue("@title", book[1]);
+        command.Parameters.AddWithValue("@author", book[2]);
+        command.Parameters.AddWithValue("@publisher", book[3]);
+        command.Parameters.AddWithValue("@cover",
+                                        File.ReadAllBytes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                                       "Resources", book[5])));
+        command.ExecuteNonQuery();
+    
+
+        connection.Close();
+        Console.WriteLine("Books inserted successfully.");
+
+    }
+
+    public string CreateLibrary(string userId) {
+        using var connection = new SqliteConnection(DB_Path);
+        connection.Open();
+
+        string    query   = "INSERT INTO UserLibraries (user_id, name) VALUES (@user_id, 'Default Library');";
+        using var command = new SqliteCommand(query, connection);
+        command.Parameters.AddWithValue("@user_id", userId);
+
+        command.ExecuteNonQuery();
+
+        // Get the library ID
+        query               = "SELECT last_insert_rowid();";
+        command.CommandText = query;
+        var libraryId = command.ExecuteScalar().ToString();
+        connection.Close();
+
+        Console.WriteLine($"Library created: {libraryId}");
+        return libraryId;
+
+    }
+
+    public void AddBooksToLibrary(string libraryId, List<String[]> books) {
+        using var connection = new SqliteConnection(DB_Path);
+        connection.Open();
+
+        foreach (var book in books) {
+            string    query   = "INSERT INTO UserLibraryBooks (lib_id, isbn) VALUES (@lib_id, @isbn);";
+            using var command = new SqliteCommand(query, connection);
+            command.Parameters.AddWithValue("@lib_id", libraryId);
+            command.Parameters.AddWithValue("@isbn", book[0]);
+
+            command.ExecuteNonQuery();
+        }
+
+        connection.Close();
+        Console.WriteLine("Books added to library.");
+    }
+
 }
 

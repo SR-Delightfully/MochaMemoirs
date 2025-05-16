@@ -11,9 +11,11 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Drawing.Drawing2D;
 using System.Reflection.Emit;
+using System.Text.Json;
 using DatabaseLib;
 using MochaMemoirs.Model;
-
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
+using Label = System.Windows.Forms.Label;
 
 
 namespace MochaMemoirs
@@ -51,6 +53,7 @@ namespace MochaMemoirs
             TransparentLabels(DateLabel, TimeLabel);
 
             ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged;
+            var user_id = database.createUser("John Doe", "john.doe@example.com", "password123");
         }
 
         private void MochaMemoirsForm_Load(object sender, EventArgs e) {
@@ -206,19 +209,30 @@ namespace MochaMemoirs
             this.DateLabel.ForeColor = Color.White;
             this.TitleLabel.ForeColor = Color.White;
         }
-
-
-        private void Button_MouseEnter(object sender, EventArgs e) {
-            if (sender is Button btn) {
-                var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
-                btn.BackColor = selectedTheme.Accent2;
+        
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            if (ThemeComboBox.SelectedItem == null || themes == null)
+                return;
+            string selectedKey = ThemeComboBox.SelectedItem.ToString();
+            if (!themes.ContainsKey(selectedKey))
+                return;
+            if (sender is Button btn)
+            {
+                btn.BackColor = themes[selectedKey].Accent2;
             }
         }
 
-        private void Button_MouseLeave(object sender, EventArgs e) {
-            if (sender is Button btn) {
-                var selectedTheme = themes[ThemeComboBox.SelectedItem.ToString()];
-                btn.BackColor = selectedTheme.Accent1;
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            if (ThemeComboBox.SelectedItem == null || themes == null)
+                return;
+            string selectedKey = ThemeComboBox.SelectedItem.ToString();
+            if (!themes.ContainsKey(selectedKey))
+                return;
+            if (sender is Button btn)
+            {
+                btn.BackColor = themes[selectedKey].Accent2;
             }
         }
 
@@ -552,16 +566,16 @@ namespace MochaMemoirs
             HomePanel.Visible     = false;
             LibraryPanel.Visible  = false;
             SettingsPanel.Visible = false;
-            loginPanel.Visible    = true;
-            panel2.Visible        = false;
+            loginPanel.Visible    = false;
+            panel2.Visible        = true;
         }
 
         private void toCreateAccountBtn_onClick(object sender, EventArgs e) {
             HomePanel.Visible     = false;
             LibraryPanel.Visible  = false;
             SettingsPanel.Visible = false;
-            loginPanel.Visible    = false;
-            panel2.Visible        = true;
+            loginPanel.Visible    = true;
+            panel2.Visible        = false;
         }
         
 
@@ -576,30 +590,49 @@ namespace MochaMemoirs
         private void loadUserInfos(string username) {
             string[]       result    = (username.Contains('@')) ? database.getUserByEmail(username) : database.getUserByID(username);
             string[][]     libraries = database.getUserLibraries(username);
+            
+            PersonalLibraryGroupBox.Controls.Clear();
+            
+            int y = 20; // vertical position offset
 
-            if (libraries == null) {
-                currentUser = new User(result[0], result[1], result[2], result[3], null);
-            } else {
-                //var userLib<> 
-                for (int i = 0; i < libraries.Length; i++) {
-                   // libraries[i] 
-                }   
+            foreach (string[] book in libraries)
+            {
+                string libId = book[0];
+                string isbn  = book[1];
+
+                // Display as label
+                Label bookLabel = new Label();
+                bookLabel.Text     = $"ISBN: {isbn}";
+                bookLabel.Location = new Point(10, y);
+                bookLabel.AutoSize = true;
+                PersonalLibraryGroupBox.Controls.Add(bookLabel);
+                y += 25; // space between items
             }
             
-        }
+            var groupedLibraries = libraries
+                                   .GroupBy(lib => lib[0])
+                                   .Select(g => new
+                                                {
+                                                    library_id = g.Key,
+                                                    books      = g.Select(lib => lib[1]).ToArray()
+                                                })
+                                   .ToArray();
 
-        private void loadUserInfoToForm() {
-            var jsonFilePath = Path.Combine(Application.StartupPath, "JSON", "user.json");
-            var jsonContent  = File.ReadAllText(jsonFilePath);
-            var jsonLibrary  = JsonConvert.DeserializeObject<Library>(jsonContent);
+            // Construct the final user profile object
+            var userProfile = new {
+                                      user = new
+                                             {
+                                                 id    = result[0],
+                                                 name  = result[1],
+                                                 email = result[2]
+                                             },
+                                      libraries = groupedLibraries
+                                  };
 
-            if (jsonLibrary != null && jsonLibrary.library != null)
-                libraryBooks = jsonLibrary.library;
-            else
-                libraryBooks = new List<Book>();
-
-
-            DisplayBook(currentBookIndex);
+            string userJson = System.Text.Json.JsonSerializer.Serialize(userProfile, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+// Save to the same folder as books.json
+            string userFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "userProfile.json");
+            File.WriteAllText(userFilePath, userJson);                                                           
         }
     
         private void AddButton_Click(object sender, EventArgs e) {
@@ -644,7 +677,12 @@ namespace MochaMemoirs
         }
 
         private void exitButton_Click(object sender, EventArgs e) {
+            saveChangesToDB();
             Application.Exit();
+        }
+
+        private void saveChangesToDB() {
+            
         }
 
         private void LoadBooksIntoGrid() {
