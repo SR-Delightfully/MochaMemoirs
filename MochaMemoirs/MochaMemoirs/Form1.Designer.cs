@@ -28,67 +28,68 @@ namespace MochaMemoirs
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MochaMemoirsForm));
-            HomePanel                    = new System.Windows.Forms.Panel();
-            ViewLibrariesPanel           = new System.Windows.Forms.Panel();
-            FeaturedBookGroupBox         = new System.Windows.Forms.GroupBox();
-            FeaturedBookPictureBox       = new System.Windows.Forms.PictureBox();
-            PreviousButton               = new System.Windows.Forms.Button();
-            NextButton                   = new System.Windows.Forms.Button();
-            PersonalLibraryGroupBox      = new System.Windows.Forms.GroupBox();
-            HeaderGroupBox               = new System.Windows.Forms.GroupBox();
-            DateLabel                    = new System.Windows.Forms.Label();
-            TimeLabel                    = new System.Windows.Forms.Label();
-            TitleLabel                   = new System.Windows.Forms.Label();
-            BannerPictureBox             = new System.Windows.Forms.PictureBox();
-            SideBarGroupBox              = new System.Windows.Forms.GroupBox();
-            exitButton                   = new System.Windows.Forms.Button();
-            SettingsButton               = new System.Windows.Forms.Button();
-            LibraryButton                = new System.Windows.Forms.Button();
-            HomeButton                   = new System.Windows.Forms.Button();
-            LanguageBox                  = new System.Windows.Forms.ComboBox();
-            LibraryPanel                 = new System.Windows.Forms.Panel();
-            booksDataGridView            = new System.Windows.Forms.DataGridView();
-            DeleteButton                 = new System.Windows.Forms.Button();
-            EditButton                   = new System.Windows.Forms.Button();
-            AddButton                    = new System.Windows.Forms.Button();
-            panel1                       = new System.Windows.Forms.Panel();
-            genreTextBox                 = new System.Windows.Forms.TextBox();
-            genreLabel                   = new System.Windows.Forms.Label();
-            bookIdTextBox                = new System.Windows.Forms.TextBox();
-            RefreshButton                = new System.Windows.Forms.Button();
-            ClearButton                  = new System.Windows.Forms.Button();
-            bookIdLabel                  = new System.Windows.Forms.Label();
-            publisherTextBox             = new System.Windows.Forms.TextBox();
-            authorTextBox                = new System.Windows.Forms.TextBox();
-            titleTextBox                 = new System.Windows.Forms.TextBox();
-            detailsPublisherLabel        = new System.Windows.Forms.Label();
-            detailsAuthor                = new System.Windows.Forms.Label();
-            titleDetailsLabel            = new System.Windows.Forms.Label();
-            DetailsLabel                 = new System.Windows.Forms.Label();
-            LibraryStageTitleLabel       = new System.Windows.Forms.Label();
-            SettingsPanel                = new System.Windows.Forms.Panel();
-            pictureBox1                  = new System.Windows.Forms.PictureBox();
-            groupBox1                    = new System.Windows.Forms.GroupBox();
-            StartupGroupBox              = new System.Windows.Forms.GroupBox();
-            DefaultPanelLabel            = new System.Windows.Forms.Label();
-            comboBox1                    = new System.Windows.Forms.ComboBox();
-            MinimizedCheckBox            = new System.Windows.Forms.CheckBox();
+            HomePanel = new System.Windows.Forms.Panel();
+            ViewLibrariesPanel = new System.Windows.Forms.Panel();
+            FeaturedBookGroupBox = new System.Windows.Forms.GroupBox();
+            FeaturedBookPictureBox = new System.Windows.Forms.PictureBox();
+            PreviousButton = new System.Windows.Forms.Button();
+            NextButton = new System.Windows.Forms.Button();
+            PersonalLibraryGroupBox = new System.Windows.Forms.GroupBox();
+            HeaderGroupBox = new System.Windows.Forms.GroupBox();
+            DateLabel = new System.Windows.Forms.Label();
+            TimeLabel = new System.Windows.Forms.Label();
+            TitleLabel = new System.Windows.Forms.Label();
+            BannerPictureBox = new System.Windows.Forms.PictureBox();
+            SideBarGroupBox = new System.Windows.Forms.GroupBox();
+            exitButton = new System.Windows.Forms.Button();
+            SettingsButton = new System.Windows.Forms.Button();
+            LibraryButton = new System.Windows.Forms.Button();
+            HomeButton = new System.Windows.Forms.Button();
+            LanguageBox = new System.Windows.Forms.ComboBox();
+            LibraryPanel = new System.Windows.Forms.Panel();
+            booksDataGridView = new System.Windows.Forms.DataGridView();
+            DeleteButton = new System.Windows.Forms.Button();
+            EditButton = new System.Windows.Forms.Button();
+            AddButton = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            genreTextBox = new System.Windows.Forms.TextBox();
+            genreLabel = new System.Windows.Forms.Label();
+            bookIdTextBox = new System.Windows.Forms.TextBox();
+            RefreshButton = new System.Windows.Forms.Button();
+            ClearButton = new System.Windows.Forms.Button();
+            bookIdLabel = new System.Windows.Forms.Label();
+            publisherTextBox = new System.Windows.Forms.TextBox();
+            authorTextBox = new System.Windows.Forms.TextBox();
+            titleTextBox = new System.Windows.Forms.TextBox();
+            detailsPublisherLabel = new System.Windows.Forms.Label();
+            detailsAuthor = new System.Windows.Forms.Label();
+            titleDetailsLabel = new System.Windows.Forms.Label();
+            DetailsLabel = new System.Windows.Forms.Label();
+            LibraryStageTitleLabel = new System.Windows.Forms.Label();
+            SettingsPanel = new System.Windows.Forms.Panel();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            StartupGroupBox = new System.Windows.Forms.GroupBox();
+            DefaultPanelLabel = new System.Windows.Forms.Label();
+            comboBox1 = new System.Windows.Forms.ComboBox();
+            MinimizedCheckBox = new System.Windows.Forms.CheckBox();
             ClockAndDateSettingsGroupBox = new System.Windows.Forms.GroupBox();
-            HideTimeCheckBox             = new System.Windows.Forms.CheckBox();
-            HideDateCheckBox             = new System.Windows.Forms.CheckBox();
-            radioButton2                 = new System.Windows.Forms.RadioButton();
-            radioButton1                 = new System.Windows.Forms.RadioButton();
-            AppearanceGroupBox           = new System.Windows.Forms.GroupBox();
-            ItalicCheckBox               = new System.Windows.Forms.CheckBox();
-            BoldCheckBox                 = new System.Windows.Forms.CheckBox();
-            ThemeModeLabel               = new System.Windows.Forms.Label();
-            ThemeComboBox                = new System.Windows.Forms.ComboBox();
-            FontFamilyLabel              = new System.Windows.Forms.Label();
-            FontFamilyComboBox           = new System.Windows.Forms.ComboBox();
-            SettingsPanelTitleLabel      = new System.Windows.Forms.Label();
-            viewLibrariesGroupBox        = new System.Windows.Forms.GroupBox();
+            HideTimeCheckBox = new System.Windows.Forms.CheckBox();
+            HideDateCheckBox = new System.Windows.Forms.CheckBox();
+            radioButton2 = new System.Windows.Forms.RadioButton();
+            radioButton1 = new System.Windows.Forms.RadioButton();
+            AppearanceGroupBox = new System.Windows.Forms.GroupBox();
+            ItalicCheckBox = new System.Windows.Forms.CheckBox();
+            BoldCheckBox = new System.Windows.Forms.CheckBox();
+            ThemeModeLabel = new System.Windows.Forms.Label();
+            ThemeComboBox = new System.Windows.Forms.ComboBox();
+            FontFamilyLabel = new System.Windows.Forms.Label();
+            FontFamilyComboBox = new System.Windows.Forms.ComboBox();
+            SettingsPanelTitleLabel = new System.Windows.Forms.Label();
+            viewLibrariesGroupBox = new System.Windows.Forms.GroupBox();
             HomePanel.SuspendLayout();
             FeaturedBookGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FeaturedBookPictureBox).BeginInit();
@@ -125,75 +126,75 @@ namespace MochaMemoirs
             FeaturedBookGroupBox.Controls.Add(FeaturedBookPictureBox);
             FeaturedBookGroupBox.Controls.Add(PreviousButton);
             FeaturedBookGroupBox.Controls.Add(NextButton);
-            FeaturedBookGroupBox.Name    = "FeaturedBookGroupBox";
+            FeaturedBookGroupBox.Name = "FeaturedBookGroupBox";
             FeaturedBookGroupBox.TabStop = false;
             // 
             // FeaturedBookPictureBox
             // 
             resources.ApplyResources(FeaturedBookPictureBox, "FeaturedBookPictureBox");
-            FeaturedBookPictureBox.Name    = "FeaturedBookPictureBox";
+            FeaturedBookPictureBox.Name = "FeaturedBookPictureBox";
             FeaturedBookPictureBox.TabStop = false;
             // 
             // PreviousButton
             // 
             resources.ApplyResources(PreviousButton, "PreviousButton");
-            PreviousButton.Name                    =  "PreviousButton";
-            PreviousButton.UseVisualStyleBackColor =  true;
-            PreviousButton.Click                   += PreviousButton_Click;
+            PreviousButton.Name = "PreviousButton";
+            PreviousButton.UseVisualStyleBackColor = true;
+            PreviousButton.Click += PreviousButton_Click;
             // 
             // NextButton
             // 
             resources.ApplyResources(NextButton, "NextButton");
-            NextButton.Name                    =  "NextButton";
-            NextButton.UseVisualStyleBackColor =  true;
-            NextButton.Click                   += NextButton_Click;
+            NextButton.Name = "NextButton";
+            NextButton.UseVisualStyleBackColor = true;
+            NextButton.Click += NextButton_Click;
             // 
             // PersonalLibraryGroupBox
             // 
             resources.ApplyResources(PersonalLibraryGroupBox, "PersonalLibraryGroupBox");
-            PersonalLibraryGroupBox.Name    = "PersonalLibraryGroupBox";
+            PersonalLibraryGroupBox.Name = "PersonalLibraryGroupBox";
             PersonalLibraryGroupBox.TabStop = false;
             // 
             // HeaderGroupBox
             // 
             resources.ApplyResources(HeaderGroupBox, "HeaderGroupBox");
-            HeaderGroupBox.BackColor = System.Drawing.Color.Transparent;
+            HeaderGroupBox.BackColor = Color.Transparent;
             HeaderGroupBox.Controls.Add(DateLabel);
             HeaderGroupBox.Controls.Add(TimeLabel);
             HeaderGroupBox.Controls.Add(TitleLabel);
             HeaderGroupBox.Controls.Add(BannerPictureBox);
-            HeaderGroupBox.Name    = "HeaderGroupBox";
+            HeaderGroupBox.Name = "HeaderGroupBox";
             HeaderGroupBox.TabStop = false;
             // 
             // DateLabel
             // 
             resources.ApplyResources(DateLabel, "DateLabel");
-            DateLabel.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)64)));
+            DateLabel.BackColor = Color.FromArgb(0, 0, 64);
             DateLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            DateLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            DateLabel.Name      = "DateLabel";
+            DateLabel.ForeColor = SystemColors.HighlightText;
+            DateLabel.Name = "DateLabel";
             // 
             // TimeLabel
             // 
             resources.ApplyResources(TimeLabel, "TimeLabel");
-            TimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)64)));
+            TimeLabel.BackColor = Color.FromArgb(0, 0, 64);
             TimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            TimeLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            TimeLabel.Name      = "TimeLabel";
+            TimeLabel.ForeColor = SystemColors.HighlightText;
+            TimeLabel.Name = "TimeLabel";
             // 
             // TitleLabel
             // 
             resources.ApplyResources(TitleLabel, "TitleLabel");
-            TitleLabel.BackColor                  = System.Drawing.Color.Transparent;
-            TitleLabel.FlatStyle                  = System.Windows.Forms.FlatStyle.Flat;
-            TitleLabel.ForeColor                  = System.Drawing.SystemColors.HighlightText;
-            TitleLabel.Name                       = "TitleLabel";
+            TitleLabel.BackColor = Color.Transparent;
+            TitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            TitleLabel.ForeColor = SystemColors.HighlightText;
+            TitleLabel.Name = "TitleLabel";
             TitleLabel.UseCompatibleTextRendering = true;
             // 
             // BannerPictureBox
             // 
             resources.ApplyResources(BannerPictureBox, "BannerPictureBox");
-            BannerPictureBox.Name    = "BannerPictureBox";
+            BannerPictureBox.Name = "BannerPictureBox";
             BannerPictureBox.TabStop = false;
             // 
             // SideBarGroupBox
@@ -204,51 +205,51 @@ namespace MochaMemoirs
             SideBarGroupBox.Controls.Add(LibraryButton);
             SideBarGroupBox.Controls.Add(HomeButton);
             SideBarGroupBox.Controls.Add(LanguageBox);
-            SideBarGroupBox.Name    = "SideBarGroupBox";
+            SideBarGroupBox.Name = "SideBarGroupBox";
             SideBarGroupBox.TabStop = false;
             // 
             // exitButton
             // 
             resources.ApplyResources(exitButton, "exitButton");
-            exitButton.BackColor               =  System.Drawing.Color.PeachPuff;
-            exitButton.ForeColor               =  System.Drawing.Color.MidnightBlue;
-            exitButton.Name                    =  "exitButton";
-            exitButton.UseVisualStyleBackColor =  false;
-            exitButton.Click                   += exitButton_Click;
+            exitButton.BackColor = Color.PeachPuff;
+            exitButton.ForeColor = Color.MidnightBlue;
+            exitButton.Name = "exitButton";
+            exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
             // 
             // SettingsButton
             // 
             resources.ApplyResources(SettingsButton, "SettingsButton");
-            SettingsButton.BackColor               =  System.Drawing.Color.PeachPuff;
-            SettingsButton.ForeColor               =  System.Drawing.Color.MidnightBlue;
-            SettingsButton.Name                    =  "SettingsButton";
-            SettingsButton.UseVisualStyleBackColor =  false;
-            SettingsButton.Click                   += SettingsButton_Click;
+            SettingsButton.BackColor = Color.PeachPuff;
+            SettingsButton.ForeColor = Color.MidnightBlue;
+            SettingsButton.Name = "SettingsButton";
+            SettingsButton.UseVisualStyleBackColor = false;
+            SettingsButton.Click += SettingsButton_Click;
             // 
             // LibraryButton
             // 
             resources.ApplyResources(LibraryButton, "LibraryButton");
-            LibraryButton.BackColor               =  System.Drawing.Color.PeachPuff;
-            LibraryButton.ForeColor               =  System.Drawing.Color.MidnightBlue;
-            LibraryButton.Name                    =  "LibraryButton";
-            LibraryButton.UseVisualStyleBackColor =  false;
-            LibraryButton.Click                   += LibraryButton_Click;
+            LibraryButton.BackColor = Color.PeachPuff;
+            LibraryButton.ForeColor = Color.MidnightBlue;
+            LibraryButton.Name = "LibraryButton";
+            LibraryButton.UseVisualStyleBackColor = false;
+            LibraryButton.Click += LibraryButton_Click;
             // 
             // HomeButton
             // 
             resources.ApplyResources(HomeButton, "HomeButton");
-            HomeButton.BackColor               =  System.Drawing.Color.PeachPuff;
-            HomeButton.ForeColor               =  System.Drawing.Color.MidnightBlue;
-            HomeButton.Name                    =  "HomeButton";
-            HomeButton.UseVisualStyleBackColor =  false;
-            HomeButton.Click                   += HomeButton_Click;
+            HomeButton.BackColor = Color.PeachPuff;
+            HomeButton.ForeColor = Color.MidnightBlue;
+            HomeButton.Name = "HomeButton";
+            HomeButton.UseVisualStyleBackColor = false;
+            HomeButton.Click += HomeButton_Click;
             // 
             // LanguageBox
             // 
             resources.ApplyResources(LanguageBox, "LanguageBox");
             LanguageBox.FormattingEnabled = true;
-            LanguageBox.Items.AddRange(new object[] { resources.GetString("LanguageBox.Items"), resources.GetString("LanguageBox.Items1"), resources.GetString("LanguageBox.Items1") });
-            LanguageBox.Name                 =  "LanguageBox";
+            LanguageBox.Items.AddRange(new object[] { resources.GetString("LanguageBox.Items"), resources.GetString("LanguageBox.Items1"), resources.GetString("LanguageBox.Items2") });
+            LanguageBox.Name = "LanguageBox";
             LanguageBox.SelectedIndexChanged += LanguageBox_SelectedIndexChanged;
             // 
             // LibraryPanel
@@ -266,28 +267,28 @@ namespace MochaMemoirs
             // 
             resources.ApplyResources(booksDataGridView, "booksDataGridView");
             booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            booksDataGridView.Name                        = "booksDataGridView";
+            booksDataGridView.Name = "booksDataGridView";
             // 
             // DeleteButton
             // 
             resources.ApplyResources(DeleteButton, "DeleteButton");
-            DeleteButton.Name                    =  "DeleteButton";
-            DeleteButton.UseVisualStyleBackColor =  true;
-            DeleteButton.Click                   += DeleteButton_Click;
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // EditButton
             // 
             resources.ApplyResources(EditButton, "EditButton");
-            EditButton.Name                    =  "EditButton";
-            EditButton.UseVisualStyleBackColor =  true;
-            EditButton.Click                   += EditButton_Click;
+            EditButton.Name = "EditButton";
+            EditButton.UseVisualStyleBackColor = true;
+            EditButton.Click += EditButton_Click;
             // 
             // AddButton
             // 
             resources.ApplyResources(AddButton, "AddButton");
-            AddButton.Name                    =  "AddButton";
-            AddButton.UseVisualStyleBackColor =  true;
-            AddButton.Click                   += AddButton_Click;
+            AddButton.Name = "AddButton";
+            AddButton.UseVisualStyleBackColor = true;
+            AddButton.Click += AddButton_Click;
             // 
             // panel1
             // 
@@ -325,16 +326,16 @@ namespace MochaMemoirs
             // RefreshButton
             // 
             resources.ApplyResources(RefreshButton, "RefreshButton");
-            RefreshButton.Name                    =  "RefreshButton";
-            RefreshButton.UseVisualStyleBackColor =  true;
-            RefreshButton.Click                   += loadButton_Click;
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.UseVisualStyleBackColor = true;
+            RefreshButton.Click += loadButton_Click;
             // 
             // ClearButton
             // 
             resources.ApplyResources(ClearButton, "ClearButton");
-            ClearButton.Name                    =  "ClearButton";
-            ClearButton.UseVisualStyleBackColor =  true;
-            ClearButton.Click                   += ClearButton_Click;
+            ClearButton.Name = "ClearButton";
+            ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButton_Click;
             // 
             // bookIdLabel
             // 
@@ -380,7 +381,7 @@ namespace MochaMemoirs
             // 
             resources.ApplyResources(LibraryStageTitleLabel, "LibraryStageTitleLabel");
             LibraryStageTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            LibraryStageTitleLabel.Name        = "LibraryStageTitleLabel";
+            LibraryStageTitleLabel.Name = "LibraryStageTitleLabel";
             // 
             // SettingsPanel
             // 
@@ -396,14 +397,14 @@ namespace MochaMemoirs
             // pictureBox1
             // 
             resources.ApplyResources(pictureBox1, "pictureBox1");
-            pictureBox1.Name    =  "pictureBox1";
-            pictureBox1.TabStop =  false;
-            pictureBox1.Click   += pictureBox1_Click;
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // groupBox1
             // 
             resources.ApplyResources(groupBox1, "groupBox1");
-            groupBox1.Name    = "groupBox1";
+            groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
             // 
             // StartupGroupBox
@@ -412,7 +413,7 @@ namespace MochaMemoirs
             StartupGroupBox.Controls.Add(DefaultPanelLabel);
             StartupGroupBox.Controls.Add(comboBox1);
             StartupGroupBox.Controls.Add(MinimizedCheckBox);
-            StartupGroupBox.Name    = "StartupGroupBox";
+            StartupGroupBox.Name = "StartupGroupBox";
             StartupGroupBox.TabStop = false;
             // 
             // DefaultPanelLabel
@@ -424,13 +425,13 @@ namespace MochaMemoirs
             // 
             resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items1") });
+            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2") });
             comboBox1.Name = "comboBox1";
             // 
             // MinimizedCheckBox
             // 
             resources.ApplyResources(MinimizedCheckBox, "MinimizedCheckBox");
-            MinimizedCheckBox.Name                    = "MinimizedCheckBox";
+            MinimizedCheckBox.Name = "MinimizedCheckBox";
             MinimizedCheckBox.UseVisualStyleBackColor = true;
             // 
             // ClockAndDateSettingsGroupBox
@@ -440,34 +441,34 @@ namespace MochaMemoirs
             ClockAndDateSettingsGroupBox.Controls.Add(HideDateCheckBox);
             ClockAndDateSettingsGroupBox.Controls.Add(radioButton2);
             ClockAndDateSettingsGroupBox.Controls.Add(radioButton1);
-            ClockAndDateSettingsGroupBox.Name    = "ClockAndDateSettingsGroupBox";
+            ClockAndDateSettingsGroupBox.Name = "ClockAndDateSettingsGroupBox";
             ClockAndDateSettingsGroupBox.TabStop = false;
             // 
             // HideTimeCheckBox
             // 
             resources.ApplyResources(HideTimeCheckBox, "HideTimeCheckBox");
-            HideTimeCheckBox.Name                    = "HideTimeCheckBox";
+            HideTimeCheckBox.Name = "HideTimeCheckBox";
             HideTimeCheckBox.UseVisualStyleBackColor = true;
             // 
             // HideDateCheckBox
             // 
             resources.ApplyResources(HideDateCheckBox, "HideDateCheckBox");
-            HideDateCheckBox.Name                    = "HideDateCheckBox";
+            HideDateCheckBox.Name = "HideDateCheckBox";
             HideDateCheckBox.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             resources.ApplyResources(radioButton2, "radioButton2");
-            radioButton2.Name                    =  "radioButton2";
-            radioButton2.TabStop                 =  true;
-            radioButton2.UseVisualStyleBackColor =  true;
-            radioButton2.CheckedChanged          += radioButton2_CheckedChanged;
+            radioButton2.Name = "radioButton2";
+            radioButton2.TabStop = true;
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
             resources.ApplyResources(radioButton1, "radioButton1");
-            radioButton1.Name                    = "radioButton1";
-            radioButton1.TabStop                 = true;
+            radioButton1.Name = "radioButton1";
+            radioButton1.TabStop = true;
             radioButton1.UseVisualStyleBackColor = true;
             // 
             // AppearanceGroupBox
@@ -479,7 +480,7 @@ namespace MochaMemoirs
             AppearanceGroupBox.Controls.Add(ThemeComboBox);
             AppearanceGroupBox.Controls.Add(FontFamilyLabel);
             AppearanceGroupBox.Controls.Add(FontFamilyComboBox);
-            AppearanceGroupBox.Name    = "AppearanceGroupBox";
+            AppearanceGroupBox.Name = "AppearanceGroupBox";
             AppearanceGroupBox.TabStop = false;
             // 
             // ItalicCheckBox
@@ -501,7 +502,7 @@ namespace MochaMemoirs
             // 
             resources.ApplyResources(ThemeComboBox, "ThemeComboBox");
             ThemeComboBox.FormattingEnabled = true;
-            ThemeComboBox.Items.AddRange(new object[] { resources.GetString("ThemeComboBox.Items"), resources.GetString("ThemeComboBox.Items1"), resources.GetString("ThemeComboBox.Items1"), resources.GetString("ThemeComboBox.Items1"), resources.GetString("ThemeComboBox.Items1") });
+            ThemeComboBox.Items.AddRange(new object[] { resources.GetString("ThemeComboBox.Items"), resources.GetString("ThemeComboBox.Items1"), resources.GetString("ThemeComboBox.Items2"), resources.GetString("ThemeComboBox.Items3"), resources.GetString("ThemeComboBox.Items4") });
             ThemeComboBox.Name = "ThemeComboBox";
             // 
             // FontFamilyLabel
@@ -513,19 +514,19 @@ namespace MochaMemoirs
             // 
             resources.ApplyResources(FontFamilyComboBox, "FontFamilyComboBox");
             FontFamilyComboBox.FormattingEnabled = true;
-            FontFamilyComboBox.Items.AddRange(new object[] { resources.GetString("FontFamilyComboBox.Items"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items1") });
+            FontFamilyComboBox.Items.AddRange(new object[] { resources.GetString("FontFamilyComboBox.Items"), resources.GetString("FontFamilyComboBox.Items1"), resources.GetString("FontFamilyComboBox.Items2"), resources.GetString("FontFamilyComboBox.Items3"), resources.GetString("FontFamilyComboBox.Items4"), resources.GetString("FontFamilyComboBox.Items5"), resources.GetString("FontFamilyComboBox.Items6"), resources.GetString("FontFamilyComboBox.Items7"), resources.GetString("FontFamilyComboBox.Items8"), resources.GetString("FontFamilyComboBox.Items9") });
             FontFamilyComboBox.Name = "FontFamilyComboBox";
             // 
             // SettingsPanelTitleLabel
             // 
             resources.ApplyResources(SettingsPanelTitleLabel, "SettingsPanelTitleLabel");
             SettingsPanelTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            SettingsPanelTitleLabel.Name        = "SettingsPanelTitleLabel";
+            SettingsPanelTitleLabel.Name = "SettingsPanelTitleLabel";
             // 
             // viewLibrariesGroupBox
             // 
             resources.ApplyResources(viewLibrariesGroupBox, "viewLibrariesGroupBox");
-            viewLibrariesGroupBox.Name    = "viewLibrariesGroupBox";
+            viewLibrariesGroupBox.Name = "viewLibrariesGroupBox";
             viewLibrariesGroupBox.TabStop = false;
             // 
             // MochaMemoirsForm
@@ -536,6 +537,7 @@ namespace MochaMemoirs
             Controls.Add(LibraryPanel);
             Controls.Add(SettingsPanel);
             Controls.Add(SideBarGroupBox);
+            Name = "MochaMemoirsForm";
             Load += MochaMemoirsForm_Load;
             HomePanel.ResumeLayout(false);
             FeaturedBookGroupBox.ResumeLayout(false);
@@ -550,8 +552,11 @@ namespace MochaMemoirs
             SettingsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             StartupGroupBox.ResumeLayout(false);
+            StartupGroupBox.PerformLayout();
             ClockAndDateSettingsGroupBox.ResumeLayout(false);
+            ClockAndDateSettingsGroupBox.PerformLayout();
             AppearanceGroupBox.ResumeLayout(false);
+            AppearanceGroupBox.PerformLayout();
             ResumeLayout(false);
         }
 

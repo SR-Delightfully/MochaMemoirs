@@ -5232,9 +5232,6 @@
   <data name="LibraryStageTitleLabel.Text" xml:space="preserve">
     <value>Bibliothèque</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Informations utilisateur</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqMAAAKjCAYAAAApnwZoAAABdGlDQ1BrQ0dDb2xvclNwYWNlRGlzcGxh
@@ -6434,6 +6431,9 @@
         AHfVcm8ALEILAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Informations utilisateur</value>
+  </data>
   <data name="DefaultPanelLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 15</value>
   </data>
@@ -6457,15 +6457,6 @@
   </data>
   <data name="StartupGroupBox.Text" xml:space="preserve">
     <value>Comportement de démarrage</value>
-  </data>
-  <data name="HighContrastCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 19</value>
-  </data>
-  <data name="HighContrastCheckBox.Text" xml:space="preserve">
-    <value>Mode contraste élevé</value>
-  </data>
-  <data name="AccessabilityGroupBox.Text" xml:space="preserve">
-    <value>Accessibilité</value>
   </data>
   <data name="HideTimeCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 19</value>
@@ -6506,26 +6497,11 @@
   <data name="BoldCheckBox.Text" xml:space="preserve">
     <value>Texte en gras</value>
   </data>
-  <data name="FontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 15</value>
-  </data>
-  <data name="FontSizeLabel.Text" xml:space="preserve">
-    <value>Taille des caractères</value>
-  </data>
   <data name="ThemeModeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 15</value>
   </data>
   <data name="ThemeModeLabel.Text" xml:space="preserve">
     <value>Choisissez votre thème de couleur</value>
-  </data>
-  <data name="BackLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 153</value>
-  </data>
-  <data name="BackLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 15</value>
-  </data>
-  <data name="BackLabel.Text" xml:space="preserve">
-    <value>Couleur du dos</value>
   </data>
   <data name="ThemeComboBox.Items" xml:space="preserve">
     <value>Clair</value>
@@ -6536,20 +6512,8 @@
   <data name="ThemeComboBox.Text" xml:space="preserve">
     <value>Par défaut (mode Clair)</value>
   </data>
-  <data name="AccentLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 15</value>
-  </data>
-  <data name="AccentLabel2.Text" xml:space="preserve">
-    <value>Couleur d'accent #2:</value>
-  </data>
   <data name="FontFamilyComboBox.Text" xml:space="preserve">
     <value>Défaut ( )</value>
-  </data>
-  <data name="AccentLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 15</value>
-  </data>
-  <data name="AccentLabel1.Text" xml:space="preserve">
-    <value>Couleur d'accent #1:</value>
   </data>
   <data name="AppearanceGroupBox.Text" xml:space="preserve">
     <value>Apparence</value>
