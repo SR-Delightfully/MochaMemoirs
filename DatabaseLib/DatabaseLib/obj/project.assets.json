@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {
+    "net8.0": {
       "Microsoft.Data.Sqlite/10.0.0-preview.3.25171.6": {
         "type": "package",
         "dependencies": {
@@ -66,10 +66,10 @@
           "lib/netstandard2.0/_._": {}
         },
         "build": {
-          "buildTransitive/net9.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+          "buildTransitive/net8.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
         },
         "runtimeTargets": {
-          "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a": {
+          "runtimes/browser-wasm/nativeassets/net8.0/e_sqlite3.a": {
             "assetType": "native",
             "rid": "browser-wasm"
           },
@@ -325,33 +325,33 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net9.0": [
+    "net8.0": [
       "Microsoft.Data.Sqlite >= 10.0.0-preview.3.25171.6"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\srobi\\.nuget\\packages\\": {},
+    "C:\\Users\\H\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\srobi\\Documents\\0_Vanier_College\\3_Semester\\4_AppDev1\\MochaMemoirs\\DatabaseLib\\DatabaseLib\\DatabaseLib.csproj",
+      "projectUniqueName": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\DatabaseLib\\DatabaseLib\\DatabaseLib.csproj",
       "projectName": "DatabaseLib",
-      "projectPath": "C:\\Users\\srobi\\Documents\\0_Vanier_College\\3_Semester\\4_AppDev1\\MochaMemoirs\\DatabaseLib\\DatabaseLib\\DatabaseLib.csproj",
-      "packagesPath": "C:\\Users\\srobi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\srobi\\Documents\\0_Vanier_College\\3_Semester\\4_AppDev1\\MochaMemoirs\\DatabaseLib\\DatabaseLib\\obj\\",
+      "projectPath": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\DatabaseLib\\DatabaseLib\\DatabaseLib.csproj",
+      "packagesPath": "C:\\Users\\H\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\H\\Documents\\03_VANIER\\MochaMemoirs\\DatabaseLib\\DatabaseLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\srobi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\H\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net9.0"
+        "net8.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -359,8 +359,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -374,11 +374,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net9.0": {
-        "targetAlias": "net9.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.Data.Sqlite": {
             "target": "Package",
@@ -401,7 +401,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
