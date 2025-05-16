@@ -614,8 +614,9 @@ namespace MochaMemoirs
             // toCreateAccountBtn
             // 
             resources.ApplyResources(toCreateAccountBtn, "toCreateAccountBtn");
-            toCreateAccountBtn.Name = "toCreateAccountBtn";
-            toCreateAccountBtn.UseVisualStyleBackColor = true;
+            toCreateAccountBtn.Name                    =  "toCreateAccountBtn";
+            toCreateAccountBtn.UseVisualStyleBackColor =  true;
+            toCreateAccountBtn.Click                   += toCreateAccountBtn_onClick;
             // 
             // label1
             // 
@@ -635,8 +636,9 @@ namespace MochaMemoirs
             // loginBtn
             // 
             resources.ApplyResources(loginBtn, "loginBtn");
-            loginBtn.Name = "loginBtn";
-            loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.Name                    =  "loginBtn";
+            loginBtn.UseVisualStyleBackColor =  true;
+            loginBtn.Click                   += loginBtn_onClick;
             // 
             // label2
             // 

@@ -2,7 +2,25 @@
 
 namespace DatabaseLib;
 
-public interface IDatabaseService { }
+public interface IDatabaseService {
+    void createUsersTable();
+    void createBooksTable();
+    void createGenresTable();
+    void createBookGenresTable();
+    void createUserLibrariesTable();
+    void createUserLibraryBooksTable();
+
+    void testConnection(string database_path);
+
+    string[]   getUserByID(string user_id);
+    string[]   getUserByEmail(string email);
+    string[][] getUserLibraries(string user_id);
+    string[]   getLibraryContentsById(int lib_id);
+    string[]   getBookById(string isbn);
+    string[]   getBookGenres(string isbn);
+
+    string DbPath { get; }
+}
 public class DatabaseSystem : IDatabaseService {
     private readonly string DB_Path;
 

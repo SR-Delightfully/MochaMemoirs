@@ -67,7 +67,7 @@ namespace MochaMemoirs
             }
 
             MinimizedCheckBox.Checked = Properties.Settings.Default.StartMinimized;
-            comboBox1.SelectedItem = Properties.Settings.Default.DefaultPanel ?? "HomePanel";
+            comboBox1.SelectedItem = Properties.Settings.Default.DefaultPanel ?? "LoginPanel";
 
             if (MinimizedCheckBox.Checked)
                 this.WindowState = FormWindowState.Minimized;
@@ -80,6 +80,8 @@ namespace MochaMemoirs
             HomePanel.Visible = (panelName == "HomePanel");
             LibraryPanel.Visible = (panelName == "LibraryPanel");
             SettingsPanel.Visible = (panelName == "SettingsPanel");
+            loginPanel.Visible = (panelName == "LoginPanel");
+            
         }
 
         private void InitSettingsEvents() {
@@ -242,7 +244,7 @@ namespace MochaMemoirs
 
         private void StartupBehaviorChanged(object sender, EventArgs e) {
             Properties.Settings.Default.StartMinimized = MinimizedCheckBox.Checked;
-            Properties.Settings.Default.DefaultPanel = comboBox1.SelectedItem?.ToString() ?? "HomePanel";
+            Properties.Settings.Default.DefaultPanel = comboBox1.SelectedItem?.ToString() ?? "LoginPanel";
             Properties.Settings.Default.Save();
         }
 
@@ -506,28 +508,100 @@ namespace MochaMemoirs
             }
         }
 
-        private void InitStages() {
-            HomePanel.Visible = true;
-            LibraryPanel.Visible = false;
+             private void InitStages() {
+            HomePanel.Visible     = false;
+            LibraryPanel.Visible  = false;
             SettingsPanel.Visible = false;
+            loginPanel.Visible    = true;
+            panel2.Visible        = false;
         }
 
         private void HomeButton_Click(object sender, EventArgs e) {
-            HomePanel.Visible = true;
-            LibraryPanel.Visible = false;
+            HomePanel.Visible     = true;
+            LibraryPanel.Visible  = false;
             SettingsPanel.Visible = false;
+            loginPanel.Visible    = false;
+            panel2.Visible        = false;
         }
 
         private void LibraryButton_Click(object sender, EventArgs e) {
-            HomePanel.Visible = false;
-            LibraryPanel.Visible = true;
+            HomePanel.Visible     = false;
+            LibraryPanel.Visible  = true;
             SettingsPanel.Visible = false;
+            loginPanel.Visible    = false;
+            panel2.Visible        = false;
         }
+
         private void SettingsButton_Click(object sender, EventArgs e) {
-            HomePanel.Visible = false;
-            LibraryPanel.Visible = false;
+            HomePanel.Visible     = false;
+            LibraryPanel.Visible  = false;
             SettingsPanel.Visible = true;
+            loginPanel.Visible    = false;
+            panel2.Visible        = false;
         }
+
+        private void createAccountBtn_Click(object sender, EventArgs e) {
+            HomePanel.Visible     = false;
+            LibraryPanel.Visible  = false;
+            SettingsPanel.Visible = false;
+            loginPanel.Visible    = false;
+            panel2.Visible = true;
+        }
+        
+        private void backToLogin_Click(object sender, EventArgs e) {
+            HomePanel.Visible     = false;
+            LibraryPanel.Visible  = false;
+            SettingsPanel.Visible = false;
+            loginPanel.Visible    = true;
+            panel2.Visible        = false;
+        }
+
+        private void toCreateAccountBtn_onClick(object sender, EventArgs e) {
+            HomePanel.Visible     = false;
+            LibraryPanel.Visible  = false;
+            SettingsPanel.Visible = false;
+            loginPanel.Visible    = false;
+            panel2.Visible        = true;
+        }
+        
+
+        private void usernameInput_TextChanged(object sender, EventArgs e) {
+            username = usernameInput.Text;
+        }
+
+        private void passwordInput_TextChanged(object sender, EventArgs e) {
+            password = passwordInput.Text;
+        }
+
+        private void loadUserInfos(string username) {
+            string[]       result    = (username.Contains('@')) ? database.getUserByEmail(username) : database.getUserByID(username);
+            string[][]     libraries = database.getUserLibraries(username);
+
+            if (libraries == null) {
+                currentUser = new User(result[0], result[1], result[2], result[3], null);
+            } else {
+                //var userLib<> 
+                for (int i = 0; i < libraries.Length; i++) {
+                   // libraries[i] 
+                }   
+            }
+            
+        }
+
+        private void loadUserInfoToForm() {
+            var jsonFilePath = Path.Combine(Application.StartupPath, "JSON", "user.json");
+            var jsonContent  = File.ReadAllText(jsonFilePath);
+            var jsonLibrary  = JsonConvert.DeserializeObject<Library>(jsonContent);
+
+            if (jsonLibrary != null && jsonLibrary.library != null)
+                libraryBooks = jsonLibrary.library;
+            else
+                libraryBooks = new List<Book>();
+
+
+            DisplayBook(currentBookIndex);
+        }
+    
         private void AddButton_Click(object sender, EventArgs e) {
             Book newBook = new Book {
                 bookId = GetNextBookId().ToString(),
@@ -656,6 +730,43 @@ namespace MochaMemoirs
 
         }
 
+        private void loginBtn_onClick(object sender, EventArgs e) {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("ERROR: Username and/or password are required.");
+                return;
+            }
+
+            string[] result;
+
+            // Decide whether to search by email or ID
+            if (username.Contains('@'))
+            {
+                result = database.getUserByEmail(username);
+            }
+            else
+            {
+                result = database.getUserByID(username);
+            }
+
+            if (result != null && result.Length > 3)
+            {
+                if (password.Equals(result[3]))  // Assuming password is at index 3
+                {
+                    MessageBox.Show("Login successful!");
+                    loadUserInfos(username);
+                    // Proceed with login flow
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect password.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("User not found.");
+            }
+        }
     }
 
 }
