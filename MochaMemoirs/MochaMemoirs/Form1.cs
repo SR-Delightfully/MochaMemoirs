@@ -11,6 +11,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Drawing.Drawing2D;
 using System.Reflection.Emit;
+using DatabaseLib;
 using MochaMemoirs.Model;
 
 
@@ -19,12 +20,16 @@ namespace MochaMemoirs
 {
     public partial class MochaMemoirsForm : Form
     {
-        private List<Book> libraryBooks;
-        private int currentBookIndex = 0;
-        private Timer currentDateTimer;
-        private string currentDate = "";
-        private string previousDate = "";
-        private string timeFormat = "hh:mm:ss tt";
+        private          List<Book>       libraryBooks;
+        private          int              currentBookIndex = 0;
+        private          Timer            currentDateTimer;
+        private          string           currentDate  = "";
+        private          string           previousDate = "";
+        private          string           timeFormat   = "hh:mm:ss tt";
+        private          User             currentUser;
+        private          string           username;
+        private          string           password;
+        private readonly IDatabaseService database;
 
         private Dictionary<string, Theme> themes = new Dictionary<string, Theme>()
         {
@@ -34,9 +39,10 @@ namespace MochaMemoirs
             { "LightSolarized", new Theme("LightSolarized", Color.Beige, Color.DimGray, Color.Khaki, Color.DarkKhaki) },
             { "DarkSolarized", new Theme("DarkSolarized", Color.DarkSlateGray, Color.Azure, Color.Teal, Color.CadetBlue) }
         };
-        public MochaMemoirsForm()
+        public MochaMemoirsForm(IDatabaseService database)
         {
             InitializeComponent();
+            this.database = database;
             RoundButton(HomeButton);
             RoundButton(LibraryButton);
             RoundButton(SettingsButton);

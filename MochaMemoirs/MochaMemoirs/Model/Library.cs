@@ -8,6 +8,11 @@ namespace MochaMemoirs
 {
     public class Library
     {
+        public Library(List<Book> books) {
+            library = books;
+        }
+
+        public Library() { }
         public List<Book> library { get; set; }  
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseLib;
 
 namespace MochaMemoirs
 {
@@ -20,10 +21,10 @@ namespace MochaMemoirs
 
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(language);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(language);
-
+            IDatabaseService database = new DatabaseSystem();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MochaMemoirsForm());
+            Application.Run(new MochaMemoirsForm(database));
         }
     }
 }

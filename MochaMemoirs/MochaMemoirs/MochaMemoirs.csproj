@@ -35,4 +35,8 @@
 	  </None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\DatabaseLib\DatabaseLib\DatabaseLib.csproj" />
+	</ItemGroup>
+
 </Project>
