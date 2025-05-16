@@ -18,6 +18,7 @@ using MochaMemoirs.Model;
 
 namespace MochaMemoirs
 {
+    //public interface IDatabaseService { }
     public partial class MochaMemoirsForm : Form
     {
         private          List<Book>       libraryBooks;
