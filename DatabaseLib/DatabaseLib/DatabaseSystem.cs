@@ -32,6 +32,11 @@ public class DatabaseSystem : IDatabaseService {
         DB_Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "database.db");
         testConnection(DB_Path);
     }
+    
+    public DatabaseSystem(string path) {
+        DB_Path = path;
+        testConnection(DB_Path);
+    }
 
     public void testConnection(string database_path) {
         try {
@@ -43,12 +48,12 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void createUsersTable() {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         var query = """
                     CREATE TABLE IF NOT EXISTS Users 
-                        (user_id TEXT PRIMARY KEY AUTOINCREMENT,
+                        (user_id INTEGER PRIMARY KEY AUTOINCREMENT,
                         name TEXT NOT NULL,
                         email TEXT NOT NULL UNIQUE,
                         password TEXT NOT NULL DEFAULT 'qwerty123456'
@@ -62,7 +67,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void createBooksTable() {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         var query = """
@@ -81,7 +86,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void createGenresTable() {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         var query = """
@@ -98,7 +103,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void createBookGenresTable() {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         var query = """
@@ -118,7 +123,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     // public void createLibrariesTable() {
-    //     using var connection = new SqliteConnection(DB_Path);
+    //     using var connection = new SqliteConnection($"Data Source={DB_Path}");
     //     connection.Open();
     //     
     //     string query = """
@@ -134,7 +139,7 @@ public class DatabaseSystem : IDatabaseService {
     // }
 
     public void createUserLibrariesTable() {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         var query = """
@@ -153,7 +158,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void createUserLibraryBooksTable() {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         var query = """
@@ -173,7 +178,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     // public void createGenreLibrariesTable() {
-    //     using var connection = new SqliteConnection(DB_Path);
+    //     using var connection = new SqliteConnection($"Data Source={DB_Path}");
     //     connection.Open();
     //     
     //     string query = """
@@ -193,7 +198,7 @@ public class DatabaseSystem : IDatabaseService {
     // }
 
     // public void createGenreLibraryBooksTable() {
-    //     using var connection = new SqliteConnection(DB_Path);
+    //     using var connection = new SqliteConnection($"Data Source={DB_Path}");
     //     connection.Open();
     //
     //     string query = """
@@ -215,7 +220,7 @@ public class DatabaseSystem : IDatabaseService {
     public string[] getUserByID(string user_id) {
         var query = "SELECT * FROM Users WHERE user_id = @user_id";
 
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         using var cmd = new SqliteCommand(query, connection);
         cmd.Parameters.AddWithValue("@user_id", user_id);
@@ -238,7 +243,7 @@ public class DatabaseSystem : IDatabaseService {
     public string[] getUserByEmail(string email) {
         var query = "SELECT * FROM Users WHERE email = @email";
 
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         using var cmd = new SqliteCommand(query, connection);
         cmd.Parameters.AddWithValue("@email", email);
@@ -263,7 +268,7 @@ public class DatabaseSystem : IDatabaseService {
             "SELECT * FROM UserLibraryBooks WHERE lib_id IN (SELECT lib_id FROM UserLibraries WHERE user_id = @user_id)";
         ;
 
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         using var cmd = new SqliteCommand(query, connection);
         cmd.Parameters.AddWithValue("@user_id", user_id);
@@ -287,7 +292,7 @@ public class DatabaseSystem : IDatabaseService {
     public string[] getLibraryContentsById(int lib_id) {
         var query = "SELECT * FROM UserLibraryBooks WHERE lib_id = @lib_id";
 
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         using var cmd = new SqliteCommand(query, connection);
         cmd.Parameters.AddWithValue("@lib_id", lib_id);
@@ -307,7 +312,7 @@ public class DatabaseSystem : IDatabaseService {
     public string[] getBookById(string isbn) {
         var query = "SELECT * FROM FROM Books WHERE isbn = @isbn";
 
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         using var cmd = new SqliteCommand(query, connection);
         cmd.Parameters.AddWithValue("@isbn", isbn);
@@ -329,7 +334,7 @@ public class DatabaseSystem : IDatabaseService {
     public string[] getBookGenres(string isbn) {
         var query = "SELECT name FROM Genres WHERE genre_id IN (SELECT genre_id FROM BookGenres WHERE isbn = @isbn)";
 
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         using var cmd = new SqliteCommand(query, connection);
         cmd.Parameters.AddWithValue("@isbn", isbn);
@@ -347,7 +352,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public string createUser(string name, string email, string password) {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         string    query   = "INSERT INTO Users (name, email, password) VALUES (@name, @email, @password);";
@@ -369,7 +374,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void InsertBooks(string[] book) {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
         
         string query = "INSERT INTO Books (isbn, title, author, publisher, cover) VALUES (@isbn, @title, @author, @publisher, @cover);";
@@ -390,7 +395,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public string CreateLibrary(string userId) {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         string    query   = "INSERT INTO UserLibraries (user_id, name) VALUES (@user_id, 'Default Library');";
@@ -411,7 +416,7 @@ public class DatabaseSystem : IDatabaseService {
     }
 
     public void AddBooksToLibrary(string libraryId, List<String[]> books) {
-        using var connection = new SqliteConnection(DB_Path);
+        using var connection = new SqliteConnection($"Data Source={DB_Path}");
         connection.Open();
 
         foreach (var book in books) {

@@ -53,7 +53,7 @@ namespace MochaMemoirs
             TransparentLabels(DateLabel, TimeLabel);
 
             ThemeComboBox.SelectedIndexChanged += ThemeComboBox_SelectedIndexChanged;
-            var user_id = database.createUser("John Doe", "john.doe@example.com", "password123");
+            //var user_id = database.createUser("John Doe", "john.doe@example.com", "password123");
         }
 
         private void MochaMemoirsForm_Load(object sender, EventArgs e) {
@@ -769,7 +769,9 @@ namespace MochaMemoirs
         }
 
         private void loginBtn_onClick(object sender, EventArgs e) {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            string inputUsername = usernameInput.Text;
+            string inputPassword = passwordInput.Text;
+            if (string.IsNullOrWhiteSpace(inputUsername) || string.IsNullOrWhiteSpace(inputPassword))
             {
                 MessageBox.Show("ERROR: Username and/or password are required.");
                 return;
@@ -778,21 +780,26 @@ namespace MochaMemoirs
             string[] result;
 
             // Decide whether to search by email or ID
-            if (username.Contains('@'))
+            if (inputUsername.Contains('@'))
             {
-                result = database.getUserByEmail(username);
+                result = database.getUserByEmail(inputUsername);
             }
             else
             {
-                result = database.getUserByID(username);
+                result = database.getUserByID(inputUsername);
             }
 
             if (result != null && result.Length > 3)
             {
-                if (password.Equals(result[3]))  // Assuming password is at index 3
+                if (inputPassword.Equals(result[3]))  // Assuming password is at index 3
                 {
                     MessageBox.Show("Login successful!");
-                    loadUserInfos(username);
+                    HomePanel.Visible     = true;
+                    LibraryPanel.Visible  = false;
+                    SettingsPanel.Visible = false;
+                    loginPanel.Visible    = false;
+                    panel2.Visible        = false;
+                    loadUserInfos(inputUsername);
                     // Proceed with login flow
                 }
                 else

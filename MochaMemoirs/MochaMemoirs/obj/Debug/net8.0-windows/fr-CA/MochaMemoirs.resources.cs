@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MochaMemoirs")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute(" ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+072f40beabdd2bf7b630ad0fcf25565cc549171e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f34aa42183454d9431e54f370b275da9fd21fde3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MochaMemoirs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MochaMemoirs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
